@@ -10,6 +10,22 @@
   </head>
 
   <body>
+    <% if signed_in? %>
+      <%= current_user.username %>
+      <form action="<%= session_url %>" method="post">
+        <%= auth_token_input %>
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Sign Out">
+      </form>
+    <% else %>
+      <a href="<%= new_session_url %>">Sign In</a>
+      <a href="<%= new_user_url %>">Sign Up</a>
+    <% end %>
+
+    <br>
+
+    <%= flash[:errors].join("<br>").html_safe if flash[:errors] %>
+
     <%= yield %>
   </body>
 </html>

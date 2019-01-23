@@ -23,9 +23,22 @@ class Login extends React.Component {
             .then(() => this.props.history.push('/shows'));
     }
 
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
+    }
+
     render() {
         return (
             <div className="session-form">
+                {this.renderErrors()}
                 <h2>Login</h2>
                 <form>
                     <label>Username:

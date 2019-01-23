@@ -16,7 +16,7 @@ export default ({ currentUser, logout }) => {
 
   return (
     <header className="nav-bar">
-      <h1 className="logo">Fullscreend</h1>
+      <Link to="/"><h1 className="logo">Fullscreend</h1></Link>
       <div>
         {display}
       </div>

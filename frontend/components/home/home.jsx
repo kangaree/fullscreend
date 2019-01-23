@@ -2,6 +2,7 @@ import React from 'react';
 
 export default () => (
     <div className="home">
+        <div class="backdrop"><div class="backdrop-fade"></div></div>
         <h2>The social network for tv lovers.</h2>
         <div className="list"> 
             <img src="https://image.tmdb.org/t/p/original/wjFU9z8EfOwczRTv0FrPcv9zHME.jpg" alt="Cowboy Bebop"/>

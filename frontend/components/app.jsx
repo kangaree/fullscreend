@@ -10,8 +10,8 @@ import { ProtectedRoute } from '../utils/route_utils';
 
 export default () => (
     <div>
-        <Route path="/" component={NavBarContainer} />
         <Route exact path="/" component={Home} />
+        <Route path="/" component={NavBarContainer} />
         <AuthRoute path="/login" component={LoginContainer} />
         <AuthRoute path="/signup" component={SignupContainer} />
     </div>

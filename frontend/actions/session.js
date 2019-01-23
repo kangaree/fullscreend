@@ -22,11 +22,24 @@ export const receiveErrors = errors => ({
     errors,
 });
 
+
+// What's wrong with the below?
+// export const createNewUser = formUser => dispatch => postUser(formUser)
+//     .then(user => dispatch(receiveCurrentUser(user), e => dispatch(receiveErrors(e.responseJSON))));
+
 export const createNewUser = formUser => dispatch => postUser(formUser)
-    .then(user => dispatch(receiveCurrentUser(user), e => dispatch(receiveErrors(e.responseJSON))));
+    .then(user => {
+        return dispatch(receiveCurrentUser(user));
+    }, e => {
+        return dispatch(receiveErrors(e.responseJSON));
+    });
 
 export const login = formUser => dispatch => postSession(formUser)
-    .then(user => dispatch(receiveCurrentUser(user), e => dispatch(receiveErrors(e.responseJSON))));
+    .then(user => {
+        return dispatch(receiveCurrentUser(user));
+    }, e => { 
+        return dispatch(receiveErrors(e.responseJSON));
+    });
 
 export const logout = () => dispatch => deleteSession()
     .then(() => dispatch(logoutCurrentUser()));

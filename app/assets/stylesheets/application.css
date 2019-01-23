@@ -41,3 +41,10 @@ body {
 .list img {
     width: 150px;
 }
+
+.nav-bar {
+   display: flex;
+   justify-content: space-between;
+   padding: 20px;
+   align-items: center;
+}

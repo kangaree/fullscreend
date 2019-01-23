@@ -6,9 +6,10 @@ import NavBar from './nav_bar';
 
 import { logout } from '../../actions/session';
 
-const mapStateToProps = state => ({
-  currentUser: state.session.currentUser,
-});
+const mapStateToProps = state => {
+  return {
+  currentUser: state.entities.users[state.session.currentUserId]
+}};
 
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),

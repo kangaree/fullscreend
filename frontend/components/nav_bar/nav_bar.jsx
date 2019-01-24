@@ -22,10 +22,12 @@ export default ({ currentUser, logout }) => {
 
   return (
     <header className="nav-bar">
-      <div className="nav-logo-text">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/%D0%A3%D0%AD%D0%98%D0%A2.svg" />
-        <Link to="/"><h1 className="logo">Fullscreend</h1></Link>
-      </div>
+      <Link to="/">
+        <div className="nav-logo-text">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/%D0%A3%D0%AD%D0%98%D0%A2.svg" />
+          <h1 className="logo">Fullscreend</h1>
+        </div>
+      </Link>
       <div>
         {display}
       </div>

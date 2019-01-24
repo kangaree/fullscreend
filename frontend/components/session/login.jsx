@@ -37,27 +37,30 @@ class Login extends React.Component {
 
     render() {
         return (
-            <div className="session-form">
-                {this.renderErrors()}
-                <h2>Login</h2>
-                <form>
-                    <label>Username:
-                        <input
-                            type="text"
-                            value={this.state.username}
-                            onChange={this.handleInput('username')}
-                        />
-                    </label>
-                    <label>Password:
-                        <input
-                            type="password"
-                            value={this.state.password}
-                            onChange={this.handleInput('password')}
-                        />
-                    </label>
-                    <button onClick={this.handleSubmit}>Login</button>
-                </form>
-            </div>
+            <>
+                <div className="no-backdrop"></div>
+                <div className="session-form">
+                    {this.renderErrors()}
+                    <h2>Login</h2>
+                    <form>
+                        <label>Username:
+                            <input
+                                type="text"
+                                value={this.state.username}
+                                onChange={this.handleInput('username')}
+                            />
+                        </label>
+                        <label>Password:
+                            <input
+                                type="password"
+                                value={this.state.password}
+                                onChange={this.handleInput('password')}
+                            />
+                        </label>
+                        <button onClick={this.handleSubmit}>Login</button>
+                    </form>
+                </div>
+            </>
         );
     }
 };

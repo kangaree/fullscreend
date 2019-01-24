@@ -107,13 +107,16 @@ footer {
     background-color: #2c3440;
     color: #9ab;
     text-align: center;
-    padding: 0px 0px 10px 0px;
+    margin-top: 30px;
+    padding-bottom: 42px;
+    padding-top: 15px;
     font-family: sans-serif;
 }
 
 footer a {
     color: #9ab;
     text-decoration: none;
+    font-weight: 900;
 }
 
 footer p {
@@ -145,6 +148,9 @@ footer ul li {
     text-align: left;
     width: 1000px;
     margin: 0 auto;
+    font-size: .92307692rem;
+    color: #678;
+    line-height: 1.5;
 }
 
 .nav-bar img {

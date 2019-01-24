@@ -11,9 +11,9 @@ export default () => {
                     <li><Link to="/credit">Credit</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
                 </ul>
-                <div className="footer-links-logos"><p>logos</p></div>
+                <div className="footer-links-logos"><p>♩ / ♪ / ♫ / ♬</p></div>
             </div>
-            <p className="footer-credit"> Fullscreend. Made by a fan of tv and Letterboxd in NY, NY. TV data from TMDb. </p>
+            <p className="footer-credit"> Fullscreend. Made by a fan of tv (and Letterboxd) in NY, NY. TV data from TMDb. </p>
         </footer>
     );
 };

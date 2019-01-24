@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 
 export default () => (
     <div className="home">
-        <div className="backdrop"><div className="backdrop-fade"></div></div>
-        <h2 className="headline-1">The social network for tv lovers.</h2>
-        <p className="headline-2">Start your tv diary now, it's free!</p>
+        <div className="backdrop"><div className="backdrop-fade">
+            <h2 className="headline-1">The social network for tv lovers.</h2>
+            <p className="headline-2">Start your tv diary now, it's free!</p>
+        </div></div>
         <div className="horizontal-featured-list"> 
 
             <Link to="/signup" className="poster-link"><img src="https://image.tmdb.org/t/p/original/wjFU9z8EfOwczRTv0FrPcv9zHME.jpg" alt="Cowboy Bebop" /></Link>

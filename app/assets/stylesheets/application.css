@@ -110,6 +110,7 @@ footer {
    color: #9ab;
    text-align: center;
    padding: 32px 0;
+   font-family: sans-serif;
 }
 
 .nav-bar img {
@@ -153,8 +154,8 @@ a {
 }
 
 .headline-1 {
-    position: absolute;
-    top: 58%;
+    position: relative;
+    top: 66%;
     left: 50%;
     transform: translate(-50%, 0);
     text-align: center;
@@ -162,8 +163,8 @@ a {
 }
 
 .headline-2 {
-    position: absolute;
-    top: 70%;
+    position: relative;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, 0);
     text-align: center;

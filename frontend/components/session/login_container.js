@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { login } from '../../actions/session';
+import { login } from '../../actions/session_actions';
 import Login from './login';
 
 const mapStateToProps = ({ errors }) => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import WelcomeBar from './nav_bar/welcome_bar_container';
+import Modal from './modal/modal'
 import NavBarContainer from './nav_bar/nav_bar_container';
 import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_container';
@@ -11,8 +11,11 @@ import { ProtectedRoute } from '../utils/route_utils';
 
 export default () => (
     <div>
-        <Route exact path="/" component={Home} />
+        <Modal />
         <Route path="/" component={NavBarContainer} />
+
+        {/* Add Switch later! */}
+        <Route exact path="/" component={Home} />
         <AuthRoute path="/login" component={LoginContainer} />
         <AuthRoute path="/signup" component={SignupContainer} />
         <Route path="/" component={FooterContainer} />

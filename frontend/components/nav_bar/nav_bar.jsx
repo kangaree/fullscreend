@@ -6,7 +6,7 @@ export default ({ currentUser, logout }) => {
     <div>
       <nav className="header-nav">
         <ul>
-          <li><Link className="nav-link" to="/login">{currentUser.username}</Link></li>
+          <li><Link className="nav-link" to="/">{currentUser.username}</Link></li>
           <button onClick={logout}>Log Out</button>
           <li><Link className="nav-link" to="/">Activity</Link></li>
           <li><Link className="nav-link" to="/shows">Shows</Link></li>

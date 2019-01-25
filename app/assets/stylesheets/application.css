@@ -385,7 +385,7 @@ footer ul li {
     font-weight: 600;
     position: fixed;
     right: 25%;
-    top: 18px;
+    top: 21px;
 }
 
 /* errors ul */
@@ -437,13 +437,15 @@ footer ul li {
     background: orange;
     position: absolute;
     top: 100%;
-    padding-left: 8px;
-    font-size: 14.5px;
-    border-radius: 2px;
+    font-size: 14px;
+    border-radius: 5px;
+    left: 0;
+    width: 100%;
+    text-align: center;
 }
 
 .div-center {
     display: flex;
     justify-content: center;
-    margin-top: 24px
+    margin-top: 24px;
 }

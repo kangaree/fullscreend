@@ -380,12 +380,12 @@ footer ul li {
     cursor: pointer;
     color: #00b020;
     background-color: transparent;
-    font-size: 12px;
+    font-size: 10.5px;
     border-width: 0px;
     font-weight: 600;
     position: fixed;
     right: 25%;
-    top: 21px;
+    top: 25px;
 }
 
 /* errors ul */

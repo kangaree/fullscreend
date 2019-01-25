@@ -111,9 +111,9 @@ footer {
     background-color: #2c3440;
     color: #9ab;
     text-align: center;
-    margin-top: 30px;
-    padding-bottom: 42px;
-    padding-top: 15px;
+    margin-top: 15px;
+    padding-bottom: 15px;
+    padding-top: 10px;
     font-family: sans-serif;
 }
 
@@ -428,4 +428,10 @@ footer ul li {
     padding-left: 8px;
     font-size: 14.5px;
     border-radius: 2px;
+}
+
+.div-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px
 }

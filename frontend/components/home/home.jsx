@@ -17,5 +17,7 @@ export default () => (
             <Link to="/signup" className="poster-link"><img src="https://image.tmdb.org/t/p/original/aCw8ONfyz3AhngVQa1E2Ss4KSUQ.jpg" alt="Seinfeld" /></Link>
     
         </div>
+
+        <div className="div-center"><a href="//letterboxd.com"><img src="https://a.ltrbxd.com/logos/letterboxd-logo-h-neg-rgb-1000px.png" alt="Letterboxd" /></a></div>
     </div>
 )

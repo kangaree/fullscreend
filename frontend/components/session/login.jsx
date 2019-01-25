@@ -33,13 +33,7 @@ class Login extends React.Component {
 
     renderErrors() {
         return (
-            <ul>
-                {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
-                        {error}
-                    </li>
-                ))}
-            </ul>
+            <div className="session-error">{this.props.errors}</div>    
         );
     }
 
@@ -50,7 +44,6 @@ class Login extends React.Component {
                     <div onClick={this.props.closeModal} className="close-x-login">X</div>
                     {this.renderErrors()}
                     <div className="login-form">
-                        <br />
                         <label>Username
                             <input type="text"
                                 value={this.state.username}
@@ -58,7 +51,6 @@ class Login extends React.Component {
                                 className="login-input"
                             />
                         </label>
-                        <br />
                         <label>Password
                             <input type="password"
                                 value={this.state.password}
@@ -66,8 +58,7 @@ class Login extends React.Component {
                                 className="login-input"
                             />
                         </label>
-                        <br />
-                        <input className="signup-submit-login" type="submit" value="LOGIN" />
+                        <input className="login-submit" type="submit" value="SIGN IN" />
                     </div>
                 </form>
             </div>

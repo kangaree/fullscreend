@@ -11,6 +11,7 @@ class Login extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
     }
 
     update(field) {
@@ -29,6 +30,26 @@ class Login extends React.Component {
         e.preventDefault();
         this.props.processLoginForm(this.state)
             .then(() => this.props.closeModal());
+    }
+
+    handleDemoSubmit(e) {
+        e.preventDefault();
+        const user = {
+            username: "test_user",
+            password: "test_user",
+        }
+        this.props.processLoginForm(user).then(() => this.props.closeModal());
+    }
+
+    renderDemoButton() {
+        const button = () => (
+            <button
+                onClick={this.handleDemoSubmit}
+                className="login-submit-demo"
+            >Testing?
+            </button>
+        );
+        return button();
     }
 
     renderErrors() {
@@ -61,6 +82,7 @@ class Login extends React.Component {
                         <input className="login-submit" type="submit" value="SIGN IN" />
                     </div>
                 </form>
+                    {this.renderDemoButton()}
             </div>
         );
     }

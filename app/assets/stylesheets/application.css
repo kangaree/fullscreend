@@ -376,6 +376,18 @@ footer ul li {
     right: 3%;
 }
 
+.login-submit-demo {
+    cursor: pointer;
+    color: #00b020;
+    background-color: transparent;
+    font-size: 12px;
+    border-width: 0px;
+    font-weight: 600;
+    position: fixed;
+    right: 25%;
+    top: 18px;
+}
+
 /* errors ul */
 .signup-form-container ul {
     margin: 0;

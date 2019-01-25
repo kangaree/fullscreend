@@ -61,8 +61,8 @@ class Login extends React.Component {
     render() {
         return (
             <div className="login-form-container">
+                <div onClick={this.props.closeModal} className="close-x-login">X</div>
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    <div onClick={this.props.closeModal} className="close-x-login">X</div>
                     {this.renderErrors()}
                     <div className="login-form">
                         <label>Username

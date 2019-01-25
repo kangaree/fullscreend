@@ -325,10 +325,12 @@ footer ul li {
 .close-x-login {
     cursor: pointer;
     color: #345;
-    padding: 3px;
-    padding-right: 20px;
+    padding-left: 3px;
+    padding-right: 10px;
+    padding-top: 10px;
     font-family: sans-serif;
     text-transform: lowercase;
+    position: relative;
 }
 
 .signup-form-container h1 {
@@ -338,6 +340,12 @@ footer ul li {
     font-size: 1.15384615rem;
     color: #2d3b4b;
     margin: 0;
+}
+
+.login-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .login-form-container h1 {
@@ -384,7 +392,7 @@ footer ul li {
     border-width: 0px;
     font-weight: 600;
     position: fixed;
-    right: 25%;
+    right: 25.6%;
     top: 25px;
 }
 

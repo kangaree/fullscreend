@@ -391,9 +391,9 @@ footer ul li {
     font-size: 10.5px;
     border-width: 0px;
     font-weight: 600;
-    position: fixed;
-    right: 25.6%;
-    top: 25px;
+    position: absolute;
+    right: 23%;
+    top: 6px;
 }
 
 /* errors ul */

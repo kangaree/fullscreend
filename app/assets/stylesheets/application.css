@@ -242,6 +242,16 @@ footer ul li {
     z-index: 10;
 }
 
+.modal-background-login {
+    position: fixed;
+    top: 10%;
+    bottom: 50%;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+}
+
 .modal-child {
     position: absolute;
     top: 50%;
@@ -249,7 +259,7 @@ footer ul li {
     transform: translate(-50%, -50%);
 }
 
-.login-form-container {
+.signup-form-container {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -264,13 +274,28 @@ footer ul li {
     font-family: sans-serif;
 }
 
-.login-form {
+/* .login-form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 330px;
+    width: 400px;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    background: #657586;
+    padding: 50px;
+    border-radius: 3px;
+    font-family: sans-serif;
+} */
+
+.signup-form {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-.login-input {
+.signup-input {
     margin-left: 20px;
 }
 
@@ -294,13 +319,17 @@ footer ul li {
     box-shadow: inset 0 1px 0 hsla(0,0%,100%,.3)
 }
 
-.login-form-container h1 {
+.signup-form-container h1 {
     text-transform: uppercase;
     letter-spacing: .075em;
     font-weight: 400;
     font-size: 1.15384615rem;
     color: #2d3b4b;
     margin: 0;
+}
+
+.login-form-container h1 {
+    font-size: 30px;
 }
 
 .signup-submit {
@@ -318,13 +347,13 @@ footer ul li {
 }
 
 /* errors ul */
-.login-form-container ul {
+.signup-form-container ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.login-input {
+.signup-input {
     padding: 9px 9px 8px;
     border: none;
     font-size: 1.07692308rem;

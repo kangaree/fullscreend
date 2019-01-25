@@ -47,20 +47,20 @@ class Signup extends React.Component {
     render() {
 
         return (
-            <div className="login-form-container">
-                <form onSubmit={this.handleSubmit} className="login-form-box">
+            <div className="signup-form-container">
+                <form onSubmit={this.handleSubmit} className="signup-form-box">
                     <h1>JOIN LETTERBOXD</h1>
                     <br/>
                     {/* Please {this.props.formType} or {this.props.otherForm} */}
                     <div onClick={this.props.closeModal} className="close-x">X</div>
                     {this.renderErrors()}
-                    <div className="login-form">
+                    <div className="signup-form">
                     <br />
                         <label>Email
                             <input type="text"
                                 value={this.state.email}
                                 onChange={this.update('email')}
-                                className="login-input"
+                                className="signup-input"
                             />
                         </label>
                     <br/>
@@ -68,7 +68,7 @@ class Signup extends React.Component {
                             <input type="text"
                                     value={this.state.username}
                                     onChange={this.update('username')}
-                                    className="login-input"
+                                    className="signup-input"
                                 />
                         </label>
                     <br/>
@@ -76,7 +76,7 @@ class Signup extends React.Component {
                             <input type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
-                                className="login-input"
+                                className="signup-input"
                             />
                         </label>
                     <br/>

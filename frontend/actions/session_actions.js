@@ -22,11 +22,6 @@ export const receiveErrors = errors => ({
     errors,
 });
 
-
-// What's wrong with the below?
-// export const createNewUser = formUser => dispatch => postUser(formUser)
-//     .then(user => dispatch(receiveCurrentUser(user), e => dispatch(receiveErrors(e.responseJSON))));
-
 export const createNewUser = formUser => dispatch => postUser(formUser)
     .then(user => {
         return dispatch(receiveCurrentUser(user));

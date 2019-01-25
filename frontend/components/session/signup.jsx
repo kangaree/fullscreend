@@ -1,4 +1,6 @@
 import React from 'react';
+import { closeModal } from '../../actions/modal_actions';
+import { withRouter } from 'react-router-dom';
 
 class Signup extends React.Component {
     constructor(props) {
@@ -12,6 +14,12 @@ class Signup extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    update(field) {
+        return e => this.setState({
+            [field]: e.currentTarget.value
+        });
+    }
+
     handleInput(type) {
         return (e) => {
             this.setState({ [type]: e.target.value })
@@ -20,8 +28,8 @@ class Signup extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.createNewUser(this.state)
-            .then(() => this.props.history.push('/shows'));
+        this.props.processSignupForm(this.state)
+            .then(() => this.props.closeModal());
     }
 
     renderErrors() {
@@ -39,40 +47,47 @@ class Signup extends React.Component {
     render() {
 
         return (
-            <>
-                <div className="no-backdrop"></div>
-
-                <div className="session-form">
+            <div className="login-form-container">
+                <form onSubmit={this.handleSubmit} className="login-form-box">
+                    <h1>JOIN LETTERBOXD</h1>
+                    <br/>
+                    {/* Please {this.props.formType} or {this.props.otherForm} */}
+                    <div onClick={this.props.closeModal} className="close-x">X</div>
                     {this.renderErrors()}
-                    <h2>Sign Up</h2>
-                    <form>
-                        <label>Username:
-                            <input
-                                type="text"
-                                value={this.state.username}
-                                onChange={this.handleInput('username')}
-                            />
-                        </label>
-                        <label>Email:
-                            <input
-                                type="text"
+                    <div className="login-form">
+                    <br />
+                        <label>Email
+                            <input type="text"
                                 value={this.state.email}
-                                onChange={this.handleInput('email')}
+                                onChange={this.update('email')}
+                                className="login-input"
                             />
                         </label>
-                        <label>Password:
-                            <input
-                                type="password"
+                    <br/>
+                        <label>Username
+                            <input type="text"
+                                    value={this.state.username}
+                                    onChange={this.update('username')}
+                                    className="login-input"
+                                />
+                        </label>
+                    <br/>
+                        <label>Password
+                            <input type="password"
                                 value={this.state.password}
-                                onChange={this.handleInput('password')}
+                                onChange={this.update('password')}
+                                className="login-input"
                             />
                         </label>
-                        <button onClick={this.handleSubmit}>Sign Up</button>
-                    </form>
-                </div>
-            </>
+                    <br/>
+                        <input className="signup-submit" type="submit" value="SIGN UP" />
+                    </div>
+                </form>
+            </div>
+
         );
     }
 };
 
-export default Signup;
+// export default Signup;
+export default withRouter(Signup);

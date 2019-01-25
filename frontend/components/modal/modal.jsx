@@ -10,9 +10,9 @@ function Modal({ modal, closeModal }) {
     }
     let component;
     switch (modal) {
-        case 'login':
-            component = <LoginContainer />;
-            break;
+        // case 'login':
+        //     component = <LoginContainer />;
+        //     break;
         case 'signup':
             component = <SignupContainer />;
             break;

@@ -16,8 +16,8 @@ export default () => (
 
         <Switch>
             <Route exact path="/" component={Home} />
-            <AuthRoute path="/login" component={LoginContainer} />
-            <AuthRoute path="/signup" component={SignupContainer} />
+            {/* <AuthRoute path="/login" component={LoginContainer} />
+            <AuthRoute path="/signup" component={SignupContainer} /> */}
         </Switch>
 
         <footer><Route path="/" component={FooterContainer} /></footer>

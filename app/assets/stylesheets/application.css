@@ -243,13 +243,24 @@ footer ul li {
 }
 
 .modal-background-login {
-    position: fixed;
-    top: 10%;
-    bottom: 50%;
-    right: 0;
-    left: 0;
+    /* position: fixed; */
     background: rgba(0, 0, 0, 0.7);
     z-index: 10;
+
+    position: absolute;
+    top: 20px;
+    right: 250px;
+
+    height: 100px;
+    width: 520px;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    background: #657586;
+    padding: 0px;
+    border-radius: 3px;
+    font-family: sans-serif;
+
+    display: flex;
 }
 
 .modal-child {
@@ -274,20 +285,9 @@ footer ul li {
     font-family: sans-serif;
 }
 
-/* .login-form-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 330px;
-    width: 400px;
-    background: rgba(0, 0, 0, 0.9);
-    z-index: 10;
-    background: #657586;
-    padding: 50px;
-    border-radius: 3px;
-    font-family: sans-serif;
-} */
+.login-form-box * {
+    display: inline-block;
+}
 
 .signup-form {
     display: flex;
@@ -317,6 +317,10 @@ footer ul li {
     cursor: pointer;
     background: orange;
     box-shadow: inset 0 1px 0 hsla(0,0%,100%,.3)
+}
+
+.close-x-login {
+    cursor: pointer;
 }
 
 .signup-form-container h1 {
@@ -366,5 +370,21 @@ footer ul li {
     box-shadow: inset 0 -1px 0 #fff;
     display: block;
     width: 100%;
+    margin: 0;
+}
+
+.login-input {
+
+    border: none;
+    font-size: 1.07692308rem;
+    line-height: 1;
+    box-sizing: border-box;
+    border-radius: 3px;
+
+    background-color: #cde;
+    color: #567;
+    box-shadow: inset 0 -1px 0 #fff;
+    display: block;
+    width: 30%;
     margin: 0;
 }

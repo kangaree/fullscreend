@@ -4,5 +4,5 @@ import showsReducer from './shows';
 
 export default combineReducers({
     users: usersReducer,
-    shows: showsReducer,
+    search_shows: showsReducer,
 });

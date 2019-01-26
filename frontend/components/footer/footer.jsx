@@ -11,7 +11,7 @@ export default () => {
                     <li><Link to="/credit">Credit</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
                 </ul>
-                <div className="footer-links-logos"><p><i class="fab fa-github"></i> / <i class="fab fa-linkedin-in"></i> / <i class="fas fa-envelope"></i></p></div>
+                <div className="footer-links-logos"><p><i className="fab fa-github"></i> / <i className="fab fa-linkedin-in"></i> / <i className="fas fa-envelope"></i></p></div>
             </div>
             <p className="footer-credit"> Fullscreend. Made by a fan of tv (and Letterboxd) in NY, NY. TV data from TMDb. </p>
         </footer>

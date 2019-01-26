@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             entities: {
                 users: { [currentUser.id]: currentUser },
-                shows: []
+                search_shows: []
             },
         };
     }

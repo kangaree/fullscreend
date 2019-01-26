@@ -1,0 +1,25 @@
+.headline-1 {
+    position: relative;
+    top: 66%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    font-size: 40px;
+    font-family: serif;
+}
+
+.headline-2 {
+    position: relative;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.div-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}

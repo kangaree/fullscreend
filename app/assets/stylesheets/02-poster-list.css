@@ -1,0 +1,19 @@
+.horizontal-featured-list {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+}
+
+.poster-link img {
+    width: 150px;
+    height: 230px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+}
+
+.poster-link img:hover {
+    border: 1px solid #00e054;
+    background-color: #fff;
+    color: #fff;
+}

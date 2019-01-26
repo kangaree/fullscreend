@@ -5,6 +5,7 @@ import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_container';
 import FooterContainer from './footer/footer_container';
 import ShowsSearchContainer from './shows_search/shows_search_container';
+import ShowsPopularContainer from './shows_popular/shows_popular_container';
 import Home from './home/home';
 import Blank from './blank/blank';
 import { Route, Switch } from 'react-router-dom';
@@ -18,6 +19,7 @@ export default () => (
         {/* <ShowsSearchContainer /> */}
         <Switch>
             <Route exact path="/" component={Home} />
+            <Route exact path="/shows" component={ShowsPopularContainer} />
             <Route path="/" component={Blank} />
         </Switch>
 

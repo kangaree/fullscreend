@@ -9,6 +9,7 @@ export const fetchSearchShows = searchTerm => dispatch => {
 };
 
 export const receiveShows = shows => {
+    debugger
     return {
         type: RECEIVE_SEARCH_SHOWS,
         shows

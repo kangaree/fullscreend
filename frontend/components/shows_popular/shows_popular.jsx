@@ -26,6 +26,7 @@ class ShowsPopular extends React.Component {
 
     render() {
         let { shows } = this.props;
+        this.props.fetchPopularShows(1);
 
         return (
             <>

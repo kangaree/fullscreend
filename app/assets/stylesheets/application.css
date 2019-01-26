@@ -185,7 +185,7 @@ footer ul li {
 }
 
 .header-nav input {
-     height: 10px;
+    /* opacity: 0; */
 }
 
 .nav-logo-text {
@@ -460,4 +460,30 @@ footer ul li {
 
 .search-bar-test {
     position: absolute;
+    right: 11.3%;
+    top: 5.5%;
+    display: flex;
+    display: block;
+    color: #89a;
+    font-size: 1rem;
+    line-height: 1.30769231;
+    /* padding: 8px 30px 8px 10px; */
+    /* height: 30px; */
+    border-radius: 15px;
+}
+
+.shows-ul {
+    position: absolute;
+    top: 9%;
+    right: 13%;
+    list-style: none;
+    background-color: gray;
+    padding: 0px 0px 0px 0px;
+    padding-inline-start: 0px;
+    -webkit-padding-start: 0;
+}
+
+.show-li img {
+    width: 11px;
+    border-radius: 5px;
 }

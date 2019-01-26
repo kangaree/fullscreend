@@ -14,12 +14,11 @@ export default () => (
     <div>
         <Modal />
         <header><Route path="/" component={NavBarContainer} /></header>
-        <Route path="/" component={ShowsSearchContainer} />
-        <Route path="/" component={FooterContainer} />
-
+        <ShowsSearchContainer />
         <Switch>
             <Route exact path="/" component={Home} />
         </Switch>
 
+        <Route path="/" component={FooterContainer} />
     </div>
 );

@@ -10,9 +10,9 @@ class ShowsSearch extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    componentDidMount() {
-        this.props.fetchSearchShows('');
-    }
+    // componentDidMount() {
+        // this.props.fetchSearchShows(' ');
+    // }
 
     handleChange(e) {
         this.setState({ searchTerm: e.currentTarget.value });

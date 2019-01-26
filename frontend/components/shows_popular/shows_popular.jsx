@@ -10,9 +10,9 @@ class ShowsPopular extends React.Component {
         // this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    // componentDidUpdate() {
-        // this.props.fetchSearchShows(' ');
-    // }
+    componentDidMount() {
+        this.props.fetchPopularShows(1);
+    }
 
     // handleChange(e) {
     //     this.setState({ searchTerm: e.currentTarget.value });
@@ -26,7 +26,6 @@ class ShowsPopular extends React.Component {
 
     render() {
         let { shows } = this.props;
-        this.props.fetchPopularShows(1);
 
         return (
             <>

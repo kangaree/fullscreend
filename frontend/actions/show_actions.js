@@ -5,11 +5,10 @@ export const REQUEST_SEARCH_SHOWS = 'REQUEST_SEARCH_SHOWS';
 
 export const fetchSearchShows = searchTerm => dispatch => {
     return APIUtil.fetchSearchShows(searchTerm)
-        .then(shows => dispatch(receiveShows(shows.results)))
+        .then(shows => dispatch(receiveSearchShows(shows.results)))
 };
 
-export const receiveShows = shows => {
-    debugger
+export const receiveSearchShows = shows => {
     return {
         type: RECEIVE_SEARCH_SHOWS,
         shows
@@ -21,7 +20,7 @@ export const REQUEST_POPULAR_SHOWS = 'REQUEST_POPULAR_SHOWS';
 
 export const fetchPopularShows = page => dispatch => {
     return APIUtil.fetchPopularShows(page)
-        .then(shows => dispatch(receiveShows(shows.results)))
+        .then(shows => dispatch(receivePopularShows(shows.results)))
 };
 
 export const receivePopularShows = shows => {
@@ -30,3 +29,4 @@ export const receivePopularShows = shows => {
         shows
     }
 };
+

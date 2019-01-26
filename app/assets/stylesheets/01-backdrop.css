@@ -33,3 +33,8 @@
     width: 100%;
     height: 700px;
 }
+
+.blank-header {
+    background: #14181b;
+    height: 70px;
+}

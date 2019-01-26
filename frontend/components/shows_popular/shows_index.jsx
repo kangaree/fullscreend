@@ -5,10 +5,12 @@ import ShowsIndexItem from './shows_index_item';
 function ShowsIndex({ shows }) {
     return (
         <>
-            <div className="no-backdrop"></div>
-            <ul className="shows-ul-SPECIAL">
-                { shows.map(show => <ShowsIndexItem key={show.id} show={show} />) }
-            </ul>
+            <div className="blank-header"></div>
+            <div className="show-index">
+                <ul className="shows-ul-popular">
+                    { shows.map(show => <ShowsIndexItem key={show.id} show={show} />) }
+                </ul>
+            </div>
         </>
     );
 }

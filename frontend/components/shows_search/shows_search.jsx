@@ -28,13 +28,13 @@ class ShowsSearch extends React.Component {
         let { shows } = this.props;
 
         return (
-            <div>
+            <>
                 <form className="search-bar-test">
                     <input value={this.state.searchTerm} onChange={this.handleChange} />
                     <button type="submit" onClick={this.handleSubmit}><i className="fas fa-search"></i></button>
                 </form>
                 <ShowsIndex shows={shows} />
-            </div>
+            </>
         );
     }
 }

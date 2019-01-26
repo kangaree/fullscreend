@@ -20,14 +20,13 @@ export default ({ currentUser, logout, openModal }) => {
   ) : (
       <nav className="header-nav">
         <ul>
-          <ShowsSearchContainer />
           <li><a className="nav-link" onClick={() => openModal('login')}>Sign In</a></li>
           <li><a className="nav-link" onClick={() => openModal('signup')}>Create Account</a></li>
           <li><Link className="nav-link" to="/shows">Shows</Link></li>
           <li><Link className="nav-link" to="/lists">Lists</Link></li>
           <li><Link className="nav-link" to="/users">People</Link></li >
+          <li className="nav-search-input" margin-right={0}><ShowsSearchContainer /></li>
         </ul>
-          <input type="text" />
       </nav>
     );
 

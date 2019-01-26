@@ -9,3 +9,7 @@ body {
 h1 {
     font-family: serif;
 }
+
+#root {
+    margin: -10px 0;
+}

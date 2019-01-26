@@ -14,7 +14,7 @@ export default () => (
     <div>
         <Modal />
         <header><Route path="/" component={NavBarContainer} /></header>
-        <ShowsSearchContainer />
+        {/* <ShowsSearchContainer /> */}
         <Switch>
             <Route exact path="/" component={Home} />
         </Switch>

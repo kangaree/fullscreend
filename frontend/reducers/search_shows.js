@@ -1,6 +1,6 @@
 import { RECEIVE_SEARCH_SHOWS } from '../actions/show_actions';
 
-const showsReducer = (state = [], action) => {
+const searchShowsReducer = (state = [], action) => {
     switch (action.type) {
         case RECEIVE_SEARCH_SHOWS:
             return action.shows;
@@ -9,4 +9,4 @@ const showsReducer = (state = [], action) => {
     }
 };
 
-export default showsReducer;
+export default searchShowsReducer;

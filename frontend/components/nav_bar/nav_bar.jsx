@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ShowsSearchContainer from '../shows_search/shows_search_container';
 
 export default ({ currentUser, logout, openModal }) => {
   const display = currentUser ? (
@@ -19,6 +20,7 @@ export default ({ currentUser, logout, openModal }) => {
   ) : (
       <nav className="header-nav">
         <ul>
+          <ShowsSearchContainer />
           <li><a className="nav-link" onClick={() => openModal('login')}>Sign In</a></li>
           <li><a className="nav-link" onClick={() => openModal('signup')}>Create Account</a></li>
           <li><Link className="nav-link" to="/shows">Shows</Link></li>

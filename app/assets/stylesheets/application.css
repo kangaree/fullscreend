@@ -457,3 +457,7 @@ footer ul li {
     justify-content: center;
     margin-top: 24px;
 }
+
+.search-bar-test {
+    position: absolute;
+}

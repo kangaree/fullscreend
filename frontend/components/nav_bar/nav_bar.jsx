@@ -13,8 +13,8 @@ export default ({ currentUser, logout, openModal }) => {
           <li><Link className="nav-link" to="/shows">Shows</Link></li>
           <li><Link className="nav-link" to="/lists">Lists</Link></li>
           <li><Link className="nav-link" to="/users">People</Link></li >
+          <li className="nav-search-input"><ShowsSearchContainer /></li>
         </ul>
-        <input type="text" />
       </nav>
     </div>
   ) : (
@@ -25,7 +25,7 @@ export default ({ currentUser, logout, openModal }) => {
           <li><Link className="nav-link" to="/shows">Shows</Link></li>
           <li><Link className="nav-link" to="/lists">Lists</Link></li>
           <li><Link className="nav-link" to="/users">People</Link></li >
-          <li className="nav-search-input" margin-right={0}><ShowsSearchContainer /></li>
+          <li className="nav-search-input"><ShowsSearchContainer /></li>
         </ul>
       </nav>
     );

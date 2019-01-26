@@ -33,7 +33,7 @@
      align-items: center;
 }
 
-.header-nav ul li {
+.header-nav > ul > li {
      display: inline-block;
      list-style: none;
      margin-left: 10px;

@@ -22,13 +22,14 @@
     /* padding: 0px 0px 0px 0px; */
     padding-inline-start: 0px;
     -webkit-padding-start: 0;
-    width: 160px;
+    width: 135px;
 }
 
 .show-li {
-    width: 100%;
+    margin-right: 10px;
+    margin-left: 0px;
 }
 
 .show-li img {
-    width: 11px;
+    width: 20px;
 }

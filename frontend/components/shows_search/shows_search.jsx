@@ -8,11 +8,26 @@ class ShowsSearch extends React.Component {
         this.state = { searchTerm: '' };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.searchWordNone = this.searchWordNone.bind(this);
     }
 
     // componentDidUpdate() {
         // this.props.fetchSearchShows(' ');
     // }
+
+    componentDidUpdate(prevProps, prevState) {
+        if (this.state.searchTerm.length == 0 && prevState.searchTerm.length > 0) {
+            this.props.removeSearchedShows();
+        }
+    }
+
+    // update() {
+    //     return e => this.setState({ searchTerm: e.currentTarget.value })
+    // };
+
+    searchWordNone() {
+        this.setState({ searchTerm: "" })
+    }
 
     handleChange(e) {
         this.setState({ searchTerm: e.currentTarget.value });

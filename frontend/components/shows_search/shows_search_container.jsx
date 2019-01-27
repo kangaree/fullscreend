@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ShowsSearch from './shows_search';
-import { fetchSearchShows } from '../../actions/show_actions';
+import { fetchSearchShows, removeSearchedShows } from '../../actions/show_actions';
 
 const mapStateToProps = state => {
     return { shows: state.entities.search_shows };
@@ -8,7 +8,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchSearchShows: searchTerm => dispatch(fetchSearchShows(searchTerm))
+        fetchSearchShows: searchTerm => dispatch(fetchSearchShows(searchTerm)),
+        removeSearchedShows: () => dispatch(removeSearchedShows())
     };
 };
 

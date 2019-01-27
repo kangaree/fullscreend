@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function ShowsIndexItem({ show }) {
     return (
         <li className="show-li">
-            {show.name}
+            <Link to={"/shows/" + show.id} className="search-link">{show.name}</Link>
         </li>
     );
 }

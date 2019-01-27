@@ -8,6 +8,7 @@ class ShowsSearch extends React.Component {
         this.state = { searchTerm: '' };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.onFocus = this.onFocus.bind(this);
         this.searchWordNone = this.searchWordNone.bind(this);
     }
 
@@ -39,16 +40,21 @@ class ShowsSearch extends React.Component {
         this.props.fetchSearchShows(searchTerm);
     }
 
+    onFocus() {
+        this.setState({ searchTerm: "" });
+        // this.inputField.value = "";
+    }
+
     render() {
-        let { shows } = this.props;
+        let { shows, removeSearchedShows } = this.props;
 
         return (
             <>
                 <form className="search-bar-test">
-                    <input value={this.state.searchTerm} onChange={this.handleChange} />
+                    <input value={this.state.searchTerm} onChange={this.handleChange} onFocus={this.onFocus}/>
                     <button type="submit" onClick={this.handleSubmit}><i className="fas fa-search"></i></button>
                 </form>
-                <ShowsIndex shows={shows} />
+                <ShowsIndex shows={shows} removeSearchedShows={removeSearchedShows} />
             </>
         );
     }

@@ -1,7 +1,28 @@
 .show-index {
-    background-image: linear-gradient(#1e252d, #1e252d)
+    background-image: linear-gradient(#1e252d, #1e252d);
+    display: flex;
+    justify-content: center;
 }
 
 .shows-ul-popular {
     margin-bottom: 0;
+    list-style: none;
+    columns: 4;
+    -webkit-columns: 4;
+    -moz-columns: 4;
+    padding-left: 0;
+}
+
+.show-li img {
+    width: 240px;
+    height: 350px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+}
+
+
+.show-li img:hover {
+    border: 1px solid #00e054;
+    background-color: #fff;
+    color: #fff;
 }

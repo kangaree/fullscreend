@@ -1,4 +1,6 @@
 .show-index {
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-image: linear-gradient(#1e252d, #1e252d);
     display: flex;
     justify-content: center;
@@ -11,18 +13,24 @@
     -webkit-columns: 4;
     -moz-columns: 4;
     padding-left: 0;
+    width: 960px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
 }
 
 .show-li img {
-    width: 240px;
-    height: 350px;
-    border-radius: 3px;
-    border: 1px solid transparent;
+    width: 218px;
+    height: 318px;
+    border-radius: 8px;
+    border: 2px solid transparent;
 }
 
 
 .show-li img:hover {
-    border: 1px solid #00e054;
+    border: 2px solid #00e054;
     background-color: #fff;
     color: #fff;
 }

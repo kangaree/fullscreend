@@ -25,11 +25,12 @@ class ShowsShow extends Component {
 
         return (
             <>
-                <div className="blank-header"></div>
-                <section className="show-index">
-                    <h2>{show.name}</h2>
-                    { show.overview }
-                    <img src={"https://image.tmdb.org/t/p/w500/" + show.backdrop_path} />
+                <div className="backdrop" style={{ backgroundImage: `url(${"https://image.tmdb.org/t/p/original" + show.backdrop_path})` }}><div className="backdrop-fade">
+                    <h2 className="headline-1">{show.name}</h2>
+                    <p className="headline-2">{show.overview}</p>
+                </div></div>
+                <section className="show-show">
+
                 </section>
             </>
         );

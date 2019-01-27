@@ -30,7 +30,7 @@ export const receivePopularShows = shows => {
     }
 };
 
-export const REMOVE_SEARCHED_SHOWS = 'REMOVED_SEARCHED_SHOWS'
+export const REMOVE_SEARCHED_SHOWS = 'REMOVE_SEARCHED_SHOWS'
 
 export const discardSearchedShows = () => dispatch => (
     dispatch(removeSearchedShows())
@@ -39,3 +39,18 @@ export const discardSearchedShows = () => dispatch => (
 export const removeSearchedShows = () => ({
     type: REMOVE_SEARCHED_SHOWS
 })
+
+export const RECEIVE_SHOW = 'RECEIVE_SHOW';
+
+
+export const receiveShow = show => {
+    return {
+        type: RECEIVE_SHOW,
+        show
+    }
+};
+
+export const fetchShow = id => dispatch => (
+    APIUtil.fetchShow(id)
+        .then(show => (dispatch(receiveShow(show))))
+);

@@ -30,3 +30,12 @@ export const receivePopularShows = shows => {
     }
 };
 
+export const REMOVE_SEARCHED_SHOWS = 'REMOVED_SEARCHED_SHOWS'
+
+export const discardSearchedShows = () => dispatch => (
+    dispatch(removeSearchedShows())
+);
+
+export const removeSearchedShows = () => ({
+    type: REMOVE_SEARCHED_SHOWS
+})

@@ -3,7 +3,12 @@ import ShowsPopular from './shows_popular';
 import { fetchPopularShows } from '../../actions/show_actions';
 
 const mapStateToProps = state => {
-    return { shows: Object.values(state.entities.popular_shows) };
+    return { 
+        showIds: state.entities.popular_shows,
+        shows: state.entities.shows,
+
+        // shows: (state.entities.popular_shows).map(showId => state.entities.shows[showId])
+    };
 };
 
 const mapDispatchToProps = dispatch => {

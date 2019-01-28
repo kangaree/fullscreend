@@ -25,11 +25,11 @@ class ShowsPopular extends React.Component {
     }
 
     render() {
-        let { shows } = this.props;
+        let { showIds, shows } = this.props;
 
         return (
             <>
-                <ShowsIndex shows={shows} />
+                <ShowsIndex shows={shows} showIds={showIds}/>
                 <div className="pagination-buttons">
                     <button onClick={this.showPreviousPage} className="previous_page">previous</button>
                     <button onClick={this.showNextPage} className="next_page">next</button>

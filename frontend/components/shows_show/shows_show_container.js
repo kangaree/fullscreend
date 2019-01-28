@@ -7,7 +7,7 @@ import { fetchShow } from '../../actions/show_actions';
 const mapStateToProps = (state, ownProps) => {
     // debugger
     // const show = state.entities.show[ownProps.match.params.showId];
-    const show = state.entities.shows_show;
+    const show = Object.values(state.entities.shows_show)[0];
     // debugger
     return {
         show,

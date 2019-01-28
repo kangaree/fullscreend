@@ -26,7 +26,15 @@ const showsReducer = (state = {}, action) => {
             return newShows;
 
         case RECEIVE_SEARCH_SHOWS:
-            return merge({}, state, action.shows);
+
+            let newShows2 = merge({}, state);
+
+            (Object.values(action.shows)).forEach(show => {
+                newShows2[show.id] = show;
+            });
+
+            return newShows2;
+            
         default:
             return state;
     }

@@ -16,7 +16,7 @@ const searchShowsReducer = (state = [], action) => {
 
             return merge([], state, action.shows.map((show) => show.id));
         case REMOVE_SEARCHED_SHOWS:
-            return {};
+            return [];
         default:
             return state;
     }

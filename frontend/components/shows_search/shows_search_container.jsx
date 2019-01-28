@@ -6,7 +6,7 @@ const mapStateToProps = state => {
     // return { shows: Object.values(state.entities.search_shows) };
 
     return {
-        showIds: state.entities.search_shows,
+        showIds: state.ui.search_shows,
         shows: state.entities.shows,
     };
 };

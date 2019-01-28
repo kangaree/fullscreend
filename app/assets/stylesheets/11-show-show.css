@@ -5,3 +5,16 @@
 }
 
 
+.headline-3 {
+    position: relative;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
+    width: 75%;
+    /* text-overflow: ellipsis;
+    height: 100px;
+    overflow: hidden; */
+}

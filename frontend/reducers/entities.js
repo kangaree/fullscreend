@@ -6,6 +6,7 @@ import showShowsReducer from './show_shows';
 
 export default combineReducers({
     users: usersReducer,
+    // comment out below later
     search_shows: searchShowsReducer,
     popular_shows: popularShowsReducer,
     shows_show: showShowsReducer,

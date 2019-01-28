@@ -10,6 +10,6 @@ export default combineReducers({
     // comment out below later
     // search_shows: searchShowsReducer,
     // popular_shows: popularShowsReducer,
-    shows_show: showShowsReducer,
+    // shows_show: showShowsReducer,
     shows: showsReducer,
 });

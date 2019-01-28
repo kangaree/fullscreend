@@ -4,11 +4,11 @@ import {
     RECEIVE_SHOW
 } from '../actions/show_actions';
 
-const showReducer = (state = {}, action) => {
+const showReducer = (state = null, action) => {
     switch (action.type) {
         case RECEIVE_SHOW:
             // debugger
-            return merge({}, state, { [action.show.id]: action.show });
+            return action.show.id;
         default:
             return state;
     }

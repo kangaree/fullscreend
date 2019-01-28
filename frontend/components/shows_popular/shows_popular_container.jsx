@@ -4,7 +4,7 @@ import { fetchPopularShows } from '../../actions/show_actions';
 
 const mapStateToProps = state => {
     return { 
-        showIds: state.entities.popular_shows,
+        showIds: state.ui.popular_shows,
         shows: state.entities.shows,
 
         // shows: (state.entities.popular_shows).map(showId => state.entities.shows[showId])

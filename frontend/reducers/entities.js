@@ -8,8 +8,8 @@ import showsReducer from './shows';
 export default combineReducers({
     users: usersReducer,
     // comment out below later
-    search_shows: searchShowsReducer,
-    popular_shows: popularShowsReducer,
+    // search_shows: searchShowsReducer,
+    // popular_shows: popularShowsReducer,
     shows_show: showShowsReducer,
     shows: showsReducer,
 });

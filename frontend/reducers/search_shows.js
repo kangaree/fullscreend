@@ -1,11 +1,20 @@
 import { RECEIVE_SEARCH_SHOWS, REMOVE_SEARCHED_SHOWS } from '../actions/show_actions';
+import merge from 'lodash/merge';
 
-const searchShowsReducer = (state = [], action) => {
+const searchShowsReducer = (state = {}, action) => {
+    Object.freeze(state);
+    
     switch (action.type) {
         case RECEIVE_SEARCH_SHOWS:
-            return action.shows;
+            let newShows = merge({}, state);
+
+            action.shows.forEach(show => {
+                newShows[show.id] = show;
+            });
+
+            return newShows;
         case REMOVE_SEARCHED_SHOWS:
-            return [];
+            return {};
         default:
             return state;
     }

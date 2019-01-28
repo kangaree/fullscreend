@@ -21,6 +21,8 @@ class User < ApplicationRecord
   has_many :links
   has_many :comments
 
+  has_many :reviews
+
   after_initialize :ensure_session_token
 
   def self.find_by_credentials(username, password)

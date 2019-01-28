@@ -10,14 +10,22 @@ Rails.application.routes.draw do
 
     resource :session, only: [:new, :create, :destroy]
 
+    # resources :reviews, only: [:create, :destroy, :update]
+
     # post '/search', to: 'users#search'
 
     # resources :chirps
     # resources :likes, only: [:create]
     # delete '/likes', to: 'likes#destroy'
     # resources :follows, only: [:create, :destroy]
+
+    resources :shows, only: [] do
+      resources :reviews, only: [:create, :update, :show]
+    end
+
   end
 
   resources :users, only: [:new, :create]
   resource :session, only: [:new, :create, :destroy]
+  resources :review, only: [:destroy]
 end

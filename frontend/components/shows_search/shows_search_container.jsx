@@ -3,7 +3,12 @@ import ShowsSearch from './shows_search';
 import { fetchSearchShows, removeSearchedShows } from '../../actions/show_actions';
 
 const mapStateToProps = state => {
-    return { shows: Object.values(state.entities.search_shows) };
+    // return { shows: Object.values(state.entities.search_shows) };
+
+    return {
+        showIds: state.entities.popular_shows,
+        shows: state.entities.shows,
+    };
 };
 
 const mapDispatchToProps = dispatch => {

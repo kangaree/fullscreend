@@ -46,7 +46,7 @@ class ShowsSearch extends React.Component {
     }
 
     render() {
-        let { shows, removeSearchedShows } = this.props;
+        let { showIds, removeSearchedShows, shows } = this.props;
 
         return (
             <>
@@ -54,7 +54,7 @@ class ShowsSearch extends React.Component {
                     <input value={this.state.searchTerm} onChange={this.handleChange} onFocus={this.onFocus}/>
                     <button type="submit" onClick={this.handleSubmit}><i className="fas fa-search"></i></button>
                 </form>
-                <ShowsIndex shows={shows} removeSearchedShows={removeSearchedShows} />
+                <ShowsIndex shows={shows} showIds={showIds} removeSearchedShows={removeSearchedShows} />
             </>
         );
     }

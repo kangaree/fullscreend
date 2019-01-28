@@ -4,7 +4,7 @@ import {
     RECEIVE_SHOW
 } from '../actions/show_actions';
 
-const showReducer = (state = [], action) => {
+const showReducer = (state = {}, action) => {
     switch (action.type) {
         case RECEIVE_SHOW:
             // debugger

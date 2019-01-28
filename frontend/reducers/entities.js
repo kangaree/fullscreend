@@ -3,6 +3,7 @@ import usersReducer from './users';
 import searchShowsReducer from './search_shows';
 import popularShowsReducer from './popular_shows';
 import showShowsReducer from './show_shows';
+import showsReducer from './shows';
 
 export default combineReducers({
     users: usersReducer,
@@ -10,4 +11,5 @@ export default combineReducers({
     search_shows: searchShowsReducer,
     popular_shows: popularShowsReducer,
     shows_show: showShowsReducer,
+    shows: showsReducer,
 });

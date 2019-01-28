@@ -5,7 +5,10 @@ function ShowsIndexItem({ show }) {
     return (
         <li className="show-li">
             {/* {show.name} */}
-            <Link to={"/shows/" + show.id} className="poster-link"><img src={"https://image.tmdb.org/t/p/w500/" + show.poster_path} /></Link>
+            <Link to={"/shows/" + show.id} className="poster-link"><img src={
+                show.poster_path ?
+                "https://image.tmdb.org/t/p/w500/" + show.poster_path
+                : ""} /></Link>
         </li>
     );
 }

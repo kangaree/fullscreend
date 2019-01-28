@@ -25,7 +25,9 @@ class ShowsShow extends Component {
 
         return (
             <>
-                <div className="backdrop" style={{ backgroundImage: `url(${"https://image.tmdb.org/t/p/original" + show.backdrop_path})` }}><div className="backdrop-fade">
+                <div className="backdrop" style={
+                        { backgroundImage: `url(${"https://image.tmdb.org/t/p/original" + show.backdrop_path})` }
+                    }><div className="backdrop-fade">
                     <h2 className="headline-1">{show.name}</h2>
                     <p className="headline-3">{show.overview}</p>
                 </div></div>

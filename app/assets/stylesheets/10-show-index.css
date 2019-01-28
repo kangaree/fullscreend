@@ -34,3 +34,9 @@
     background-color: #fff;
     color: #fff;
 }
+
+.pagination-buttons {
+    display: flex;
+    justify-content: center;
+    background-color: #1e252d;
+}

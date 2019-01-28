@@ -21,7 +21,6 @@ export default () => (
         <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/shows" component={ShowsPopularContainer} />
-            <Route path="/shows/page/:pageId" component={ShowsPopularContainer} />
             <Route exact path="/shows/:showId" component={ShowsShowContainer}/>
             <Route path="/" component={Blank} />
         </Switch>

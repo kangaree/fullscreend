@@ -15,7 +15,7 @@ class ShowsShow extends Component {
     }
 
     render() {
-        const { show } = this.props;
+        const { show, openModal } = this.props;
 
         // if (loading) {
         //     return <section className="pokemon-detail"><LoadingIcon /></section>;
@@ -32,7 +32,7 @@ class ShowsShow extends Component {
                     <p className="headline-3">{show.overview}</p>
                 </div></div>
                 <section className="show-show">
-
+                    <a className="add-review" onClick={() => openModal('review')}>Add Review</a>
                 </section>
             </>
         );

@@ -54,3 +54,17 @@ export const fetchShow = id => dispatch => (
     APIUtil.fetchShow(id)
         .then(show => (dispatch(receiveShow(show))))
 );
+
+export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
+
+export const receiveReview = ({review, user}) => ({
+    type: RECEIVE_REVIEW,
+    review,
+    user
+})
+
+export const createReview = review => dispatch => (
+    APIUtil.createReview(review).then(review => (
+        dispatch(receiveReview(review))
+    ))
+);

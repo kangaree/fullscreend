@@ -32,7 +32,12 @@ class ShowsShow extends Component {
                         </div></div>
                     <section className="show-show">
 
-                    {/* Add Sign Up Button Here? */}
+                        <div className="show-info">
+                            <p>{show.first_air_date} to {show.last_air_date} ({show.status})</p>
+                            <p>{show.type}</p>
+                            <p>{show.episode_run_time ? show.episode_run_time[0] : null} min</p>
+                            <p>{show.number_of_seasons} Season{show.number_of_seasons == 1 ? "" : "s"}</p>
+                        </div>
 
                     </section>
                 </>
@@ -46,13 +51,18 @@ class ShowsShow extends Component {
                     : {}}><div className="backdrop-fade">
                     <h2 className="headline-1">{show.name}</h2>
                     <p className="headline-3">{show.overview}</p>
-                    {/* <p className="headline-3">{show.seasons}</p> */}
-                    <p className="headline-3">{show.seasons.length} Seasons</p>
                 </div></div>
+
+
                 <section className="show-show">
+                    <div className="show-info">
+                        <p>{show.first_air_date} to {show.last_air_date} ({show.status})</p>
+                        <p>{show.type}</p>
+                        <p>{show.episode_run_time ? show.episode_run_time[0] : null} min</p>
+                        <p>{show.number_of_seasons} Season{show.number_of_seasons == 1 ? "" : "s"}</p>
+                    </div>
 
-                    <a className="green-button" onClick={() => openModal('review')} show={show}>log</a>
-
+                    <div className="center-buttons"><a className="green-button" onClick={() => openModal('review')} show={show}>log</a></div>
                 </section>
             </>
         );

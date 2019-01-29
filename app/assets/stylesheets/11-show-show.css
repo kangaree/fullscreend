@@ -1,4 +1,4 @@
-.show-show {
+.center-buttons {
     display: flex;
     justify-content: center;
     /* background-image: linear-gradient(#1e252d, #1e252d); */
@@ -17,4 +17,9 @@
     /* text-overflow: ellipsis;
     height: 100px;
     overflow: hidden; */
+}
+
+.show-info {
+    text-align: center;
+    font-family: sans-serif;
 }

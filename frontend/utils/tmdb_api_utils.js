@@ -21,10 +21,19 @@ export const fetchShow = id => {
 
 // https://api.themoviedb.org/3/tv/30991?api_key=138b6460ffe9a8a67112c073f2008fd5&language=en-US
 
-export const createReview = review => (
-    $.ajax({
+// export const createReview = review => (
+//     $.ajax({
+//         method: 'POST',
+//         url: 'api/reviews',
+//         data: { review }
+//     })
+// );
+
+export const createReview = review => {
+    debugger
+    return $.ajax({
         method: 'POST',
         url: 'api/reviews',
         data: { review }
     })
-);
+};

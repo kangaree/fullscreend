@@ -14,6 +14,6 @@ class Api::ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:date_watched, :season_progress, :body, :score, :like)
+    params.require(:review).permit(:date_watched, :season_progress, :body, :score, :like, :show_id, :user_id)
   end
 end

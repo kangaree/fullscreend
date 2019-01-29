@@ -41,8 +41,14 @@ class ReviewForm extends React.Component {
             <div className="signup-form-container">
                 <div onClick={this.props.closeModal} className="close-x">X</div>
                 <form onSubmit={this.handleSubmit}>
-                    <label>Comment</label>
+                    <label>I watched...</label>
                     <br />
+                    
+                    <input type="date"
+                        className="signup-input"
+                        value={this.state.date_watched}
+                        onChange={this.update("date_watched")}
+                    />
 
                     <textarea
                         className="signup-input"

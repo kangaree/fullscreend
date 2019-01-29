@@ -46,7 +46,7 @@ class Login extends React.Component {
             <button
                 onClick={this.handleDemoSubmit}
                 className="login-submit-demo"
-            >Demo User
+            >guest user
             </button>
         );
         return button();

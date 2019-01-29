@@ -29,7 +29,7 @@ class ReviewForm extends React.Component {
         });
         debugger
         this.props.createReview(review).then(() => this.props.closeModal());
-        this.navigateToShowShow();
+        // this.navigateToShowShow();
     }
 
     update(property) {

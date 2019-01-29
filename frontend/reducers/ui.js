@@ -9,7 +9,6 @@ import modal from './modal';
 export default combineReducers({
     // filters,
     modal,
-    // just added
     search_shows: searchShowsReducer,
     popular_shows: popularShowsReducer,
     shows_show: showShowsReducer,

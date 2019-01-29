@@ -6,7 +6,7 @@ import ReviewForm from './review_form';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = state => {
-    // debugger
+
     return {
         currentUserId: currentUser.id,
         showId: state.ui.shows_show,

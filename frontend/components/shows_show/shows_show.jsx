@@ -19,10 +19,6 @@ class ShowsShow extends Component {
     render() {
         const { show, openModal, currentUser } = this.props;
 
-        // if (loading) {
-        //     return <section className="pokemon-detail"><LoadingIcon /></section>;
-        // }
-
         if (!show) return null;
 
         return (
@@ -34,13 +30,6 @@ class ShowsShow extends Component {
                     <p className="headline-3">{show.overview}</p>
                 </div></div>
                 <section className="show-show">
-
-                    {/* <ReviewLink
-                        component={ReviewFormContainer}
-                        to={`/shows/${this.props.match.params.showId}/review`}
-                        label="Leave a Review"
-                        onClick={() => openModal('review')}
-                    /> */}
 
                     <a className="signup-submit" onClick={() => openModal('review')} show={show}>log</a>
 

@@ -15,7 +15,6 @@ const showsReducer = (state = {}, action) => {
             return merge({}, state, {[action.show.id]: action.show})
             
         case RECEIVE_POPULAR_SHOWS:
-            // return merge({}, state, action.shows);
 
             let newShows = merge({}, state);
 

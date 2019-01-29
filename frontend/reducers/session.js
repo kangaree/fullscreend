@@ -1,6 +1,5 @@
 import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER } from '../actions/session_actions';
 
-// what we return if we don't have a user
 const _nullSession = {
     currentUserId: null,
 }

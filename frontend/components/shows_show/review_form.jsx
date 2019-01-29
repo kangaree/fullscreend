@@ -11,14 +11,14 @@ class ReviewForm extends React.Component {
     }
 
     navigateToShowShow() {
-        // debugger
+
         const url = `/shows/${this.props.showId}`
         this.props.history.push(url);
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        // debugger
+
         const showId = parseInt(this.props.showId);
 
         const review = Object.assign({}, this.state, {
@@ -27,7 +27,7 @@ class ReviewForm extends React.Component {
             show_id: showId,
             user_id: this.props.currentUserId
         });
-        // debugger
+
         this.props.createReview(review).then(() => this.props.closeModal());
         // this.navigateToShowShow();
     }

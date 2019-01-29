@@ -6,14 +6,6 @@ const searchShowsReducer = (state = [], action) => {
     
     switch (action.type) {
         case RECEIVE_SEARCH_SHOWS:
-            // let newShows = merge({}, state);
-
-            // action.shows.forEach(show => {
-            //     newShows[show.id] = show;
-            // });
-
-            // return newShows;
-
             return merge([], state, action.shows.map((show) => show.id));
         case REMOVE_SEARCHED_SHOWS:
             return [];

@@ -30,16 +30,20 @@ class ShowsShow extends Component {
                             <h2 className="headline-1">{show.name}</h2>
                             <p className="headline-3">{show.overview}</p>
                         </div></div>
-                    <section className="show-show">
+
 
                         <div className="show-info">
+                            <i className="fas fa-calendar-day"></i>
                             <p>{show.first_air_date} to {show.last_air_date} ({show.status})</p>
+                            <i className="fas fa-tv"></i>
                             <p>{show.type}</p>
+                            <i className="far fa-clock"></i>
                             <p>{show.episode_run_time ? show.episode_run_time[0] : null} min</p>
+                            <i className="fas fa-cloud-sun"></i>
                             <p>{show.number_of_seasons} Season{show.number_of_seasons == 1 ? "" : "s"}</p>
                         </div>
 
-                    </section>
+
                 </>
             );
         }
@@ -52,18 +56,29 @@ class ShowsShow extends Component {
                     <h2 className="headline-1">{show.name}</h2>
                     <p className="headline-3">{show.overview}</p>
                 </div></div>
+                
+                <div className="center-test">
+                    <ul className="season-list">
+                        {show.seasons && show.seasons.every(season => season.poster_path) ? show.seasons.map(season => <li key={season.name}><img src={season.poster_path ?
+                            "https://image.tmdb.org/t/p/w500" + season.poster_path
+                            : ""}/></li> )
+                        :
+                        null}
+                    </ul>
+                </div>
 
+                <div className="show-info">
+                    <i className="fas fa-calendar-day"></i>
+                    <p>{show.first_air_date} to {show.last_air_date} ({show.status})</p>
+                    <i className="fas fa-tv"></i>
+                    <p>{show.type}</p>
+                    <i className="far fa-clock"></i>
+                    <p>{show.episode_run_time ? show.episode_run_time[0] : null} min</p>
+                    <i className="fas fa-cloud-sun"></i>
+                    <p>{show.number_of_seasons} Season{show.number_of_seasons == 1 ? "" : "s"}</p>
+                </div>
 
-                <section className="show-show">
-                    <div className="show-info">
-                        <p>{show.first_air_date} to {show.last_air_date} ({show.status})</p>
-                        <p>{show.type}</p>
-                        <p>{show.episode_run_time ? show.episode_run_time[0] : null} min</p>
-                        <p>{show.number_of_seasons} Season{show.number_of_seasons == 1 ? "" : "s"}</p>
-                    </div>
-
-                    <div className="center-buttons"><a className="green-button" onClick={() => openModal('review')} show={show}>log</a></div>
-                </section>
+                <div className="center-buttons"><a className="green-button" onClick={() => openModal('review')} show={show}>log</a></div>
             </>
         );
     }

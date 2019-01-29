@@ -27,7 +27,7 @@ class ReviewForm extends React.Component {
             show_id: showId,
             user_id: this.props.currentUserId
         });
-        debugger
+        // debugger
         this.props.createReview(review).then(() => this.props.closeModal());
         // this.navigateToShowShow();
     }
@@ -58,6 +58,15 @@ class ReviewForm extends React.Component {
                         onChange={this.update("body")}
                     />
                     <br />
+
+                    <div className="five-stars">
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                    </div>
+
                     <input type="submit" className="signup-submit"/>
                 </form>
             </div>

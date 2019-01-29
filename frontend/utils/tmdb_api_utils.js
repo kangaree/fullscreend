@@ -30,7 +30,7 @@ export const fetchShow = id => {
 // );
 
 export const createReview = review => {
-    debugger
+    // debugger
     return $.ajax({
         method: 'POST',
         url: 'api/reviews',

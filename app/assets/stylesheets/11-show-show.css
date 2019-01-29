@@ -1,6 +1,6 @@
 .show-show {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
     /* background-image: linear-gradient(#1e252d, #1e252d); */
 }
 

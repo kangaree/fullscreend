@@ -6,7 +6,7 @@ class Api::SessionsController < ApplicationController
       render json: ['No matching account.'], status: 401
     else
       sign_in(@user)
-      # render 'api/users/show'
+      render 'api/users/show'
     end
   end
 

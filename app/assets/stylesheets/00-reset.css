@@ -13,17 +13,3 @@ h1 {
 #root {
     margin: -10px 0;
 }
-
-.button {
-    color: #f4fcf0;
-    cursor: pointer;
-    background: #00b020;
-    display: inline-block;
-    padding: 9px 12px 8px;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: .075em;
-    border-width: 0px;
-    width: 130px;
-    margin-bottom: 20px;
-}

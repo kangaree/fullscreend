@@ -21,6 +21,24 @@ class ShowsShow extends Component {
 
         if (!show) return null;
 
+        if (!currentUser) {
+            return (
+                <>
+                    <div className="backdrop" style={show.backdrop_path ?
+                        { backgroundImage: `url(${"https://image.tmdb.org/t/p/original" + show.backdrop_path})` }
+                        : {}}><div className="backdrop-fade">
+                            <h2 className="headline-1">{show.name}</h2>
+                            <p className="headline-3">{show.overview}</p>
+                        </div></div>
+                    <section className="show-show">
+
+                        {/* <a className="signup-submit" onClick={() => openModal('signup')} show={show}>JOIN</a> */}
+
+                    </section>
+                </>
+            );
+        }
+
         return (
             <>
                 <div className="backdrop" style={ show.backdrop_path ?

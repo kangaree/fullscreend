@@ -42,7 +42,7 @@ class ShowsShow extends Component {
                         onClick={() => openModal('review')}
                     /> */}
 
-                    <a className="add-review" onClick={() => openModal('review')} show={show}>Add Review</a>
+                    <a className="signup-submit" onClick={() => openModal('review')} show={show}>log</a>
 
                 </section>
             </>

@@ -60,7 +60,6 @@ class ReviewForm extends React.Component {
                     <br />
                     <input type="submit" className="signup-submit"/>
                 </form>
-                <button onClick={this.navigateToShowShow} className="signup-submit">Cancel</button>
             </div>
         );
     }

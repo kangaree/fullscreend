@@ -23,6 +23,9 @@
     padding-inline-start: 0px;
     -webkit-padding-start: 0;
     width: 135px;
+    max-height: 18px;
+    overflow: scroll;
+    border-radius: 3px;
 }
 
 /* Select Only The First Result */

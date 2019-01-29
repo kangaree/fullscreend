@@ -75,7 +75,7 @@ class ShowsShow extends Component {
                     <i className="far fa-clock"></i>
                     <p>{show.episode_run_time ? show.episode_run_time[0] : null} min</p>
                     <i className="fas fa-cloud-sun"></i>
-                    <p>{show.number_of_seasons} Season{show.number_of_seasons == 1 ? "" : "s"}</p>
+                    <p>{show.number_of_seasons} Season{show.number_of_seasons == 1 ? "" : "s"}, {show.number_of_episodes} Episode{show.number_of_episodes == 1 ? "" : "s"}</p>
                 </div>
 
                 <div className="center-buttons"><a className="green-button" onClick={() => openModal('review')} show={show}>log</a></div>

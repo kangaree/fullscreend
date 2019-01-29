@@ -37,7 +37,7 @@
     /* align-content: space-around; */
     list-style: none;
     overflow: auto;
-    max-width: 1100px;
+    max-width: 1033px;
     margin: 0 auto;
 
     /* columns: 10;
@@ -51,6 +51,8 @@
     height: 240px;
     border-radius: 10px;
     border: 1px solid transparent;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 
 .season-list {
@@ -60,4 +62,5 @@
 .center-test {
     display: flex;
     justify-content: center;
+    
 }

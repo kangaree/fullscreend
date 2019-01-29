@@ -11,21 +11,21 @@ class ReviewForm extends React.Component {
     }
 
     navigateToShowShow() {
-        debugger
-        const url = `/shows/${this.props.show.id}`
+        // debugger
+        const url = `/shows/${this.props.showId}`
         this.props.history.push(url);
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        debugger
-        const showId = parseInt(this.props.show.id);
+        // debugger
+        const showId = parseInt(this.props.showId);
 
         const review = Object.assign({}, this.state, {
             // show_id: this.state.ui.shows_show,
             // user_id: this.state.session.currentUserId
             show_id: showId,
-            user_id: currentUser.id
+            user_id: this.props.currentUserId
         });
         debugger
         this.props.createReview(review).then(() => this.props.closeModal());
@@ -41,7 +41,6 @@ class ReviewForm extends React.Component {
             <div className="signup-form-container">
                 <div onClick={this.props.closeModal} className="close-x">X</div>
                 <form onSubmit={this.handleSubmit}>
-
                     <label>Comment</label>
                     <br />
 

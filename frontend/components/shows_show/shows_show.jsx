@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
+import ReviewFormContainer from './review_form_container';
+import { ReviewLink } from '../../utils/link_util';
 
 // import LoadingIcon from './loading_icon';
 
@@ -32,7 +34,16 @@ class ShowsShow extends Component {
                     <p className="headline-3">{show.overview}</p>
                 </div></div>
                 <section className="show-show">
+
+                    {/* <ReviewLink
+                        component={ReviewFormContainer}
+                        to={`/shows/${this.props.match.params.showId}/review`}
+                        label="Leave a Review"
+                        onClick={() => openModal('review')}
+                    /> */}
+
                     <a className="add-review" onClick={() => openModal('review')} show={show}>Add Review</a>
+
                 </section>
             </>
         );

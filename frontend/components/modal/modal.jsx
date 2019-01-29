@@ -6,6 +6,7 @@ import SignupContainer from '../session/signup_container';
 import ReviewFormContainer from '../shows_show/review_form_container';
 
 function Modal({ modal, closeModal }) {
+    // debugger
     if (!modal) {
         return null;
     }
@@ -33,6 +34,7 @@ function Modal({ modal, closeModal }) {
 }
 
 const mapStateToProps = state => {
+    // debugger
     return {
         modal: state.ui.modal
     };

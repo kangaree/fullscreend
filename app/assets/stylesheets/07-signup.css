@@ -10,6 +10,7 @@
     z-index: 10;
     background: #657586;
     padding: 50px;
+    padding-bottom: 88px;
     border-radius: 3px;
     font-family: sans-serif;
 }
@@ -51,22 +52,6 @@
     font-size: 1.15384615rem;
     color: #2d3b4b;
     margin: 0;
-}
-
-.signup-submit {
-    color: #f4fcf0;
-    cursor: pointer;
-    background: #00b020;
-    display: inline-block;
-    padding: 9px 12px 8px;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: .075em;
-    border-width: 0px;
-    width: 130px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    text-align: center;
 }
 
 /* errors ul */

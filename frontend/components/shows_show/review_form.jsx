@@ -49,6 +49,7 @@ class ReviewForm extends React.Component {
                         value={this.state.date_watched}
                         onChange={this.update("date_watched")}
                     />
+                    <br />
 
                     <textarea
                         className="signup-input"
@@ -59,15 +60,24 @@ class ReviewForm extends React.Component {
                     />
                     <br />
 
-                    <div className="five-stars">
-                        <i className="fa fa-star" aria-hidden="true"></i>
-                        <i className="fa fa-star" aria-hidden="true"></i>
-                        <i className="fa fa-star" aria-hidden="true"></i>
-                        <i className="fa fa-star" aria-hidden="true"></i>
-                        <i className="fa fa-star" aria-hidden="true"></i>
+                    <div className="stars-likes">
+                        <div className="five-stars">
+                            <i className="fa fa-star" aria-hidden="true"></i>
+                            <input type="number" id="tentacles" name="tentacles"
+                                min="1" max="10" />
+                            <br />
+                        </div>
+                        <br />
+
+                        <div className="heart-like">
+                            <i className="far fa-heart"></i>
+                            <input type="checkbox"/>
+                        </div>
                     </div>
 
-                    <input type="submit" className="signup-submit"/>
+
+                    <br/>
+                    <input type="submit" className="green-button"/>
                 </form>
             </div>
         );

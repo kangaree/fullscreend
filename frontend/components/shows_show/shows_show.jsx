@@ -32,7 +32,7 @@ class ShowsShow extends Component {
                         </div></div>
                     <section className="show-show">
 
-                        {/* <a className="signup-submit" onClick={() => openModal('signup')} show={show}>JOIN</a> */}
+                    {/* Add Sign Up Button Here? */}
 
                     </section>
                 </>
@@ -46,10 +46,12 @@ class ShowsShow extends Component {
                     : {}}><div className="backdrop-fade">
                     <h2 className="headline-1">{show.name}</h2>
                     <p className="headline-3">{show.overview}</p>
+                    {/* <p className="headline-3">{show.seasons}</p> */}
+                    <p className="headline-3">{show.seasons.length} Seasons</p>
                 </div></div>
                 <section className="show-show">
 
-                    <a className="signup-submit" onClick={() => openModal('review')} show={show}>log</a>
+                    <a className="green-button" onClick={() => openModal('review')} show={show}>log</a>
 
                 </section>
             </>

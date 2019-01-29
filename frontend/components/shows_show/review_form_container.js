@@ -6,6 +6,7 @@ import ReviewForm from './review_form';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = state => {
+    debugger
     return {
         currentUser: state.entities.users[state.session.currentUserId]
     }

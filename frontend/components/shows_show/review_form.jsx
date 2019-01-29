@@ -11,21 +11,23 @@ class ReviewForm extends React.Component {
     }
 
     navigateToShowShow() {
-        const url = `/shows/${this.props.match.params.showId}`
+        debugger
+        const url = `/shows/${this.props.show.id}`
         this.props.history.push(url);
     }
 
     handleSubmit(e) {
         e.preventDefault();
         debugger
-        const showId = parseInt(this.props.match.params.showId);
+        const showId = parseInt(this.props.show.id);
 
         const review = Object.assign({}, this.state, {
+            // show_id: this.state.ui.shows_show,
+            // user_id: this.state.session.currentUserId
             show_id: showId,
             user_id: currentUser.id
-            // show_id: showId,
-            // user_id: currentUser.id
         });
+        debugger
         this.props.createReview(review).then(() => this.props.closeModal());
         this.navigateToShowShow();
     }
@@ -36,23 +38,24 @@ class ReviewForm extends React.Component {
 
     render() {
         return (
-            <div className="signup-form">
-                <div onClick={this.props.closeModal} className="close-x-login">X</div>
+            <div className="signup-form-container">
+                <div onClick={this.props.closeModal} className="close-x">X</div>
                 <form onSubmit={this.handleSubmit}>
 
                     <label>Comment</label>
                     <br />
 
                     <textarea
+                        className="signup-input"
                         cols="30"
                         rows="10"
                         value={this.state.body}
                         onChange={this.update("body")}
                     />
                     <br />
-                    <input type="submit" />
+                    <input type="submit" className="signup-submit"/>
                 </form>
-                <button onClick={this.navigateToShowShow}>Cancel</button>
+                <button onClick={this.navigateToShowShow} className="signup-submit">Cancel</button>
             </div>
         );
     }

@@ -5,6 +5,6 @@ import reviewsReducer from './reviews';
 
 export default combineReducers({
     users: usersReducer,
-    shows: showsReducer,
     reviews: reviewsReducer,
+    shows: showsReducer,
 });

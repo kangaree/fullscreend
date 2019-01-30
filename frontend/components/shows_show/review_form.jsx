@@ -13,6 +13,42 @@ class ReviewForm extends React.Component {
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.navigateToShowShow = this.navigateToShowShow.bind(this);
+        this.handleHeartClick = this.handleHeartClick.bind(this);
+        this.handleStarsOneClick = this.handleStarsOneClick.bind(this);
+        this.handleStarsTwoClick = this.handleStarsTwoClick.bind(this);
+        this.handleStarsThreeClick = this.handleStarsThreeClick.bind(this);
+        this.handleStarsFourClick = this.handleStarsFourClick.bind(this);
+        this.handleStarsFiveClick = this.handleStarsFiveClick.bind(this);
+    }
+
+    handleHeartClick(e) {
+        e.preventDefault();
+        if (this.state.like) {
+            this.setState({ like: "" });
+        } else {
+            this.setState({ like: true });
+        }
+    }
+
+    handleStarsOneClick(e) {
+        e.preventDefault();
+        this.setState({ score: 1 });
+    }
+    handleStarsTwoClick(e) {
+        e.preventDefault();
+        this.setState({ score: 2 });
+    }
+    handleStarsThreeClick(e) {
+        e.preventDefault();
+        this.setState({ score: 3 });
+    }
+    handleStarsFourClick(e) {
+        e.preventDefault();
+        this.setState({ score: 4 });
+    }
+    handleStarsFiveClick(e) {
+        e.preventDefault();
+        this.setState({ score: 5 });
     }
 
     navigateToShowShow() {
@@ -77,17 +113,17 @@ class ReviewForm extends React.Component {
                         <label>
                             <div className="stars-likes-submit-label">Rating</div>
                             <div className="five-stars">
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
+                                <div className="one-out-of-five" onClick={this.handleStarsOneClick}><i className="fas fa-star" style={this.state.score >= 1 ? { color: "#00e24b" } : { color: "#3f4b58" }}></i></div>
+                                <div className="two-out-of-five" onClick={this.handleStarsTwoClick}><i className="fas fa-star" style={this.state.score >= 2 ? { color: "#00e24b" } : { color: "#3f4b58" }}></i></div>
+                                <div className="three-out-of-five" onClick={this.handleStarsThreeClick}><i className="fas fa-star" style={this.state.score >= 3 ? { color: "#00e24b" } : { color: "#3f4b58" }}></i></div>
+                                <div className="four-out-of-five" onClick={this.handleStarsFourClick}><i className="fas fa-star" style={this.state.score >= 4 ? { color: "#00e24b" } : { color: "#3f4b58" }}></i></div>
+                                <div className="five-out-of-five" onClick={this.handleStarsFiveClick}><i className="fas fa-star" style={this.state.score >= 5 ? { color: "#00e24b" } : { color: "#3f4b58" }}></i></div>
                             </div>
                             
                         </label>
                         <label>
                             <div className="stars-likes-submit-label">Like</div>
-                                <div><i className="fas fa-heart"></i></div>
+                            <div onClick={this.handleHeartClick} className="like-button"><i className="fas fa-heart" style={this.state.like ? { color: "orange" } : { color:"#3f4b58"}}></i></div>
                         </label>
                         <input type="submit" className="green-button"/>
                     </div>

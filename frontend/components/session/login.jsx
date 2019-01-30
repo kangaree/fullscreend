@@ -81,8 +81,8 @@ class Login extends React.Component {
                         </label>
                         <input className="login-submit" type="submit" value="SIGN IN" />
                     </div>
-                </form>
                     {this.renderDemoButton()}
+                </form>
             </div>
         );
     }

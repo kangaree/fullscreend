@@ -9,21 +9,18 @@
 }
 
 .modal-background-login {
-    /* position: fixed; */
-    z-index: 10;
-
     position: absolute;
-    top: 20px;
-    right: 230px;
-
-    height: 45px;
-    width: 520px;
+    top: -1px;
+    right: 206px;
+    height: 48px;
+    width: 550px;
     z-index: 10;
     background: #14181c;
-    padding: 5px;
+    padding: 8px;
+    padding-top: 21px;
+    padding-bottom: 21px;
     border-radius: 5px;
     font-family: sans-serif;
-
     display: flex;
 }
 

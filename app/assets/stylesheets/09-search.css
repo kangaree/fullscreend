@@ -19,21 +19,13 @@
     position: absolute;
     list-style: none;
     background-color: gray;
-    /* padding: 0px 0px 0px 0px; */
+
+    padding: 0px 0px 0px 0px;
     padding-inline-start: 0px;
     -webkit-padding-start: 0;
+
     width: 135px;
-    max-height: 18px;
+    max-height: 46px;
     overflow: scroll;
     border-radius: 3px;
-}
-
-/* Select Only The First Result */
-/* .shows-ul > li:not(:first-child){
-    display: none;
-} */
-
-.show-li {
-    margin-right: 10px;
-    margin-left: 0px;
 }

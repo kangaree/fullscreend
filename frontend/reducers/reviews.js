@@ -11,7 +11,7 @@ const reviewsReducer = (state = {}, action) => {
         case RECEIVE_SHOW:
             return merge({}, state, action.reviews);
         case RECEIVE_REVIEW:
-            const { review } = action;
+            const review = action.review || {};
             return merge({}, state, { [review.id]: review });
         default:
             return state;

@@ -63,9 +63,9 @@ class ShowsShow extends Component {
                     <i className="fas fa-cloud-sun"></i>
                     <p>{show.number_of_seasons} Season{show.number_of_seasons == 1 ? "" : "s"}, {show.number_of_episodes} Episode{show.number_of_episodes == 1 ? "" : "s"}</p>
                 </div>
-                
+
                 <h3>Reviews</h3>
-                {reviewList(reviews)}
+                {currentUser ? reviewList(reviews) : <p>Please sign in to see reviews.</p>}
 
                 {currentUser ? <div className="center-buttons"><a className="green-button" onClick={() => openModal('review')} show={show}>log</a></div> : null }
 

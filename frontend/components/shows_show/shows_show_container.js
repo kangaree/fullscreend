@@ -3,14 +3,15 @@ import { connect } from 'react-redux';
 import ShowsShow from './shows_show';
 import { fetchShow, fetchShowReviews } from '../../actions/show_actions';
 import { openModal } from '../../actions/modal_actions';
-import { selectReviewsForShow, selectShow } from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
     const show = state.entities.shows[state.ui.shows_show];
-    // const reviews = selectReviewsForShow(state.entities, show);
+    const reviews = state.ui.show_reviews.map(reviewId => state.entities.reviews[reviewId])
+
     return {
+        currentUser: state.entities.users[state.session.currentUserId],
         show,
-        currentUser: state.entities.users[state.session.currentUserId]
+        reviews,
     };
 };
 

@@ -5,6 +5,17 @@ import { ReviewLink } from '../../utils/link_util';
 
 // import LoadingIcon from './loading_icon';
 
+import ReviewListItemContainer from './review_list_item_container'
+
+const reviewList = (reviews) => (
+    reviews.map(review => (
+        <ReviewListItemContainer
+            review={review}
+            key={review.id}
+        />
+    ))
+);
+
 class ShowsShow extends Component {
     componentDidMount() {
         this.props.fetchShow(this.props.match.params.showId);
@@ -19,7 +30,7 @@ class ShowsShow extends Component {
     }
 
     render() {
-        const { show, openModal, currentUser } = this.props;
+        const { show, openModal, currentUser, reviews } = this.props;
 
         if (!show) return null;
 
@@ -53,8 +64,11 @@ class ShowsShow extends Component {
                     <p>{show.number_of_seasons} Season{show.number_of_seasons == 1 ? "" : "s"}, {show.number_of_episodes} Episode{show.number_of_episodes == 1 ? "" : "s"}</p>
                 </div>
                 
+                <h3>Reviews</h3>
+                {reviewList(reviews)}
+
                 {currentUser ? <div className="center-buttons"><a className="green-button" onClick={() => openModal('review')} show={show}>log</a></div> : null }
-                
+
             </>
         );
     }

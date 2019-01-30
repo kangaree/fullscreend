@@ -8,11 +8,13 @@ import { ReviewLink } from '../../utils/link_util';
 class ShowsShow extends Component {
     componentDidMount() {
         this.props.fetchShow(this.props.match.params.showId);
+        this.props.fetchShowReviews(this.props.match.params.showId);
     }
 
     componentDidUpdate(prevProps) {
         if (prevProps.match.params.showId !== this.props.match.params.showId) {
             this.props.fetchShow(this.props.match.params.showId);
+            this.props.fetchShowReviews(this.props.match.params.showId);
         }
     }
 

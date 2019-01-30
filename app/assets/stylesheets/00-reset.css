@@ -13,3 +13,8 @@ h1 {
 #root {
     margin: -10px 0;
 }
+
+ul {
+    list-style: none;
+    padding-inline-start: 0px;
+}

@@ -25,7 +25,7 @@
     -webkit-padding-start: 0;
 
     width: 135px;
-    max-height: 46px;
-    overflow: scroll;
+    max-height: 31px;
+    overflow: auto;
     border-radius: 3px;
 }

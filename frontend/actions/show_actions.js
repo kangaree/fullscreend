@@ -79,7 +79,7 @@ export const receiveShowReviews = reviews => {
     }
 };
 
-export const fetchShowReviews = showId => dispatch => (
-    APIUtil.fetchShowReviews(showId)
+export const fetchShowReviews = showId => dispatch => {
+    return APIUtil.fetchShowReviews(showId)
         .then(reviews => (dispatch(receiveShowReviews(reviews))))
-);
+};

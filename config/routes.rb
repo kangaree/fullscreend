@@ -21,6 +21,10 @@ Rails.application.routes.draw do
 
     resources :reviews, only: [:create, :update, :show]
 
+    resources :shows, only: [] do
+      resources :reviews, only: [:index]
+    end
+
   end
 
   resources :users, only: [:new, :create]

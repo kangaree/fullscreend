@@ -26,3 +26,10 @@ export const createReview = review => {
         data: { review }
     })
 };
+
+export const fetchShowReviews = showId => (
+    $.ajax({
+        method: 'GET',
+        url: `api/shows/${showId}/reviews`,
+    })
+);

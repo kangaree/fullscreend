@@ -11,6 +11,11 @@ class Api::ReviewsController < ApplicationController
     end
   end
 
+  def index
+    # to avoid a n+1 query, include the user with it
+    @reviews = Review.includes(:user).where(show_id: params[:show_id])
+  end
+
   private
 
   def review_params

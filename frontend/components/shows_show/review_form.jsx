@@ -73,13 +73,23 @@ class ReviewForm extends React.Component {
                         onChange={this.update("body")}
                     />
 
-                    <div className="stars-likes">
-                        <i className="far fa-star" aria-hidden="true"></i>
-                        <i className="far fa-star" aria-hidden="true"></i>
-                        <i className="far fa-star" aria-hidden="true"></i>
-                        <i className="far fa-star" aria-hidden="true"></i>
-                        <i className="far fa-star" aria-hidden="true"></i>
-                        <i className="far fa-heart"></i>
+                    <div className="stars-likes-submit">
+                        <label>
+                            <div className="stars-likes-submit-label">Rating</div>
+                            <div className="five-stars">
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                            </div>
+                            
+                        </label>
+                        <label>
+                            <div className="stars-likes-submit-label">Like</div>
+                                <div><i className="fas fa-heart"></i></div>
+                        </label>
+                        <input type="submit" className="green-button"/>
                     </div>
 
                     <label className="review-season-input">
@@ -94,7 +104,6 @@ class ReviewForm extends React.Component {
                         />
                     </label>
 
-                    <input type="submit" className="green-button"/>
                 </form>
             </div>
         );

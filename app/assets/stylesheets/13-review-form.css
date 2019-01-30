@@ -13,18 +13,27 @@
     font-family: sans-serif;
 }
 
-.stars-likes {
+.stars-likes-submit {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 3px;
+    font-size: 25px;
+    color: #3f4b58;
+}
+
+
+
+.stars-likes-submit-label {
+    font-size: 15px;
+    color: white;
 }
 
 .review-form-poster {
     border-radius: 5px;
     position: absolute;
-    left: 4%;
-    top: 25%;
-    width: 120px
+    left: 2.5%;
+    top: 21%;
+    width: 156px;
 }
 
 .review-body-input {
@@ -45,7 +54,6 @@
 .review-season-input {
     padding: 9px 9px 8px;
     border: none;
-    font-size: 1.07692308rem;
     line-height: 1;
     box-sizing: border-box;
     border-radius: 3px;
@@ -80,22 +88,29 @@
     text-transform: uppercase;
     letter-spacing: .075em;
     font-weight: 400;
-    font-size: 1.15384615rem;
+    font-size: 14px;
     color: #2d3b4b;
 }
 
 .review-season-input {
     position: absolute;
-    top: 40%;
-    right: 5%;
+    top: 34%;
+    right: 5.3%
 }
 .review-season-input-input {
     background-color: #cde;
     color: #567;
+    font-size: 17px;
+    border-style: none;
+    text-align: right;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
+}
+
+.review-form-container h1 {
+    margin: 0;
 }

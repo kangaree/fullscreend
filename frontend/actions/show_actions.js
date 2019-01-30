@@ -57,17 +57,18 @@ export const fetchShow = id => dispatch => (
 
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 
-export const receiveReview = ({review, user}) => ({
-    type: RECEIVE_REVIEW,
-    review,
-    user
-})
+export const receiveReview = (review) => {
+    return    {
+        type: RECEIVE_REVIEW,
+        review,
+    }
+}
 
-export const createReview = review => dispatch => (
-    APIUtil.createReview(review).then(review => (
+export const createReview = review => dispatch => {
+    return APIUtil.createReview(review).then(review => (
         dispatch(receiveReview(review))
     ))
-);
+};
 
 export const RECEIVE_SHOW_REVIEWS = 'RECEIVE_SHOW_REVIEWS';
 

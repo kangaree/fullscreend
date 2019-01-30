@@ -13,10 +13,12 @@ const mapStateToProps = state => {
     }
 };
 
-const mapDispatchToProps = dispatch => ({
-    createReview: review => dispatch(createReview(review)),
-    closeModal: () => dispatch(closeModal()),
-});
+const mapDispatchToProps = dispatch => {
+    return {
+        createReview: review => dispatch(createReview(review)),
+        closeModal: () => dispatch(closeModal()),
+    }
+};
 
 export default connect(
     mapStateToProps,

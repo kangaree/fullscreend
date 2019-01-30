@@ -4,13 +4,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 330px;
     width: 400px;
     background: rgba(0, 0, 0, 0.9);
     z-index: 10;
     background: #657586;
     padding: 50px;
-    padding-bottom: 88px;
     border-radius: 3px;
     font-family: sans-serif;
 }
@@ -19,10 +17,6 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-}
-
-.signup-input {
-    margin-left: 20px;
 }
 
 .close-x {

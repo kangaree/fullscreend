@@ -1,4 +1,101 @@
+.review-form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    background: #657586;
+    padding: 50px;
+    padding-left: 200px;
+    border-radius: 3px;
+    font-family: sans-serif;
+}
+
 .stars-likes {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    padding: 3px;
+}
+
+.review-form-poster {
+    border-radius: 5px;
+    position: absolute;
+    left: 4%;
+    top: 25%;
+    width: 120px
+}
+
+.review-body-input {
+    padding: 9px 9px 8px;
+    border: none;
+    font-size: 1.07692308rem;
+    line-height: 1;
+    box-sizing: border-box;
+    border-radius: 3px;
+
+    background-color: #cde;
+    color: #567;
+    box-shadow: inset 0 -1px 0 #fff;
+    display: block;
+    width: 100%;
+}
+
+.review-season-input {
+    padding: 9px 9px 8px;
+    border: none;
+    font-size: 1.07692308rem;
+    line-height: 1;
+    box-sizing: border-box;
+    border-radius: 3px;
+
+    background-color: #cde;
+    color: #567;
+    box-shadow: inset 0 -1px 0 #fff;
+    display: block;
+}
+
+.review-date-input {
+    padding: 9px 9px 8px;
+    border: none;
+    font-size: 1.07692308rem;
+    line-height: 1;
+    box-sizing: border-box;
+    border-radius: 3px;
+
+    background-color: #cde;
+    color: #567;
+    box-shadow: inset 0 -1px 0 #fff;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.review-form-title {
+    padding: 3px;
+}
+
+.diary-header {
+    text-transform: uppercase;
+    letter-spacing: .075em;
+    font-weight: 400;
+    font-size: 1.15384615rem;
+    color: #2d3b4b;
+}
+
+.review-season-input {
+    position: absolute;
+    top: 40%;
+    right: 5%;
+}
+.review-season-input-input {
+    background-color: #cde;
+    color: #567;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }

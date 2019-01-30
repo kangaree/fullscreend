@@ -9,7 +9,7 @@ const mapStateToProps = state => {
 
     return {
         currentUserId: state.ui.currentUserId,
-        showId: state.ui.shows_show,
+        show: state.entities.shows[state.ui.shows_show],
     }
 };
 

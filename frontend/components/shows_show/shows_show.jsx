@@ -32,6 +32,16 @@ class ShowsShow extends Component {
                         </div></div>
 
 
+                    <div className="center-test">
+                        <ul className="season-list">
+                            {show.seasons && show.seasons.every(season => season.poster_path) ? show.seasons.map(season => <li key={season.name}><img src={season.poster_path ?
+                                "https://image.tmdb.org/t/p/w500" + season.poster_path
+                                : ""} /></li>)
+                                :
+                                null}
+                        </ul>
+                    </div>
+
                         <div className="show-info">
                             <i className="fas fa-calendar-day"></i>
                             <p>{show.first_air_date} to {show.last_air_date} ({show.status})</p>

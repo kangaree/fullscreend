@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { openModal } from '../../actions/modal_actions';
 
-const Review = ({ review, user, deleteReview }) => {
+const Review = ({ review, user, deleteReview, show }) => {
     const { score, body, like, season_progress, date_watched } = review;
     
     return (
@@ -19,6 +20,7 @@ const Review = ({ review, user, deleteReview }) => {
                 {season_progress ? <li><p>S{season_progress}</p></li> : null}
                 {date_watched ? <li><p>{date_watched}</p></li> : null}
                 { currentUser.id == review.user_id ? <button onClick={() => deleteReview(review.id)}>Delete</button> : null }
+                { currentUser.id == review.user_id ? <button onClick={() => openModal('edit-review')}>Edit</button> : null }
             </ul>
                 <p className="review-author">by{" " + user.username}</p>
         </div>

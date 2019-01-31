@@ -3,7 +3,8 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginContainer from '../session/login_container';
 import SignupContainer from '../session/signup_container';
-import ReviewFormContainer from '../shows_show/review_form_container';
+import CreateReviewFormContainer from '../shows_show/create_review_form_container';
+import EditReviewFormContainer from '../shows_show/edit_review_form_container';
 
 function Modal({ modal, closeModal }) {
 
@@ -19,7 +20,10 @@ function Modal({ modal, closeModal }) {
             component = <SignupContainer />;
             break;
         case 'review':
-            component = <ReviewFormContainer />;
+            component = <CreateReviewFormContainer />;
+            break;
+        case 'edit-review':
+            component = <EditReviewFormContainer />;
             break;
         default:
             return null;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import ReviewFormContainer from './review_form_container';
+import ReviewFormContainer from './create_review_form_container';
 import { ReviewLink } from '../../utils/link_util';
 
 // import LoadingIcon from './loading_icon';
@@ -60,6 +60,9 @@ class ShowsShow extends Component {
                         review={review}
                         key={review.id}
                         deleteReview={this.props.deleteReview}
+                        updateReview={this.props.updateReview}
+                        openModal={this.props.openModal}
+                        show={show}
                     />
                     ))
                     : 

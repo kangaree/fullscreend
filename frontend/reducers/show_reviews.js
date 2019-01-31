@@ -14,7 +14,7 @@ const showReviewsReducer = (state = [], action) => {
         case RECEIVE_SHOW_REVIEWS:
             return action.reviews.reviews ? Object.keys(action.reviews.reviews).map(num => parseInt(num)) : [];
         case REMOVE_REVIEW:
-            const index = newState.indexOf(action.review);
+            const index = newState.indexOf(action.reviewId);
             if (index !== -1) newState.splice(index, 1)
 
             return newState;

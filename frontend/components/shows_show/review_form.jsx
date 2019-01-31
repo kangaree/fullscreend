@@ -4,6 +4,9 @@ import { withRouter } from 'react-router-dom';
 
 class ReviewForm extends React.Component {
     constructor(props) {
+        // debugger
+        // props.review => {id: 144, user_id: 88, show_id: 83095, date_watched: null, season_progress: "", …}
+
         super(props);
         this.state = {
             date_watched: "",
@@ -70,6 +73,7 @@ class ReviewForm extends React.Component {
     }
 
     render() {
+        // debugger
         return (
             <div className="review-form-container">
                 <div onClick={this.props.closeModal} className="close-x">X</div>

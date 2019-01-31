@@ -13,6 +13,9 @@ function Modal({ modal, closeModal }) {
     if (!modal) {
         return null;
     }
+
+    // debugger
+
     let component;
     switch (modal.modal_type) {
         case 'login':
@@ -25,7 +28,7 @@ function Modal({ modal, closeModal }) {
             component = <CreateReviewFormContainer />;
             break;
         case 'edit-review':
-            component = <EditReviewFormContainer />;
+            component = <EditReviewFormContainer review={modal.options.review}/>;
             break;
         default:
             return null;

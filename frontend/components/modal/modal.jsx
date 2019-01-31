@@ -14,7 +14,7 @@ function Modal({ modal, closeModal }) {
         return null;
     }
     let component;
-    switch (modal) {
+    switch (modal.modal_type) {
         case 'login':
             component = <LoginContainer />;
             break;
@@ -31,8 +31,8 @@ function Modal({ modal, closeModal }) {
             return null;
     }
     return (
-        <div className={modal === "login" ? "modal-background-login" : "modal-background"} onClick={closeModal}>
-            <div className={modal === "login" ? "modal-child-login" : "modal-child"} onClick={e => e.stopPropagation()}>
+        <div className={modal.modal_type === "login" ? "modal-background-login" : "modal-background"} onClick={closeModal}>
+            <div className={modal.modal_type === "login" ? "modal-child-login" : "modal-child"} onClick={e => e.stopPropagation()}>
                 {component}
             </div>
         </div>

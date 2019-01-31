@@ -20,7 +20,7 @@ const Review = ({ review, user, deleteReview, show, openModal }) => {
                 {season_progress ? <li><p>Season{season_progress}</p></li> : null}
                 {date_watched ? <li><p>{date_watched}</p></li> : null}
                 { currentUser.id == review.user_id ? <button onClick={() => deleteReview(review.id)}>Delete</button> : null }
-                { currentUser.id == review.user_id ? <button onClick={() => openModal('edit-review')}>Edit</button> : null }
+                { currentUser.id == review.user_id ? <button onClick={() => openModal('edit-review', review)}>Edit</button> : null }
             </ul>
                 <p className="review-author">by{" " + user.username}</p>
         </div>

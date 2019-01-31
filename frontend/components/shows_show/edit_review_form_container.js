@@ -8,21 +8,21 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
 
-    const defaultReview = {
-        date_watched: "",
-        season_progress: "",
-        body: "",
-        score: "",
-        like: null
-    };
+    // const defaultReview = {
+    //     date_watched: "",
+    //     season_progress: "",
+    //     body: "",
+    //     score: "",
+    //     like: null
+    // };
 
     // ownProps.match.params.reviewId - dis ain't it chief
-    const review = state.reviews[ownProps.review.id] || defaultReview;
+    // const review = state.reviews[ownProps.review.id] || defaultReview;
 
     return {
         currentUserId: state.ui.currentUserId,
         show: state.entities.shows[state.ui.shows_show],
-        review,
+        // review,
     }
 };
 
@@ -39,11 +39,11 @@ class EditReviewForm extends React.Component {
         this.props.fetchReview(this.props.review.id);
     }
 
-    componentDidUpdate(prevProps) {
-        if (prevProps.review.id != this.props.review.id) {
-            this.props.fetchReview(this.props.review.id);
-        }
-    }
+    // componentDidUpdate(prevProps) {
+    //     if (prevProps.review.id != this.props.review.id) {
+    //         this.props.fetchReview(this.props.review.id);
+    //     }
+    // }
 
     render() {
         const { action, review } = this.props;

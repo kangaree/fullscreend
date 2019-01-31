@@ -20,8 +20,9 @@ export default () => (
         {/* <ShowsSearchContainer /> */}
         <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/shows/:showId" component={ShowsShowContainer}/>
             <Route exact path="/shows" component={ShowsPopularContainer} />
+            <Route path="/shows/:showId/reviews/:reviewId" component={ShowsShowContainer}/>
+            <Route path="/shows/:showId" component={ShowsShowContainer}/>
             <Route path="/" component={Blank} />
         </Switch>
 

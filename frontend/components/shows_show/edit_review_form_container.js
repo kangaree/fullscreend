@@ -8,10 +8,16 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
 
-    const defaultReview = {};
+    const defaultReview = {
+        date_watched: "",
+        season_progress: "",
+        body: "",
+        score: "",
+        like: null
+    };
 
-    // ownProps.match.params.reviewId this ain't it chief
-    const review = state.reviews[ownProps.match.params.reviewId] || defaultReview;
+    // ownProps.match.params.reviewId - dis ain't it chief
+    const review = state.reviews[ownProps.review.id] || defaultReview;
 
     return {
         currentUserId: state.ui.currentUserId,

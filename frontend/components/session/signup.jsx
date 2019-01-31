@@ -49,7 +49,7 @@ class Signup extends React.Component {
         return (
             <div className="signup-form-container">
                 <form onSubmit={this.handleSubmit} className="signup-form-box">
-                    <h1>JOIN LETTERBOXD</h1>
+                    <h1>JOIN FULLSCREEND</h1>
                     <br/>
                     {/* Please {this.props.formType} or {this.props.otherForm} */}
                     <div onClick={this.props.closeModal} className="close-x">X</div>

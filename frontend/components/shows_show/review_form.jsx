@@ -51,26 +51,17 @@ class ReviewForm extends React.Component {
         this.setState({ score: 5 });
     }
 
-    navigateToShowShow() {
-
-        const url = `/shows/${this.props.show.id}`
-        this.props.history.push(url);
-    }
-
     handleSubmit(e) {
         e.preventDefault();
 
         const showId = parseInt(this.props.show.id);
 
         const review = Object.assign({}, this.state, {
-            // show_id: this.state.ui.shows_show,
-            // user_id: this.state.session.currentUserId
             show_id: showId,
             user_id: this.props.currentUserId
         });
 
         this.props.createReview(review).then(() => this.props.closeModal());
-        // this.navigateToShowShow();
     }
 
     update(property) {

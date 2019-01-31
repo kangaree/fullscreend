@@ -4,22 +4,10 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     resources :users, only: [:new, :create]
-    # do
-    #   resources :chirps, only: [:index]
-    # end
 
     resource :session, only: [:new, :create, :destroy]
 
-    # resources :reviews, only: [:create, :destroy, :update]
-
-    # post '/search', to: 'users#search'
-
-    # resources :chirps
-    # resources :likes, only: [:create]
-    # delete '/likes', to: 'likes#destroy'
-    # resources :follows, only: [:create, :destroy]
-
-    resources :reviews, only: [:create, :update, :show]
+    resources :reviews, only: [:create, :update, :show, :destroy]
 
     resources :shows, only: [] do
       resources :reviews, only: [:index]
@@ -29,5 +17,5 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create]
   resource :session, only: [:new, :create, :destroy]
-  resources :review, only: [:destroy]
+  resources :reviews, only: [:destroy]
 end

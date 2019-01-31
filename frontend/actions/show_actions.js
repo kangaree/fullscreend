@@ -83,3 +83,24 @@ export const fetchShowReviews = showId => dispatch => {
     return APIUtil.fetchShowReviews(showId)
         .then(reviews => (dispatch(receiveShowReviews(reviews))))
 };
+
+export const REMOVE_REVIEW = "REMOVE_REVIEW"
+
+export const fetchReview = id => dispatch => {
+    return APIUtil.fetchReview(id)
+        .then(review => (dispatch(receiveReview(review))))
+};
+
+export const updateReview = review => dispatch => (
+    APIUtil.updateReview(review)
+        .then(review => dispatch(receiveReview(review)))
+);
+
+export const deleteReview = reviewId => dispatch => {
+    return APIUtil.deleteReview(reviewId).then(review => dispatch(removeReview(reviewId)))
+};
+
+const removeReview = reviewId => ({
+    type: REMOVE_REVIEW,
+    reviewId
+});

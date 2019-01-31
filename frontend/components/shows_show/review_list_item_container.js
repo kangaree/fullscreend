@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const Review = ({ review, user }) => {
+const Review = ({ review, user, deleteReview }) => {
     const { score, body, like, season_progress, date_watched } = review;
+    
     return (
         <div>
             <ul className="show-review-index">
@@ -17,6 +18,7 @@ const Review = ({ review, user }) => {
                 </li>
                 {season_progress ? <li><p>S{season_progress}</p></li> : null}
                 {date_watched ? <li><p>{date_watched}</p></li> : null}
+                { currentUser.id == review.user_id ? <button onClick={() => deleteReview(review.id)}>Delete</button> : null }
             </ul>
                 <p className="review-author">by{" " + user.username}</p>
         </div>
@@ -29,4 +31,5 @@ const mapStateToProps = ({ entities: { users } }, { review }) => {
     };
 };
 
-export default connect(mapStateToProps)(Review);
+
+export default connect(mapStateToProps, null)(Review);

@@ -1,7 +1,7 @@
 json.review do
-  json.partial! '/api/reviews/review', review: review
+  json.partial! '/api/reviews/review', review: @review
 end
 
 json.user do
-  json.partial! '/api/users/user', user: review.user
+  json.partial! '/api/users/user', user: @review.user
 end

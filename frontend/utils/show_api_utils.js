@@ -33,3 +33,26 @@ export const fetchShowReviews = showId => (
         url: `api/shows/${showId}/reviews`,
     })
 );
+
+export const fetchReview = id => (
+    $.ajax({
+        method: 'GET',
+        url: `api/reviews/${id}`,
+    })
+)
+
+
+export const updateReview = review => (
+    $.ajax({
+        url: `api/reviews/${review.id}`,
+        method: 'PATCH',
+        data: { review }
+    })
+);
+
+export const deleteReview = reviewId => (
+    $.ajax({
+        url: `api/reviews/${reviewId}`,
+        method: 'DELETE'
+    })
+);

@@ -7,15 +7,6 @@ import { ReviewLink } from '../../utils/link_util';
 
 import ReviewListItemContainer from './review_list_item_container'
 
-const reviewList = (reviews) => (
-    reviews.map(review => (
-        <ReviewListItemContainer
-            review={review}
-            key={review.id}
-        />
-    ))
-);
-
 class ShowsShow extends Component {
     componentDidMount() {
         this.props.fetchShow(this.props.match.params.showId);
@@ -64,7 +55,15 @@ class ShowsShow extends Component {
                     <p>{show.number_of_seasons} Season{show.number_of_seasons == 1 ? "" : "s"}, {show.number_of_episodes} Episode{show.number_of_episodes == 1 ? "" : "s"}</p>
                 </div>
 
-                {currentUser ? reviewList(reviews) : <p className="show-review-index">Please sign in to see reviews.</p>}
+                {currentUser ? reviews.map(review => (
+                    <ReviewListItemContainer
+                        review={review}
+                        key={review.id}
+                        deleteReview={this.props.deleteReview}
+                    />
+                    ))
+                    : 
+                    <p className="show-review-index">Please sign in to see reviews.</p>}
 
                 {currentUser ? <div className="center-buttons"><a className="green-button" onClick={() => openModal('review')} show={show}>log</a></div> : null }
 

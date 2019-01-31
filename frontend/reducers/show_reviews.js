@@ -7,9 +7,19 @@ import {
 const showReviewsReducer = (state = [], action) => {
     Object.freeze(state)
     let newState = merge([], state);
+
     switch (action.type) {
+        // action.review.review is edit, and action.review is new
         case RECEIVE_REVIEW:
-            newState.push(action.review.id);
+
+            if (action.review.review) {
+                if (state.includes(action.review.review.id)) {
+                    return state;
+                }
+            } else {
+                newState.push(action.review.id);
+            }
+
             return newState;
         case RECEIVE_SHOW_REVIEWS:
             return action.reviews.reviews ? Object.keys(action.reviews.reviews).map(num => parseInt(num)) : [];

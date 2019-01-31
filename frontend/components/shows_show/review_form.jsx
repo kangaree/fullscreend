@@ -4,16 +4,33 @@ import { withRouter } from 'react-router-dom';
 
 class ReviewForm extends React.Component {
     constructor(props) {
-        // debugger
         // props.review => {id: 144, user_id: 88, show_id: 83095, date_watched: null, season_progress: "", …}
 
         super(props);
-        this.state = {
-            date_watched: "",
-            season_progress: "",
-            score: "",
-            like: "",
-        };
+
+        if (props.review) {
+                const string_if_null_date_watched = (props.review.date_watched ? props.review.date_watched : "");
+                const string_if_null_season_progress = (props.review.season_progress ? props.review.season_progress : "");
+                const string_if_null_score = (props.review.score ? props.review.score : "");
+                const string_if_null_like = (props.review.like ? props.review.like : "");           
+                const string_if_null_body = (props.review.body ? props.review.body : "");           
+
+            this.state = {
+                date_watched: string_if_null_date_watched,
+                season_progress: string_if_null_season_progress,
+                score: string_if_null_score,
+                like: string_if_null_like,
+                body: string_if_null_body,
+                id: props.review.id,
+            };
+        } else {
+            this.state = {
+                date_watched: "",
+                season_progress: "",
+                score: "",
+                like: "",
+            };
+        }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleHeartClick = this.handleHeartClick.bind(this);
         this.handleStarsOneClick = this.handleStarsOneClick.bind(this);
@@ -63,7 +80,11 @@ class ReviewForm extends React.Component {
             user_id: this.props.currentUserId
         });
 
-        this.props.createReview(review).then(() => this.props.closeModal());
+        if (this.props.createReview) {
+            this.props.createReview(review).then(() => this.props.closeModal());
+        } else {
+            this.props.updateReview(review).then(() => this.props.closeModal());
+        }
     }
 
     update(property) {
@@ -73,7 +94,6 @@ class ReviewForm extends React.Component {
     }
 
     render() {
-        // debugger
         return (
             <div className="review-form-container">
                 <div onClick={this.props.closeModal} className="close-x">X</div>

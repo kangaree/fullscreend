@@ -20,7 +20,7 @@ const mapStateToProps = (state, ownProps) => {
     // const review = state.reviews[ownProps.review.id] || defaultReview;
 
     return {
-        currentUserId: state.ui.currentUserId,
+        currentUserId: parseInt(state.session.currentUserId),
         show: state.entities.shows[state.ui.shows_show],
         // review,
     }
@@ -28,16 +28,15 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchReview: id => dispatch(fetchReview(id)),
         closeModal: () => dispatch(closeModal()),
         updateReview: review => dispatch(updateReview(review)),
     }
 };
 
 class EditReviewForm extends React.Component {
-    componentDidMount() {
-        this.props.fetchReview(this.props.review.id);
-    }
+    // componentDidMount() {
+    //     this.props.fetchReview(this.props.review.id);
+    // }
 
     // componentDidUpdate(prevProps) {
     //     if (prevProps.review.id != this.props.review.id) {
@@ -46,12 +45,15 @@ class EditReviewForm extends React.Component {
     // }
 
     render() {
-        // debugger
-        const { action, review } = this.props;
+        const { action, review, show, closeModal, updateReview, currentUserId } = this.props;
         return (
             <ReviewForm
                 action={action}
-                review={review} />
+                review={review}
+                show={show}
+                closeModal={closeModal}
+                updateReview={updateReview}
+                currentUserId={currentUserId} />
         );
     }
 }

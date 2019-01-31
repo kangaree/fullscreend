@@ -14,8 +14,6 @@ function Modal({ modal, closeModal }) {
         return null;
     }
 
-    // debugger
-
     let component;
     switch (modal.modal_type) {
         case 'login':
@@ -33,6 +31,7 @@ function Modal({ modal, closeModal }) {
         default:
             return null;
     }
+
     return (
         <div className={modal.modal_type === "login" ? "modal-background-login" : "modal-background"} onClick={closeModal}>
             <div className={modal.modal_type === "login" ? "modal-child-login" : "modal-child"} onClick={e => e.stopPropagation()}>

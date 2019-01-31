@@ -13,9 +13,10 @@ const showReviewsReducer = (state = [], action) => {
             return newState;
             // return merge([], state, [action.review.id])
         case RECEIVE_SHOW_REVIEWS:
-            return action.reviews.reviews ? merge([],state,Object.keys(action.reviews.reviews).map(num => parseInt(num))) : state;
-        case RECEIVE_SHOW:
-            return [];
+            // return action.reviews.reviews ? merge([],state,Object.keys(action.reviews.reviews).map(num => parseInt(num))) : state;
+            return action.reviews.reviews ? Object.keys(action.reviews.reviews).map(num => parseInt(num)) : [];
+        // case RECEIVE_SHOW:
+        //     return [];
         default:
             return state;
     }

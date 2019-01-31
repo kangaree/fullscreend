@@ -12,7 +12,6 @@ class ReviewForm extends React.Component {
             like: "",
         };
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.navigateToShowShow = this.navigateToShowShow.bind(this);
         this.handleHeartClick = this.handleHeartClick.bind(this);
         this.handleStarsOneClick = this.handleStarsOneClick.bind(this);
         this.handleStarsTwoClick = this.handleStarsTwoClick.bind(this);

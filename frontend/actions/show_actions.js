@@ -1,4 +1,4 @@
-import * as APIUtil from '../utils/tmdb_api_utils';
+import * as APIUtil from '../utils/show_api_utils';
 
 export const RECEIVE_SEARCH_SHOWS = 'RECEIVE_SEARCH_SHOWS';
 export const REQUEST_SEARCH_SHOWS = 'REQUEST_SEARCH_SHOWS';

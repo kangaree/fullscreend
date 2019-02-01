@@ -1,6 +1,5 @@
-# Fullscreend
-
 ![Alt Text](https://media.giphy.com/media/Sb7WSbjHFNIL6/giphy.gif)
+# Fullscreend
 Fullscreend is an app that lets you log and collect tv. 
 
 [Live Demo](https://fullscreend.herokuapp.com)

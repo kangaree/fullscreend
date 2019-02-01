@@ -68,7 +68,7 @@ class ShowsShow extends Component {
                     : 
                     <p className="show-review-index">Please sign in to see reviews.</p>}
 
-                {currentUser ? <div className="center-buttons"><a className="green-button" onClick={() => openModal({modal_type: 'review'})} show={show}>log</a></div> : null }
+                {currentUser ? <div className="center-buttons"><a className="green-button-log" onClick={() => openModal({modal_type: 'review'})} show={show}>log</a></div> : null }
 
             </>
         );

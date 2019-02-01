@@ -8,6 +8,7 @@ import ShowsSearchContainer from './shows_search/shows_search_container';
 import ShowsPopularContainer from './shows_popular/shows_popular_container';
 import ShowsShowContainer from './shows_show/shows_show_container';
 import Home from './home/home';
+import Lists from './lists/lists';
 import Blank from './blank/blank';
 import { Route, Switch } from 'react-router-dom';
 import { AuthRoute } from '../utils/route_utils';
@@ -20,6 +21,7 @@ export default () => (
         {/* <ShowsSearchContainer /> */}
         <Switch>
             <Route exact path="/" component={Home} />
+            <Route exact path="/lists" component={Lists} />
             <Route exact path="/shows" component={ShowsPopularContainer} />
             <Route path="/shows/:showId/reviews/:reviewId" component={ShowsShowContainer}/>
             <Route path="/shows/:showId" component={ShowsShowContainer}/>

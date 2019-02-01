@@ -1,0 +1,7 @@
+.profile-pic img{
+    border-radius: 50%;
+    width: 17px;
+    height: 17px;
+    margin: 0;
+    background-color: #38475a;
+}

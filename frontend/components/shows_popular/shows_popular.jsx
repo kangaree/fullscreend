@@ -17,11 +17,13 @@ class ShowsPopular extends React.Component {
     showPreviousPage() {
         this.setState({ page: this.state.page - 1 })
         this.props.fetchPopularShows(this.state.page - 1);
+        window.scrollTo(0, 0);
     }
 
     showNextPage() {
         this.setState({ page: this.state.page + 1 })
         this.props.fetchPopularShows(this.state.page + 1);
+        window.scrollTo(0, 0);
     }
 
     render() {

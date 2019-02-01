@@ -56,16 +56,6 @@ class ShowsShow extends Component {
                         <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Share</a>
                     </div>
                 </div> : null } */}
-                
-                <div className="center-horizontally">
-                    <ul className="season-list">
-                        {show.seasons && show.seasons.every(season => season.poster_path) ? show.seasons.map(season => <li key={season.name}><img src={season.poster_path ?
-                            "https://image.tmdb.org/t/p/w500" + season.poster_path
-                            : ""}/></li> )
-                        :
-                        null}
-                    </ul>
-                </div>
 
                 <div className="show-info">
                     <i className="fas fa-calendar-day"></i>
@@ -76,6 +66,16 @@ class ShowsShow extends Component {
                     <p>{show.episode_run_time ? show.episode_run_time[0] : null} min</p>
                     <i className="fas fa-cloud-sun"></i>
                     <p>{show.number_of_seasons} Season{show.number_of_seasons == 1 ? "" : "s"}, {show.number_of_episodes} Episode{show.number_of_episodes == 1 ? "" : "s"}</p>
+                </div>
+                
+                <div className="center-horizontally">
+                    <ul className="season-list">
+                        {show.seasons && show.seasons.every(season => season.poster_path) ? show.seasons.map(season => <li key={season.name}><img src={season.poster_path ?
+                            "https://image.tmdb.org/t/p/w500" + season.poster_path
+                            : ""}/></li> )
+                        :
+                        null}
+                    </ul>
                 </div>
 
                 {currentUser ? reviews.map(review => (

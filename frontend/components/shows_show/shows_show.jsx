@@ -9,6 +9,7 @@ import ReviewListItemContainer from './review_list_item_container'
 
 class ShowsShow extends Component {
     componentDidMount() {
+        window.scrollTo(0, 0);
         this.props.fetchShow(this.props.match.params.showId);
         this.props.fetchShowReviews(this.props.match.params.showId);
     }
@@ -68,7 +69,7 @@ class ShowsShow extends Component {
                     : 
                     <p className="show-review-index">Please sign in to see reviews.</p>}
 
-                {currentUser ? <div className="center-buttons"><a className="green-button-log" onClick={() => openModal({modal_type: 'review'})} show={show}>log</a></div> : null }
+                {currentUser ? <div className="center-buttons"><a className="green-button" onClick={() => openModal({modal_type: 'review'})} show={show}>log</a></div> : null }
 
             </>
         );

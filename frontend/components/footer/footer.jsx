@@ -6,10 +6,10 @@ export default () => {
         <footer className="footer">
             <div className="footer-links">
                 <ul className="footer-links-text">
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/help">Help</Link></li>
-                    <li><Link to="/credit">Credit</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
+                    <li><Link to="/shows">About</Link></li>
+                    <li><Link to="/shows">Help</Link></li>
+                    <li><Link to="/shows">Credit</Link></li>
+                    <li><Link to="/shows">Contact</Link></li>
                 </ul>
                 <div className="footer-links-logos"><p><i className="fab fa-github"></i> / <i className="fab fa-linkedin-in"></i> / <i className="fas fa-envelope"></i></p></div>
             </div>

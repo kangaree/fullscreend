@@ -12,6 +12,7 @@ class ShowsPopular extends React.Component {
 
     componentDidMount() {
         this.props.fetchPopularShows(this.state.page);
+        window.scrollTo(0, 0);
     }
 
     showPreviousPage() {
@@ -33,8 +34,8 @@ class ShowsPopular extends React.Component {
             <>
                 <ShowsIndex shows={shows} showIds={showIds}/>
                 <div className="pagination-buttons">
-                    <button onClick={this.showPreviousPage} className="previous_page">previous</button>
-                    <button onClick={this.showNextPage} className="next_page">next</button>
+                    <button onClick={this.showPreviousPage} className="previous-page-popular">Previous</button>
+                    <button onClick={this.showNextPage} className="next-page-popular">Next</button>
                 </div>
             </>
         );

@@ -9,10 +9,10 @@ export default ({ currentUser, logout, openModal }) => {
         <ul>
           <li><Link className="nav-link" to="/">{currentUser.username}</Link></li>
           <li><a className="nav-link" onClick={logout}>Log Out</a></li>
-          <li><Link className="nav-link" to="/">Activity</Link></li>
+          <li><Link className="nav-link" to="/shows">Activity</Link></li>
           <li><Link className="nav-link" to="/shows">Shows</Link></li>
-          <li><Link className="nav-link" to="/lists">Lists</Link></li>
-          <li><Link className="nav-link" to="/users">People</Link></li >
+          <li><Link className="nav-link" to="/shows">Lists</Link></li>
+          <li><Link className="nav-link" to="/shows">People</Link></li >
           <li className="nav-search-input"><ShowsSearchContainer /></li>
         </ul>
       </nav>
@@ -23,8 +23,8 @@ export default ({ currentUser, logout, openModal }) => {
           <li><a className="nav-link" onClick={() => openModal({ modal_type: 'login' })}>Sign In</a></li>
           <li><a className="nav-link" onClick={() => openModal({ modal_type: 'signup' })}>Create Account</a></li>
           <li><Link className="nav-link" to="/shows">Shows</Link></li>
-          <li><Link className="nav-link" to="/lists">Lists</Link></li>
-          <li><Link className="nav-link" to="/users">People</Link></li >
+          <li><Link className="nav-link" to="/shows">Lists</Link></li>
+          <li><Link className="nav-link" to="/shows">People</Link></li >
           <li className="nav-search-input"><ShowsSearchContainer /></li>
         </ul>
       </nav>

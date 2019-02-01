@@ -30,12 +30,34 @@ class ShowsShow extends Component {
             <>
                 <div className="backdrop" style={ show.backdrop_path ?
                         { backgroundImage: `url(${"https://image.tmdb.org/t/p/original" + show.backdrop_path})` }
-                    : {}}><div className="backdrop-fade">
+                        : {}}><div className="backdrop-fade">
                     <h2 className="headline-1">{show.name}</h2>
-                    <p className="headline-3">{show.overview}</p>
+                        <div className="headline-3"><img className="dashboard-poster"
+                            src={
+                                show.poster_path ?
+                                    "https://image.tmdb.org/t/p/w500/" + show.poster_path
+                                    : ""} /><div className="show-overview">{show.overview}</div><div className="dashboard-buttons">
+                                <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Review or log...</a>
+                                <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Add to a list...</a>
+                                <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Share</a>
+                            </div></div>
                 </div></div>
+
+                {/* {currentUser ? 
+                <div className="dashboard-container">
+                    <img className="dashboard-poster"
+                        src={
+                        show.poster_path ?
+                            "https://image.tmdb.org/t/p/w500/" + show.poster_path
+                            : ""} />
+                    <div className="dashboard-buttons">
+                        <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Review or log...</a>
+                        <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Add to a list...</a>
+                        <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Share</a>
+                    </div>
+                </div> : null } */}
                 
-                <div className="center-test">
+                <div className="center-horizontally">
                     <ul className="season-list">
                         {show.seasons && show.seasons.every(season => season.poster_path) ? show.seasons.map(season => <li key={season.name}><img src={season.poster_path ?
                             "https://image.tmdb.org/t/p/w500" + season.poster_path
@@ -67,9 +89,9 @@ class ShowsShow extends Component {
                     />
                     ))
                     : 
-                    <p className="show-review-index">Please sign in to see reviews.</p>}
+                    <p className="center-horizontally">Please sign in to see reviews.</p>}
 
-                {currentUser ? <div className="center-buttons"><a className="green-button" onClick={() => openModal({modal_type: 'review'})} show={show}>log</a></div> : null }
+                {currentUser ? <div className="center-buttons"><a className="green-button-log" onClick={() => openModal({ modal_type: 'review' })} show={show}>log</a></div> : null}
 
             </>
         );

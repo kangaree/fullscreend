@@ -37,6 +37,38 @@
 
 .pagination-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     background-color: #1e252d;
+    padding-left: 17%;
+    padding-right: 17%;
+    padding-bottom: 20px;
+}
+
+.previous-page-popular {
+    color: #9ab;
+    background: #242c34;
+    display: inline-block;
+    white-space: nowrap;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 0 hsla(0,0%,100%,.1);
+    display: block;
+    line-height: 1;
+    padding: 9px 15px;
+    text-decoration: none;
+    border: 1px;
+    cursor: pointer;
+}
+.next-page-popular {
+    color: #9ab;
+    background: #242c34;
+    display: inline-block;
+    white-space: nowrap;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 0 hsla(0,0%,100%,.1);
+    display: block;
+    line-height: 1;
+    padding: 9px 15px;
+    text-decoration: none;
+    border: 1px;
+    cursor: pointer;
 }

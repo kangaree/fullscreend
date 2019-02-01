@@ -40,12 +40,12 @@
 .poster-link-top img {
     width: 90px;
     height: 136px;
-    border-radius: 3px;
-    border: 1.5px solid transparent;
+    border-radius: 8px;
+    border: 2px solid transparent;
 }
 
 .poster-link-top img:hover {
-    border: 1.5px solid #00e054;
+    border: 2px solid #00e054;
     background-color: #fff;
     color: #fff;
 }

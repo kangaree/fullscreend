@@ -1,24 +1,21 @@
 # Fullscreend
 
 ![Alt Text](https://media.giphy.com/media/Sb7WSbjHFNIL6/giphy.gif)
-[Live Demo](https://fullscreend.herokuapp.com)
-
 Fullscreend is an app that lets you log and collect tv. 
 
-It is a clone of Letterboxd, an app that lets you log and collect movies. 
+[Live Demo](https://fullscreend.herokuapp.com)
 
-Fullscreend's name comes from the full screen aspect ratio 4:3 (1.3:1) of the old standard television screen. 
+Fullscreend is a clone of Letterboxd, an app that lets you log and collect movies. 
 
-Letterboxd's name comes from letterboxing, or the practice of transferring film shot in a widescreen aspect ratio to standard-width video formats while preserving the original aspect ratio. It comes from a love of the widescreen format.
+It's name comes from the full screen aspect ratio of the old standard television screen (4:3). Letterboxd's name comes from letterboxing, or the practice of transferring film shot in a widescreen aspect ratio to standard-width video formats while preserving the original aspect ratio.
 
-It was built on a Rails and PostgreSQL backend with a React/Redux frontend.
-It uses the TMDb API but is not endorsed or certified by TMDb.
+Fullscreend was built on a Rails and PostgreSQL backend with a React/Redux frontend. It uses the TMDb API but is not endorsed or certified by TMDb.
 
 This project was completed in a fortnight, but will continue to be updated.
 
 ## Features
 
-* User authentication using BCrypt
+* User Authentication with BCrypt
 * Search, Index, and Show TV Shows through TMDb API
 * Create, Read, Update, and Delete Reviews
 * Flexible Form for Reviews
@@ -33,13 +30,13 @@ Letterboxd uses the TMDb API service for its website. I adapted the TMDb API for
 
 Letterboxd has a very flexible structure for reviews. It's really more of a log with several optional fields. You can submit nothing and it'll make a timestamp of the show.
 
-I like this philosophy. It puts less stress on the diary writer. Diaries should not be restricted to a number rating. When I review a show, I might want to write the date I saw it, the season I watched, write a blurb, give a star rating, and like it, or I could only want to keep a log of the show.
+I like this philosophy. It puts less stress on the diary writer. Reviews should not be restricted to a number rating. When I review a show, I could want to mark the date I saw it, the season I watched, write a blurb, give a star rating, and like it, or I could just keep a log of the show.
 
 The review form is a modal and it has clickable stars and hearts.
 
 ## Design
 
-I love the design of Letterboxd. The faded gradient backdrops are gorgeous and mirror the effect of watching a film in the dark. Posters are are easier to identify than title text and are used frequently throughout Letterboxd. The color choices are well balanced as well- dark blue, orange, and green.
+I love the design of Letterboxd. The gradient backdrops are gorgeous and mirror the effect of watching a film in the dark. Posters are plentiful and are easier to identify than title text. The color choices are well balanced- dark blue, orange, and green.
 
 A slice of the CSS:
 

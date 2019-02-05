@@ -25,6 +25,34 @@ The TMDb API service is for those interested in using movie, TV show or actor im
 
 Letterboxd uses the TMDb API service for its website. I adapted the TMDb API for TV.
 
+The search bar does a lot in Letterboxd. When I was adapting it for Fullscreend, I was suprised to learn there were all sorts of behaviors that I needed to account for. 
+
+For example, if the search bar is cleared, than the results should clear too. This required making an action to remove searched shows:
+
+```javascript
+
+export const discardSearchedShows = () => dispatch => (
+    dispatch(removeSearchedShows())
+);
+
+export const removeSearchedShows = () => ({
+    type: REMOVE_SEARCHED_SHOWS
+})
+
+```
+
+And in turn this needed to be triggered when the Search Bar is updated:
+
+```javascript
+    componentDidUpdate(prevProps, prevState) {
+        if (this.state.searchTerm.length == 0 && prevState.searchTerm.length > 0) {
+            this.props.removeSearchedShows();
+        }
+    }
+```
+
+Subtle, but essential for good UI.
+
 ## Flexible Form for Reviews
 
 Letterboxd has a very flexible structure for reviews. It's really more of a log with several optional fields. You can submit nothing and it'll make a timestamp of the show.

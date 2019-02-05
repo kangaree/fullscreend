@@ -30,18 +30,44 @@ class ShowsShow extends Component {
             <>
                 <div className="backdrop" style={ show.backdrop_path ?
                         { backgroundImage: `url(${"https://image.tmdb.org/t/p/original" + show.backdrop_path})` }
-                        : {}}><div className="backdrop-fade">
-                    <h2 className="headline-1">{show.name}</h2>
-                        <div className="headline-3"><img className="dashboard-poster"
-                            src={
-                                show.poster_path ?
-                                    "https://image.tmdb.org/t/p/w500/" + show.poster_path
-                                    : ""} /><div className="show-overview">{show.overview}</div><div className="dashboard-buttons">
+                        : {}}>
+                        
+                    <div className="backdrop-fade">
+
+                        <div className="headline-overview">
+
+                            <img className="dashboard-poster"
+                                src={
+                                    show.poster_path ?
+                                        "https://image.tmdb.org/t/p/w500/" + show.poster_path
+                                        : ""} />
+                                            
+                            <div className="dashboard-middle-text">
+                                <h2 className="headline-show">{show.name}</h2>
+                                <div className="show-info-overview">
+                                    <i className="fas fa-calendar-day"></i>
+                                    <p>{show.first_air_date} to {show.last_air_date} ({show.status})</p>
+                                    <i className="fas fa-tv"></i>
+                                    <p>{show.type}</p>
+                                    <i className="far fa-clock"></i>
+                                    <p>{show.episode_run_time ? show.episode_run_time[0] : null} min</p>
+                                    <i className="fas fa-cloud-sun"></i>
+                                    <p>{show.number_of_seasons} Season{show.number_of_seasons == 1 ? "" : "s"}, {show.number_of_episodes} Episode{show.number_of_episodes == 1 ? "" : "s"}</p>
+                                </div>
+                                <div className="show-overview">{show.overview}</div>
+                            </div>
+
+                            <div className="dashboard-buttons">
                                 <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Review or log...</a>
                                 <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Add to a list...</a>
                                 <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Share</a>
-                            </div></div>
-                </div></div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                
+                </div>
 
                 {/* {currentUser ? 
                 <div className="dashboard-container">
@@ -57,7 +83,7 @@ class ShowsShow extends Component {
                     </div>
                 </div> : null } */}
 
-                <div className="show-info">
+                {/* <div className="show-info">
                     <i className="fas fa-calendar-day"></i>
                     <p>{show.first_air_date} to {show.last_air_date} ({show.status})</p>
                     <i className="fas fa-tv"></i>
@@ -66,7 +92,7 @@ class ShowsShow extends Component {
                     <p>{show.episode_run_time ? show.episode_run_time[0] : null} min</p>
                     <i className="fas fa-cloud-sun"></i>
                     <p>{show.number_of_seasons} Season{show.number_of_seasons == 1 ? "" : "s"}, {show.number_of_episodes} Episode{show.number_of_episodes == 1 ? "" : "s"}</p>
-                </div>
+                </div> */}
                 
                 <div className="center-horizontally">
                     <ul className="season-list">

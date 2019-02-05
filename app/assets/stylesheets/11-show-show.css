@@ -4,8 +4,16 @@
     /* background-image: linear-gradient(#1e252d, #1e252d); */
 }
 
+.headline-show {
+    top: -70%;
+    left: 20.3%;
+    font-size: 40px;
+    font-family: serif;
+    color: #fff;
+    margin: 0;
+}
 
-.headline-3 {
+.headline-overview {
     position: relative;
     top: 65%;
     left: 50%;
@@ -26,11 +34,11 @@
 }
 
 .headline-3 img {
-    width: 120px;
-    height: 182px;
+    width: 175px;
+    height: 262.5px;
     position: absolute;
-    left: 0%;
-    top: -64%;
+    left: 20%;
+    top: -129%;
 }
 
 .show-info {
@@ -45,13 +53,26 @@
     padding-right: 8px;
 }
 
+.show-info-overview {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    font-size: 12px;
+    color: #fff;
+}
+
+.show-info-overview * {
+    padding-right: 8px;
+}
+
 .season-list {
     display: flex;
     /* justify-content: center; */
     /* align-content: space-around; */
     list-style: none;
-    overflow: auto;
-    max-width: 1033px;
+    overflow: scroll;
+    max-width: 45%;
     margin: 0 auto;
     margin-top: 50px;
 
@@ -61,6 +82,11 @@
     padding-left: 0; */
 }
 
+.season-list::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
 .season-list img {
     width: 165px;
     height: 240px;
@@ -68,10 +94,6 @@
     border: 1px solid transparent;
     padding-left: 3px;
     padding-right: 3px;
-}
-
-.season-list {
-    padding-inline-start: 0;
 }
 
 .center-horizontally {
@@ -86,10 +108,10 @@
     align-items: flex-end;
     flex-direction: column;
     /* padding-right: 15%; */
-
-    position: absolute;
-    right: 1%;
-    top: -8px;
+    /* right: 18%;
+    top: 25%;
+    position: absolute; */
+    padding-top: 42px;
 }
 
 .dashboard-container {
@@ -103,15 +125,32 @@
 
 .dashboard-poster {
     width: 150px;
-    height: 230px;
+    height: 220px;
     border-radius: 10px;
     border: 1px solid transparent;
+    /* position: absolute;
+    left: 275px;
+    bottom: -102px; */
+    margin-right: 10px;
 }
 
 .show-overview {
-    width: 1000px;
-    padding-left: 147px;
-    padding-right: 147px;
-    overflow: scroll;
+    width: 560px;
+    /* padding-left: 500px; */
+    /* padding-right: 500px; */
+    /* overflow: scroll; */
     height: 110px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 16px;     /* fallback */
+    max-height: 80px;      /* fallback */
+    -webkit-line-clamp: 5; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.dashboard-middle-text {
+    display: flex;
+    flex-direction: column;
 }

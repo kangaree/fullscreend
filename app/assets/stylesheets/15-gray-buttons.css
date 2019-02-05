@@ -1,22 +1,15 @@
 .gray-button {
-    /* color: #f4fcf0; */
     cursor: pointer;
-    /* background: #00b020; */
     display: inline-block;
-    /* padding: 9px 12px 8px; */
-
-    /* letter-spacing: .075em; */
     border-width: 0px;
-    width: 130px;
-    /* margin-bottom: 20px; */
+    width: 155px;
     border-radius: 5px;
     text-align: center;
 
     color: #bcd;
     background-color: #456;
-    text-align: center;
     margin-bottom: 1px;
-    padding: 10px 20px;
+    padding: 15px 30px;
     box-sizing: border-box;
 
     font-size: 12px;

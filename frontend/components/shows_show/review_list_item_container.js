@@ -20,8 +20,8 @@ const Review = ({ review, user, deleteReview, show, openModal }) => {
                     <div className="index-heart"><i className="fas fa-heart" style={like ? { color: "orange" } : { display: "none" }}></i></div>
                     <div>{season_progress ? `S${season_progress}`: null}</div>
                     <div>{date_watched ? date_watched : null}</div>
-                {currentUser.id == review.user_id ? <div onClick={() => deleteReview(review.id)} className="delete-review-button"><i className="fas fa-trash"></i></div> : null }
-                {currentUser.id == review.user_id ? <div onClick={() => openModal({ modal_type: 'edit-review', options: { review } })} className="edit-review-button"><i className="fas fa-edit"></i></div> : null }
+                {user.id == review.user_id ? <div onClick={() => deleteReview(review.id)} className="delete-review-button"><i className="fas fa-trash"></i></div> : null }
+                {user.id == review.user_id ? <div onClick={() => openModal({ modal_type: 'edit-review', options: { review } })} className="edit-review-button"><i className="fas fa-edit"></i></div> : null }
             </div>
             <div className="show-review-index">
                 { body ? <p>{body}</p> : <p><i className="fas fa-bookmark"></i></p> }

@@ -11,9 +11,15 @@ export default () => {
                     <li><Link to="/shows">Credit</Link></li>
                     <li><Link to="/shows">Contact</Link></li>
                 </ul>
-                <div className="footer-links-logos"><p><i className="fab fa-github"></i> / <i className="fab fa-linkedin-in"></i> / <i className="fas fa-envelope"></i></p></div>
+                <div className="footer-links-logos">
+                    <p><a href="//github.com/kangaree/"><i className="fab fa-github"></i></a> / <a href="//linkedin.com/in/gary-kang-877b9b22"><i className="fab fa-linkedin-in"></i></a> / <a href="mailto:garyzkang@gmail.com"><i className="fas fa-envelope"></i></a></p>
+                </div>
             </div>
             <p className="footer-credit"> Fullscreend. Made by a fan of tv (and Letterboxd) in NY, NY. TV data from TMDb. </p>
         </footer>
     );
 };
+
+{/* <a href="//github.com/kangaree/"><i className="fab fa-github"></i></a>
+<a href="//linkedin.com/in/gary-kang-877b9b22"><i className="fab fa-linkedin-in"></i></a>
+<a href="//garyzkang@gmail.com"><i className="fas fa-envelope"></i></a> */}

@@ -37,7 +37,7 @@ class ShowsSearch extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         let searchTerm = this.state.searchTerm.split(' ').join('+');
-        this.props.fetchSearchShows(searchTerm);
+        if (this.state.searchTerm) {this.props.fetchSearchShows(searchTerm)};
     }
 
     onFocus() {

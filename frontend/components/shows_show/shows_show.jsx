@@ -11,13 +11,13 @@ class ShowsShow extends Component {
     componentDidMount() {
         window.scrollTo(0, 0);
         this.props.fetchShow(this.props.match.params.showId);
-        this.props.fetchShowReviews(this.props.match.params.showId);
+        if (this.props.currentUser) {this.props.fetchShowReviews(this.props.match.params.showId)};
     }
 
     componentDidUpdate(prevProps) {
         if (prevProps.match.params.showId !== this.props.match.params.showId) {
             this.props.fetchShow(this.props.match.params.showId);
-            this.props.fetchShowReviews(this.props.match.params.showId);
+            if (this.props.currentUser) { this.props.fetchShowReviews(this.props.match.params.showId) };
         }
     }
 

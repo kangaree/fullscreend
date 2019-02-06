@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { openModal } from '../../actions/modal_actions';
 
-const Review = ({ review, user, deleteReview, show, openModal }) => {
+const Review = ({ review, user, deleteReview, show, openModal, currentUser }) => {
     const { score, body, like, season_progress, date_watched } = review;
     
     return (
@@ -20,8 +20,8 @@ const Review = ({ review, user, deleteReview, show, openModal }) => {
                     <div className="index-heart"><i className="fas fa-heart" style={like ? { color: "orange" } : { display: "none" }}></i></div>
                     <div>{season_progress ? `S${season_progress}`: null}</div>
                     <div>{date_watched ? date_watched : null}</div>
-                {user.id == review.user_id ? <div onClick={() => deleteReview(review.id)} className="delete-review-button"><i className="fas fa-trash"></i></div> : null }
-                {user.id == review.user_id ? <div onClick={() => openModal({ modal_type: 'edit-review', options: { review } })} className="edit-review-button"><i className="fas fa-edit"></i></div> : null }
+                {currentUser.id == review.user_id ? <div onClick={() => deleteReview(review.id)} className="delete-review-button"><i className="fas fa-trash"></i></div> : null }
+                {currentUser.id == review.user_id ? <div onClick={() => openModal({ modal_type: 'edit-review', options: { review } })} className="edit-review-button"><i className="fas fa-edit"></i></div> : null }
             </div>
             <div className="show-review-index">
                 { body ? <p>{body}</p> : <p><i className="fas fa-bookmark"></i></p> }
@@ -32,9 +32,10 @@ const Review = ({ review, user, deleteReview, show, openModal }) => {
     );
 };
 
-const mapStateToProps = ({ entities: { users } }, { review }) => {
+const mapStateToProps = ({ entities: { users }, session: { currentUserId } }, { review }) => {
     return {
-        user: users[review.user_id]
+        user: users[review.user_id],
+        currentUser: users[currentUserId]
     };
 };
 

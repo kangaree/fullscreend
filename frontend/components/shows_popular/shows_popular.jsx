@@ -3,9 +3,9 @@ import React from 'react';
 import ShowsIndex from './shows_index';
 
 class ShowsPopular extends React.Component {
-    constructor() {
+    constructor({ page }) {
         super();
-        this.state = { page: 1 };
+        this.state = { page: page };
         this.showNextPage = this.showNextPage.bind(this);
         this.showPreviousPage = this.showPreviousPage.bind(this);
     }
@@ -17,12 +17,14 @@ class ShowsPopular extends React.Component {
 
     showPreviousPage() {
         this.setState({ page: this.state.page - 1 })
+        this.props.history.push(`/shows/pages/${this.state.page - 1}`);
         this.props.fetchPopularShows(this.state.page - 1);
         window.scrollTo(0, 0);
     }
 
     showNextPage() {
         this.setState({ page: this.state.page + 1 })
+        this.props.history.push(`/shows/pages/${this.state.page + 1}`);
         this.props.fetchPopularShows(this.state.page + 1);
         window.scrollTo(0, 0);
     }

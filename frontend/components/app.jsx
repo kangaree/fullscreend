@@ -22,9 +22,9 @@ export default () => (
         <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/lists" component={Lists} />
-            <Route exact path="/shows" component={ShowsPopularContainer} />
-            <Route path="/shows/:showId/reviews/:reviewId" component={ShowsShowContainer}/>
-            <Route path="/shows/:showId" component={ShowsShowContainer}/>
+            <Route exact path="/shows/:showId" component={ShowsShowContainer}/>
+            <Route path="/shows/pages/:page" component={ShowsPopularContainer} />
+            <Route path="/shows" component={ShowsPopularContainer} />
             <Route path="/" component={Blank} />
         </Switch>
 

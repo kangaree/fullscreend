@@ -8,7 +8,7 @@ function ShowsIndexItem({ show }) {
             <Link to={"/shows/" + show.id} className="poster-link"><img src={
                 show.poster_path ?
                 "https://image.tmdb.org/t/p/w500/" + show.poster_path
-                : ""} /></Link>
+                    : "https://image.tmdb.org/t/p/w500//8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg"} /></Link>
         </li>
     );
 }

@@ -76,11 +76,6 @@
 
 .session-error {
     background: orange;
-    position: absolute;
-    top: 100%;
-    font-size: 14px;
+    font-size: 16px;
     border-radius: 5px;
-    left: 0;
-    width: 100%;
-    text-align: center;
 }

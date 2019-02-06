@@ -115,7 +115,7 @@ class ShowsShow extends Component {
                     />
                     ))
                     : 
-                    <p className="center-horizontally">Please sign in to see reviews.</p>}
+                    null}
 
                 {currentUser ? <div className="center-buttons"><a className="green-button-log" onClick={() => openModal({ modal_type: 'review' })} show={show}>log</a></div> : null}
 

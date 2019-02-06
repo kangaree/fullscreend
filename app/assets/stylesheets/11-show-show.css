@@ -137,19 +137,20 @@
 }
 
 .show-overview {
-    width: 560px;
-    /* padding-left: 500px; */
-    /* padding-right: 500px; */
-    /* overflow: scroll; */
-    height: 110px;
+    width: 572px;
 
-    overflow: hidden;
+    overflow: scroll;
     text-overflow: ellipsis;
     display: -webkit-box;
-    line-height: 16px;     /* fallback */
-    max-height: 80px;      /* fallback */
-    -webkit-line-clamp: 5; /* number of lines to show */
+    line-height: 16px;
+    max-height: 113px;
+
     -webkit-box-orient: vertical;
+}
+
+.show-overview::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
 }
 
 .dashboard-middle-text {

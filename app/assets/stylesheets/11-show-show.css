@@ -11,6 +11,7 @@
     font-family: serif;
     color: #fff;
     margin: 0;
+    width: 555px;
 }
 
 .headline-overview {
@@ -60,6 +61,7 @@
     align-items: baseline;
     font-size: 12px;
     color: #fff;
+    width: 580px;
 }
 
 .show-info-overview * {

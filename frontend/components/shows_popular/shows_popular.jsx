@@ -16,27 +16,27 @@ class ShowsPopular extends React.Component {
     }
 
     showPreviousPage() {
-        this.setState({ page: this.state.page - 1 })
         this.props.history.push(`/shows/pages/${this.state.page - 1}`);
+        this.setState({ page: this.state.page - 1 })
         this.props.fetchPopularShows(this.state.page - 1);
         window.scrollTo(0, 0);
     }
 
     showNextPage() {
-        this.setState({ page: this.state.page + 1 })
         this.props.history.push(`/shows/pages/${this.state.page + 1}`);
+        this.setState({ page: this.state.page + 1 })
         this.props.fetchPopularShows(this.state.page + 1);
         window.scrollTo(0, 0);
     }
 
     render() {
-        let { showIds, shows } = this.props;
+        let { showIds, shows, page } = this.props;
 
         return (
             <>
                 <ShowsIndex shows={shows} showIds={showIds}/>
                 <div className="pagination-buttons">
-                    <button onClick={this.showPreviousPage} className="previous-page-popular">Previous</button>
+                    {!(page - 1 < 1) ? <button onClick={this.showPreviousPage} className="previous-page-popular">Previous</button> : <button className="previous-page-popular">Previous</button> }
                     <button onClick={this.showNextPage} className="next-page-popular">Next</button>
                 </div>
             </>

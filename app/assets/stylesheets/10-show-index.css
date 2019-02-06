@@ -72,3 +72,11 @@
     border: 1px;
     cursor: pointer;
 }
+
+.previous-page-popular:focus {
+    outline: 0;
+}
+
+.next-page-popular:focus {
+    outline: 0;
+}

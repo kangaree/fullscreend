@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import Reviews from './reviews';
-import { fetchReviews } from '../../actions/show_actions';
+import { fetchReviews, deleteReview } from '../../actions/show_actions';
 import { openModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state) => {

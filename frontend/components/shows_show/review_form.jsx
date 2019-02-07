@@ -85,12 +85,15 @@ class ReviewForm extends React.Component {
         const showId = parseInt(this.props.show.id);
 
         const poster_path = this.props.show.poster_path ? this.props.show.poster_path : "/8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg";
+        
+        const show_title = this.props.show.name ? this.props.show.name : this.props.review.show_title;
 
         const review = Object.assign({}, this.state, {
             show_id: showId,
             user_id: this.props.currentUserId,
 
-            show_title: this.props.show.name,
+            // show_title: this.props.show.name,
+            show_title,
             poster_path,
         });
 
@@ -108,6 +111,10 @@ class ReviewForm extends React.Component {
     }
 
     render() {
+        const showTitle = this.props.show.name ? this.props.show.name : this.props.review.show_title;
+        const showPosterPath = this.props.show.poster_path ? this.props.show.poster_path : (this.props.review.poster_path ? this.props.review.poster_path : "/8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg");
+        
+        // debugger
         return (
             <div className="review-form-container">
                 <div onClick={this.props.closeModal} className="close-x">X</div>
@@ -115,13 +122,10 @@ class ReviewForm extends React.Component {
                 
                 <form onSubmit={this.handleSubmit}>
                     <label className="diary-header">I WATCHED...</label>
-                    <h1>{this.props.show.name}</h1>
+                    <h1>{showTitle}</h1>
                     <br />
                     
-                    <img src={
-                        this.props.show.poster_path ?
-                            "https://image.tmdb.org/t/p/w500/" + this.props.show.poster_path
-                            : ""} className="review-form-poster"/>
+                    <img src={"https://image.tmdb.org/t/p/w500/" + showPosterPath} className="review-form-poster"/>
                     
                     <input type="date"
                         className="review-date-input"

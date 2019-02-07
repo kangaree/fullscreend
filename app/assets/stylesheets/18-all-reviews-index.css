@@ -1,0 +1,16 @@
+.all-review-show-poster {
+    height: 120px;
+    margin-right: 5px;
+    margin-bottom: 25px;
+}
+
+.all-review-index {
+    color: #98aabc;
+    font-size: 18px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.all-review-index p {
+    margin-top: 0;
+}

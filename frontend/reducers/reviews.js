@@ -10,6 +10,7 @@ import {
 
 const reviewsReducer = (state = {}, action) => {
     Object.freeze(state);
+
     switch (action.type) {
         case RECEIVE_SHOW_REVIEWS:
             return merge({}, state, action.reviews.reviews);
@@ -26,7 +27,7 @@ const reviewsReducer = (state = {}, action) => {
             return newState;
 
         case RECEIVE_REVIEWS:
-            return merge({}, state, action.reviews);
+            return merge({}, state, action.reviews.reviews);
 
         default:
             return state;

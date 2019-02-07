@@ -5,7 +5,7 @@ import { fetchReviews, deleteReview } from '../../actions/show_actions';
 import { openModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state) => {
-    const reviews = state.entities.reviews.reviews ? Object.values(state.entities.reviews.reviews) : []; 
+    const reviews = state.entities.reviews ? Object.values(state.entities.reviews) : []; 
 
     return {
         currentUser: state.entities.users[state.session.currentUserId],

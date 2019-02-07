@@ -1,12 +1,14 @@
 import merge from 'lodash/merge';
 
 import {
-    RECEIVE_SHOW_REVIEWS, RECEIVE_REVIEW, REMOVE_REVIEW
+    RECEIVE_SHOW_REVIEWS, RECEIVE_REVIEW, REMOVE_REVIEW, RECEIVE_REVIEWS
 } from '../actions/show_actions';
 
 const showReviewsReducer = (state = [], action) => {
     Object.freeze(state)
     let newState = merge([], state);
+
+    // debugger
 
     switch (action.type) {
         // action.review.review is edit, and action.review is new
@@ -28,6 +30,10 @@ const showReviewsReducer = (state = [], action) => {
             if (index !== -1) newState.splice(index, 1)
 
             return newState;
+
+        // case RECEIVE_REVIEWS:
+        //     return action.reviews.reviews ? Object.keys(action.reviews.reviews).map(num => parseInt(num)) : [];
+
         default:
             return state;
     }

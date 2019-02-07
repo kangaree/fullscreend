@@ -5,6 +5,7 @@ import {
     RECEIVE_REVIEW,
     RECEIVE_SHOW_REVIEWS,
     REMOVE_REVIEW,
+    RECEIVE_REVIEWS,
 } from '../actions/show_actions';
 
 const reviewsReducer = (state = {}, action) => {
@@ -23,6 +24,9 @@ const reviewsReducer = (state = {}, action) => {
             let newState = merge({}, state);
             delete newState[action.reviewId];
             return newState;
+
+        case RECEIVE_REVIEWS:
+            return merge({}, state, action.reviews);
 
         default:
             return state;

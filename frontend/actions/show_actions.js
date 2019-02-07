@@ -104,3 +104,17 @@ const removeReview = reviewId => ({
     type: REMOVE_REVIEW,
     reviewId
 });
+
+export const RECEIVE_REVIEWS = 'RECEIVE_REVIEWS';
+
+export const receiveReviews = reviews => {
+    return {
+        type: RECEIVE_REVIEWS,
+        reviews
+    }
+};
+
+export const fetchReviews = () => dispatch => {
+    return APIUtil.fetchReviews()
+        .then(reviews => (dispatch(receiveReviews(reviews))))
+};

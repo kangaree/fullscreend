@@ -9,7 +9,7 @@ export default ({ currentUser, logout, openModal }) => {
         <ul>
           <li><Link className="nav-link" to="/">{currentUser.username}</Link></li>
           <li><a className="nav-link" onClick={logout}>Log Out</a></li>
-          <li><Link className="nav-link" to="/shows">Activity</Link></li>
+          <li><Link className="nav-link" to="/reviews">Activity</Link></li>
           <li><Link className="nav-link" to="/shows">Shows</Link></li>
           <li><Link className="nav-link" to="/lists">Lists</Link></li>
           <li><Link className="nav-link" to="/shows">People</Link></li >

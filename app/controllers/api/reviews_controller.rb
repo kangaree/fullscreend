@@ -16,6 +16,10 @@ class Api::ReviewsController < ApplicationController
     @reviews = Review.includes(:user).where(show_id: params[:show_id])
   end
 
+  def index_all
+    @reviews = Review.all
+  end
+
   def show
     @review = Review.find(params[:id])
   end

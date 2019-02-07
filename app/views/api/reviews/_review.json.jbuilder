@@ -1,1 +1,1 @@
-json.extract! review, :id, :user_id, :show_id, :date_watched, :season_progress, :body, :score, :like
+json.extract! review, :id, :user_id, :show_id, :date_watched, :season_progress, :body, :score, :like, :show_title, :poster_path

@@ -13,6 +13,8 @@ Rails.application.routes.draw do
       resources :reviews, only: [:index]
     end
 
+    get "reviews", to: "reviews#index_all"
+
   end
 
   resources :users, only: [:new, :create]

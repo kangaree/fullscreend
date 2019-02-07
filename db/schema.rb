@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_28_213923) do
+ActiveRecord::Schema.define(version: 2019_02_07_150648) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,12 +25,18 @@ ActiveRecord::Schema.define(version: 2019_01_28_213923) do
     t.boolean "like"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "show_title"
+    t.string "poster_path"
+    t.string "episode_progress"
     t.index ["body"], name: "index_reviews_on_body"
     t.index ["date_watched"], name: "index_reviews_on_date_watched"
+    t.index ["episode_progress"], name: "index_reviews_on_episode_progress"
     t.index ["like"], name: "index_reviews_on_like"
+    t.index ["poster_path"], name: "index_reviews_on_poster_path"
     t.index ["score"], name: "index_reviews_on_score"
     t.index ["season_progress"], name: "index_reviews_on_season_progress"
     t.index ["show_id"], name: "index_reviews_on_show_id"
+    t.index ["show_title"], name: "index_reviews_on_show_title"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 

@@ -14,6 +14,9 @@ class ReviewForm extends React.Component {
                 const string_if_null_score = (props.review.score ? props.review.score : "");
                 const string_if_null_like = (props.review.like ? props.review.like : "");           
                 const string_if_null_body = (props.review.body ? props.review.body : "");           
+                
+                // const string_if_null_name = (props.review.name ? props.review.name : "");           
+                // const string_if_null_poster_path = (props.review.poster_path ? props.review.poster_path : "");           
 
             this.state = {
                 date_watched: string_if_null_date_watched,
@@ -22,6 +25,9 @@ class ReviewForm extends React.Component {
                 like: string_if_null_like,
                 body: string_if_null_body,
                 id: props.review.id,
+
+                // show_title: string_if_null_name,
+                // poster_path: string_if_null_poster_path,
             };
         } else {
             this.state = {
@@ -29,6 +35,9 @@ class ReviewForm extends React.Component {
                 season_progress: "",
                 score: "",
                 like: "",
+
+                // show_title: props.review.name,
+                // poster_path: props.review.poster_path,
             };
         }
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -75,9 +84,14 @@ class ReviewForm extends React.Component {
 
         const showId = parseInt(this.props.show.id);
 
+        const poster_path = this.props.show.poster_path ? this.props.show.poster_path : "/8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg";
+
         const review = Object.assign({}, this.state, {
             show_id: showId,
-            user_id: this.props.currentUserId
+            user_id: this.props.currentUserId,
+
+            show_title: this.props.show.name,
+            poster_path,
         });
 
         if (this.props.createReview) {

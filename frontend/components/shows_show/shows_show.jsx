@@ -113,7 +113,7 @@ class ShowsShow extends Component {
                         openModal={this.props.openModal}
                         show={show}
                     />
-                    ))
+                    )).reverse()
                     : 
                     null}
 

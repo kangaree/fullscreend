@@ -31,7 +31,7 @@ class Reviews extends Component {
                         updateReview={this.props.updateReview}
                         openModal={this.props.openModal}
                     />
-                    ))
+                    )).reverse()
                     : 
                     null}
 

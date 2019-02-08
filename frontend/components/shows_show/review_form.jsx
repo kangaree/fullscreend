@@ -82,7 +82,7 @@ class ReviewForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        const showId = this.props.show ? parseInt(this.props.show.id) : parseInt(this.props.review.id);
+        const showId = this.props.show ? parseInt(this.props.show.id) : parseInt(this.props.review.show_id);
 
         // const poster_path = this.props.show.poster_path ? this.props.show.poster_path : "/8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg";
         

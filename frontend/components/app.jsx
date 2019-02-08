@@ -26,7 +26,7 @@ export default () => (
             <Route exact path="/shows/:showId" component={ShowsShowContainer}/>
             <Route exact path="/shows/pages/:page" component={ShowsPopularContainer} />
             <Route exact path="/shows" component={ShowsPopularContainer} />
-            <Route exact path="/reviews" component={ReviewsContainer} />
+            <ProtectedRoute exact path="/reviews" component={ReviewsContainer} />
             <Route path="/" component={Blank} />
         </Switch>
 

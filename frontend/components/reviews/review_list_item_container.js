@@ -28,7 +28,7 @@ const Review = ({ review, deleteReview, openModal, currentUser, user }) => {
                             : "https://image.tmdb.org/t/p/w500//8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg"} /> */}
 
                 <div>
-                    <div className="review-author">
+                    <div className="review-author-body">
                         <b>{user.username}</b>watched
                     </div>
 

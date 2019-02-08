@@ -23,18 +23,21 @@ class Reviews extends Component {
         return (
             <>
                 <div className="blank-header"></div>
-                <h2 className="stream-title">STREAM</h2>
-                {currentUser ? reviews.map(review => (
-                    <ReviewListItemContainer
-                        review={review}
-                        key={review.id}
-                        deleteReview={this.props.deleteReview}
-                        updateReview={this.props.updateReview}
-                        openModal={this.props.openModal}
-                    />
-                    )).reverse()
-                    : 
-                    null}
+                <div className="all-review-index-background">
+                    <h2 className="stream-title">STREAM</h2>
+                    {currentUser ? reviews.map(review => (
+                        <ReviewListItemContainer
+                            review={review}
+                            key={review.id}
+                            deleteReview={this.props.deleteReview}
+                            updateReview={this.props.updateReview}
+                            openModal={this.props.openModal}
+                        />
+                        )).reverse()
+                        : 
+                        null}
+                </div>
+
 
             </>
         );

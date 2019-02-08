@@ -54,7 +54,7 @@ class Login extends React.Component {
 
     renderErrors() {
         return (
-            <div className="session-error">{this.props.errors}</div>    
+            <div className="session-login-error">{this.props.errors}</div>    
         );
     }
 

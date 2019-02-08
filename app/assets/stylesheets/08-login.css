@@ -74,8 +74,21 @@
     font-size: 13px;
 }
 
-.session-error {
+.session-signup-error {
     background: orange;
     font-size: 16px;
     border-radius: 5px;
+}
+
+
+.session-login-error {
+    background: orange;
+    font-size: 16px;
+    border-radius: 5px;
+    position: absolute;
+    top: 100%;
+    font-size: 14px;
+    left: 0;
+    width: 100%;
+    text-align: center;
 }

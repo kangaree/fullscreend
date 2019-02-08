@@ -57,42 +57,27 @@ class ShowsShow extends Component {
                                 <div className="show-overview">{show.overview}</div>
                             </div>
 
-                            <div className="dashboard-buttons">
-                                <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Review or log...</a>
-                                <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Add to a list...</a>
-                                <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Share</a>
-                            </div>
+
+                            {currentUser ? 
+                                <div className="dashboard-buttons">
+                                    <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Review or log...</a>
+                                    <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Add to a list...</a>
+                                    <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Share</a>
+                                </div>
+                                :
+                                
+                                <div className="dashboard-buttons">
+                                    <a className="gray-button" onClick={() => openModal({ modal_type: 'login' })} show={show}>Sign In</a>
+                                    <a className="gray-button" onClick={() => openModal({ modal_type: 'signup' })} show={show}>Create account to log, rate or review</a>
+                                </div>
+
+                                }
 
                         </div>
                         
                     </div>
                 
                 </div>
-
-                {/* {currentUser ? 
-                <div className="dashboard-container">
-                    <img className="dashboard-poster"
-                        src={
-                        show.poster_path ?
-                            "https://image.tmdb.org/t/p/w500/" + show.poster_path
-                            : ""} />
-                    <div className="dashboard-buttons">
-                        <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Review or log...</a>
-                        <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Add to a list...</a>
-                        <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Share</a>
-                    </div>
-                </div> : null } */}
-
-                {/* <div className="show-info">
-                    <i className="fas fa-calendar-day"></i>
-                    <p>{show.first_air_date} to {show.last_air_date} ({show.status})</p>
-                    <i className="fas fa-tv"></i>
-                    <p>{show.type}</p>
-                    <i className="far fa-clock"></i>
-                    <p>{show.episode_run_time ? show.episode_run_time[0] : null} min</p>
-                    <i className="fas fa-cloud-sun"></i>
-                    <p>{show.number_of_seasons} Season{show.number_of_seasons == 1 ? "" : "s"}, {show.number_of_episodes} Episode{show.number_of_episodes == 1 ? "" : "s"}</p>
-                </div> */}
                 
                 <div className="center-horizontally">
                     <ul className="season-list">

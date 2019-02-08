@@ -82,7 +82,7 @@ class ReviewForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        const showId = this.props.show ? parseInt(this.props.show.id) : parseInt(this.props.review.show_id);
+        const showId = this.props.review ? parseInt(this.props.review.show_id) : parseInt(this.props.show_id);
 
         // const poster_path = this.props.show.poster_path ? this.props.show.poster_path : "/8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg";
         
@@ -167,7 +167,7 @@ class ReviewForm extends React.Component {
                             className="review-season-input-input"
                             type="number"
                             min="1"
-                            max={ this.props.show ? this.props.show.number_of_seasons : 100 }
+                            max={ this.props.show ? this.props.show.number_of_seasons : 420 }
                             value= { this.state.season_progress }
                             onChange={this.update("season_progress")}
                         />

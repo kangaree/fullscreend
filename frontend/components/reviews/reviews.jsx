@@ -23,6 +23,7 @@ class Reviews extends Component {
         return (
             <>
                 <div className="blank-header"></div>
+                <h2 className="stream-title">STREAM</h2>
                 {currentUser ? reviews.map(review => (
                     <ReviewListItemContainer
                         review={review}

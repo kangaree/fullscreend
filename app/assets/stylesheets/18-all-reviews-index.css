@@ -1,7 +1,8 @@
 .all-review-show-poster {
     height: 120px;
-    margin-right: 5px;
+    margin-right: 10px;
     margin-bottom: 25px;
+    margin-left: 10px;
 }
 
 .all-review-index {
@@ -9,8 +10,79 @@
     font-size: 18px;
     display: flex;
     align-items: flex-start;
+    margin-top: 10px;
 }
 
-.all-review-index p {
-    margin-top: 0;
+.stream-title {
+    color: #00e054;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-bottom: 1px solid #456;
+    font-family: sans-serif;
+    font-size: 13px;
+}
+
+.all-review-index-body-container {
+    margin-left: 20%;
+    margin-right: 20%;
+    border-bottom: 1px solid #435466;
+    padding-top: 10px;
+}
+
+.all-review-index-body-container * {
+    color: #89a;
+}
+
+.all-review-index-log-container {
+    margin-left: 20%;
+    margin-right: 20%;
+    border-bottom: 1px solid #435466;
+    padding-top: 10px;
+    
+    background-color: #1c232a;
+}
+
+.all-review-index-log-container * {
+    color: #89a;
+}
+
+.all-review-index-show-title {
+    text-decoration: none;
+    color: white;
+}
+
+.all-review-index-show-body-title {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.review-author b {
+    margin-right: 4px;
+}
+
+.all-review-index-symbols {
+    display: flex;
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+.all-review-index-symbols > * {
+    margin-right: 5px;
+}
+
+.delete-edit-buttons {
+    display: flex;
+    padding-bottom: 5px;
+}
+
+.delete-edit-buttons * {
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.all-review-index-body-container p {
+    /* margin-bottom: 0; */
+    margin-top: 10px;
 }

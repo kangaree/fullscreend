@@ -71,11 +71,11 @@ const Review = ({ review, deleteReview, openModal, currentUser, user }) => {
 
 
                     {score ? (<div className="five-stars-index">
-                        <div className="index-star" ><i className="fas fa-star"></i></div>
-                        <div className="index-star"><i className="fas fa-star"></i></div>
-                        <div className="index-star"><i className="fas fa-star"></i></div>
-                        <div className="index-star"><i className="fas fa-star"></i></div>
-                        <div className="index-star"><i className="fas fa-star"></i></div>
+                        <div className="index-star" ><i className="fas fa-star" style={parseInt(score) >= 1 ? { } : { display: "none" }}></i></div>
+                        <div className="index-star"><i className="fas fa-star" style={parseInt(score) >= 2 ? { } : { display: "none" }}></i></div>
+                        <div className="index-star"><i className="fas fa-star" style={parseInt(score) >= 3 ? { } : { display: "none" }}></i></div>
+                        <div className="index-star"><i className="fas fa-star" style={parseInt(score) >= 4 ? { } : { display: "none" }}></i></div>
+                        <div className="index-star"><i className="fas fa-star" style={parseInt(score) >= 5 ? { } : { display: "none" }}></i></div>
                     </div>) : null}
 
                     {like ? (<div className="index-heart"><i className="fas fa-heart"></i></div>) : null}

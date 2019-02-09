@@ -1,4 +1,4 @@
-![Alt Text](https://media.giphy.com/media/Sb7WSbjHFNIL6/giphy.gif)
+![Spongebob and TV](https://media.giphy.com/media/Sb7WSbjHFNIL6/giphy.gif)
 # Fullscreend
 Fullscreend is an app that lets you log and collect tv. 
 
@@ -6,7 +6,11 @@ Fullscreend is an app that lets you log and collect tv.
 
 Fullscreend is a clone of Letterboxd, an app that lets you log and collect movies. 
 
-It's name comes from the full screen aspect ratio of the old standard television screen (4:3). Letterboxd's name comes from letterboxing, or the practice of transferring film shot in a widescreen aspect ratio to standard-width video formats while preserving the original aspect ratio.
+Letterboxd's name comes from letterboxing, or the practice of transferring film shot in a widescreen aspect ratio to standard-width video formats while preserving the original aspect ratio.
+![Letterbox at Home](https://upload.wikimedia.org/wikipedia/commons/0/01/Image_cropping_235x1.jpg)
+
+Fullscreend's name comes from the full screen aspect ratio of the old standard television screen (4:3). 
+![Letterbox at Home](https://upload.wikimedia.org/wikipedia/commons/2/26/Image_cropping_133x1.jpg)
 
 Fullscreend was built on a Rails and PostgreSQL backend with a React/Redux frontend. It uses the TMDb API but is not endorsed or certified by TMDb.
 
@@ -51,7 +55,7 @@ And in turn this needed to be triggered when the Search Bar is updated:
     }
 ```
 
-Subtle, but essential for good UI.
+Subtle, but important for good UI.
 
 ## Flexible Form for Reviews
 

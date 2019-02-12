@@ -8,6 +8,7 @@ import ShowsSearchContainer from './shows_search/shows_search_container';
 import ShowsPopularContainer from './shows_popular/shows_popular_container';
 import ShowsShowContainer from './shows_show/shows_show_container';
 import ReviewsContainer from './reviews/reviews_container';
+import ListsContainer from './lists/lists_container';
 import Home from './home/home';
 import BigList from './biglist/biglist';
 import Blank from './blank/blank';
@@ -27,6 +28,7 @@ export default () => (
             <Route exact path="/shows/pages/:page" component={ShowsPopularContainer} />
             <Route exact path="/shows" component={ShowsPopularContainer} />
             <ProtectedRoute exact path="/reviews" component={ReviewsContainer} />
+            <ProtectedRoute exact path="/lists" component={ListsContainer} />
             <Route path="/" component={Blank} />
         </Switch>
 

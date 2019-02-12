@@ -12,7 +12,7 @@
 
 class List < ApplicationRecord
     validates :title, presence: true
-    validates_uniqueness_of :title, :scope => [:creator_id]
+    validates_uniqueness_of :title, :scope => [:user_id]
 
     belongs_to :user
 

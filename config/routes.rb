@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
     get "reviews", to: "reviews#index_all"
 
+    resources :lists, only: [:create, :update, :show, :destroy, :index]
+
   end
 
   resources :users, only: [:new, :create]

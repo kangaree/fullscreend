@@ -16,6 +16,11 @@ class Api::ListsController < ApplicationController
   def index
     # @lists = current_user.lists
     @lists = List.all
+
+    @listings = [];    
+    @lists.each do |list|
+        @listings.concat(list.listings)
+    end
   end
 
   def show

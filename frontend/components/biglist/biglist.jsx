@@ -9,13 +9,13 @@ export default () => (
     //     </div></div>
     //     <div className="horizontal-featured-list"> 
 
-            // <Link to="/shows/30991" className="poster-link"><img src="https://image.tmdb.org/t/p/original/wjFU9z8EfOwczRTv0FrPcv9zHME.jpg" alt="Cowboy Bebop" /></Link>
+    // <Link to="/shows/30991" className="poster-link"><img src="https://image.tmdb.org/t/p/original/wjFU9z8EfOwczRTv0FrPcv9zHME.jpg" alt="Cowboy Bebop" /></Link>
     //         <Link to="/shows/1438" className="poster-link"><img src="https://image.tmdb.org/t/p/original/dg7NuKDjmS6OzuNy33qt8kSkPA1.jpg" alt="The Wire" /></Link>
     //         <Link to="/shows/66732" className="poster-link"><img src="https://image.tmdb.org/t/p/original/vNJ95BMCzIBJZhW0IEoxzOoW53P.jpg" alt="Stranger Things" /></Link>
     //         <Link to="/shows/63926" className="poster-link"><img src="https://image.tmdb.org/t/p/original/iE3s0lG5QVdEHOEZnoAxjmMtvne.jpg" alt="One Punch Man" /></Link>
     //         <Link to="/shows/2382" className="poster-link"><img src="https://image.tmdb.org/t/p/original/tPqV63zcW6ZV0Hd48DMGb5UzQIG.jpg" alt="Freaks and Geeks" /></Link>
     //         <Link to="/shows/1400" className="poster-link"><img src="https://image.tmdb.org/t/p/original/aCw8ONfyz3AhngVQa1E2Ss4KSUQ.jpg" alt="Seinfeld" /></Link>
-    
+
     //     </div>
 
     //     <div className="div-center"><a href="//letterboxd.com"><img src="https://a.ltrbxd.com/logos/letterboxd-logo-h-neg-rgb-1000px.png" alt="Letterboxd" /></a></div>
@@ -64,7 +64,7 @@ export default () => (
                 <li className="show-li-top"><Link to="/shows/8592" className="poster-link-top"><img src="https://image.tmdb.org/t/p/w500/9kWSJ9c8NlBY2WgfvOZZ71kafSx.jpg" alt="Parks and Recreation" /></Link></li>
                 <li className="show-li-top"><Link to="/shows/67198" className="poster-link-top"><img src="https://image.tmdb.org/t/p/w500/aJTSeqG43514TewIuS9hiHvbero.jpg" alt="Star Trek: Discovery" /></Link></li>
                 <li className="show-li-top"><Link to="/shows/1399" className="poster-link-top"><img src="https://image.tmdb.org/t/p/w500/gwPSoYUHAKmdyVywgLpKKA4BjRr.jpg" alt="Game of Thrones" /></Link></li>
-                
+
                 <li className="show-li-top"><Link to="/shows/3796" className="poster-link-top"><img src="https://image.tmdb.org/t/p/w500/2oxnChmt8USYhMwWwx7pd04hpSI.jpg" alt="Trailer Park Boys" /></Link></li>
                 <li className="show-li-top"><Link to="/shows/65798" className="poster-link-top"><img src="https://image.tmdb.org/t/p/w500/esAfULPmvwLbMvQmHQndIkwOWcB.jpg" alt="Letterkenny" /></Link></li>
                 <li className="show-li-top"><Link to="/shows/57243" className="poster-link-top"><img src="https://image.tmdb.org/t/p/w500/3EcYZhBMAvVw4czcDLg9Sd0FuzQ.jpg" alt="Doctor Who" /></Link></li>

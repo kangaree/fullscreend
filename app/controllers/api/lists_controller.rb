@@ -8,7 +8,7 @@ class Api::ListsController < ApplicationController
     if @list.save
       render json: @list
     else
-      render json: @review, status: :unprocessable_entity
+      render json: @list, status: :unprocessable_entity
     end
 
   end

@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 
     resources :lists, only: [:create, :update, :show, :destroy, :index]
 
+    resources :listings, only: [:create, :update, :show, :destroy, :index]
+
   end
 
   resources :users, only: [:new, :create]

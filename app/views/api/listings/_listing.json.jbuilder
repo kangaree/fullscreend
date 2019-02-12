@@ -1,0 +1,1 @@
+json.extract! listing, :id, :list_id, :show_id, :note, :show_title, :poster_path

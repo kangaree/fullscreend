@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
 import ListListItemContainer from './list_list_item_container'
 
 class Lists extends Component {
@@ -14,7 +14,8 @@ class Lists extends Component {
             <>
                 <div className="blank-header"></div>
                 <div className="all-review-index-background">
-                    <h2 className="stream-title">LISTS</h2>
+                    <h2 className="list-index-new-title">Collect, curate, and share. Lists are the perfect way to group shows.</h2>
+                    <div className="new-list-link"><Link to="/biglist" className="new-list-link">Start your own list.</Link></div>
                     {currentUser ? lists.map(list => (
                         <ListListItemContainer
                             list={list}

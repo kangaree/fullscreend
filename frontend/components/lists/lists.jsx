@@ -8,7 +8,7 @@ class Lists extends Component {
     }
 
     render() {
-        const { currentUser, lists, } = this.props;
+        const { currentUser, lists } = this.props;
 
         return (
             <>

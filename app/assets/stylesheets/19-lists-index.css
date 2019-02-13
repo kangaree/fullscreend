@@ -30,3 +30,27 @@
     font-family: sans-serif;
     padding: 4px 5px;
 }
+
+.list-posters {
+    display: flex;
+    margin-right: -100px;
+    overflow: hidden;
+}
+
+.list-poster {
+    margin-right: -40px;
+    height: 120px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+}
+
+.list-item-container {
+    margin-left: 20%;
+    margin-right: 20%;
+    border-bottom: 1px solid #435466;
+    padding-top: 10px;
+}
+
+.list-item-container * {
+    color: #89a;
+}

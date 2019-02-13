@@ -7,9 +7,12 @@ import { openModal } from '../../actions/modal_actions';
 const mapStateToProps = (state) => {
     const lists = state.entities.lists ? Object.values(state.entities.lists) : [];
 
+    const listings = state.entities.listings ? Object.values(state.entities.listings) : [];
+
     return {
         currentUser: state.entities.users[state.session.currentUserId],
         lists,
+        listings,
     };
 };
 

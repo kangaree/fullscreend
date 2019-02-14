@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const ListPoster = ({ poster_path }) => {
-    debugger
 
     return (
         <img className="all-review-show-poster"

@@ -1,7 +1,7 @@
-json.list do
-  json.partial! '/api/lists/list', list: @list
+json.listing do
+  json.partial! '/api/listings/listing', listing: @listing
 end
 
-json.user do
-  json.partial! '/api/users/user', user: @list.user
+json.list do
+  json.partial! '/api/lists/list', list: @listing.list
 end

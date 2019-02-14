@@ -94,7 +94,6 @@ const Review = ({ review, deleteReview, openModal, currentUser, user }) => {
 };
 
 const mapStateToProps = ({ entities: { users }, session: { currentUserId } }, { review }) => {
-    // debugger
     return {
         user: users[review.user_id],
         currentUser: users[currentUserId]

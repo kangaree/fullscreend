@@ -8,8 +8,6 @@ const showReviewsReducer = (state = [], action) => {
     Object.freeze(state)
     let newState = merge([], state);
 
-    // debugger
-
     switch (action.type) {
         // action.review.review is edit, and action.review is new
         case RECEIVE_REVIEW:

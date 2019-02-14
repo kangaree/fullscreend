@@ -17,7 +17,6 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = dispatch => {
-    // debugger
     return {
         fetchLists: () => dispatch(fetchLists()),
         deleteReview: listId => dispatch(deleteList(listId)),

@@ -8,8 +8,6 @@ import ListPosterItemContainer from './list_poster_item_container'
 const List = ({ list }) => {
     const { title, description, poster_paths } = list;
 
-    // debugger
-
     return (
         <div className="list-item-container">
 

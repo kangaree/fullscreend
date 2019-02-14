@@ -18,8 +18,6 @@ class Reviews extends Component {
     render() {
         const { openModal, currentUser, reviews, } = this.props;
 
-        // debugger
-
         return (
             <>
                 <div className="blank-header"></div>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 import ListPosterItemContainer from './list_poster_item_container'
 
-const List = ({ list, deleteList, openModal, currentUser, user }) => {
+const List = ({ list }) => {
     const { title, description, poster_paths } = list;
 
     // debugger
@@ -17,11 +17,6 @@ const List = ({ list, deleteList, openModal, currentUser, user }) => {
 
                 <div className="">
                     {poster_paths ? 
-                        // Object.values(poster_paths)[0].poster_path 
-
-                        // Object.values(poster_paths).map(poster_path => {
-                        //     Object.values(poster_paths)[0].poster_path
-                        // })
                         <ul className="list-posters">
                             {Object.values(poster_paths).map(poster_path => {
                                 return (
@@ -44,7 +39,8 @@ const List = ({ list, deleteList, openModal, currentUser, user }) => {
                         }
                 </div>
 
-                <div className="">{title}</div>
+                <h3 className="">{title}</h3>
+                <p className="">{description}</p>
 
             </div>
 

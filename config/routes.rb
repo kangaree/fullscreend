@@ -18,6 +18,8 @@ Rails.application.routes.draw do
     resources :lists, only: [:create, :update, :show, :destroy, :index]
 
     resources :listings, only: [:create, :update, :show, :destroy, :index]
+    
+    get "/users/:user_id/lists", to: "lists#user_lists"
 
   end
 

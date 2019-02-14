@@ -23,6 +23,17 @@ class Api::ListsController < ApplicationController
     end
   end
 
+  def user_lists
+    @lists = User.find(params[:user_id]).lists
+    # @lists = current_user.lists
+    # @lists = List.all
+
+    @listings = [];    
+    @lists.each do |list|
+        @listings.concat(list.listings)
+    end
+  end
+
   def show
     @list = List.find(params[:id])
   end

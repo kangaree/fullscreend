@@ -2,7 +2,7 @@ class Api::ListingsController < ApplicationController
   before_action :require_signed_in!
 
   def create
-    @listing = current_user.listings.new(list_params)
+    @listing = Listing.new(listing_params)
 
     if @listing.save
       render json: @listing
@@ -23,7 +23,7 @@ class Api::ListingsController < ApplicationController
   def update
     @listing = Listing.find(params[:id])
     
-    if @listing.update(list_params)
+    if @listing.update(listing_params)
       render :show
     else
       render json: @listing.errors.full_messages, status: 422
@@ -41,7 +41,7 @@ class Api::ListingsController < ApplicationController
 
   private
 
-  def list_params
-    params.require(:list).permit(:title, :user_id, :description)
+  def listing_params
+    params.require(:listing).permit(:list_id, :show_id, :show_title, :poster_path)
   end
 end

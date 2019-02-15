@@ -49,3 +49,44 @@ export const fetchLists = () => dispatch => {
     return APIUtil.fetchLists()
         .then(lists => (dispatch(receiveLists(lists))))
 };
+
+export const RECEIVE_LISTING = 'RECEIVE_LISTING';
+
+export const receiveListing = (listing) => {
+    return {
+        type: RECEIVE_LISTING,
+        listing,
+    }
+}
+
+export const createListing = listing => dispatch => {
+    return APIUtil.createListing(listing).then(listing => (
+        dispatch(receiveListing(listing))
+    ))
+};
+
+export const REMOVE_LISTING = "REMOVE_LISTING"
+
+export const fetchListing = id => dispatch => {
+    return APIUtil.fetchListing(id)
+        .then(listing => (dispatch(receiveListing(listing))))
+};
+
+export const updateListing = listing => dispatch => (
+    APIUtil.updateListing(listing)
+        .then(listing => dispatch(receiveListing(listing)))
+);
+
+export const deleteListing = listingId => dispatch => {
+    return APIUtil.deleteListing(listingId).then(listing => dispatch(removeListing(listingId)))
+};
+
+const removeListing = listingId => ({
+    type: REMOVE_LISTING,
+    listingId
+});
+
+export const fetchUserLists = (userId) => dispatch => {
+    return APIUtil.fetchUserLists(userId)
+        .then(lists => (dispatch(receiveLists(lists))))
+};

@@ -34,3 +34,40 @@ export const deleteList = id => (
         url: `api/lists/${id}`
     })
 );
+
+export const fetchListing = id => (
+    $.ajax({
+        method: 'GET',
+        url: `api/listings/${id}`
+    })
+);
+
+export const createListing = listing => (
+    $.ajax({
+        method: 'POST',
+        url: 'api/listings',
+        data: { listing }
+    })
+);
+
+export const updateListing = listing => (
+    $.ajax({
+        method: 'PUT',
+        url: `api/listings/${listing.id}`,
+        data: { listing }
+    })
+);
+
+export const deleteListing = id => (
+    $.ajax({
+        method: 'DELETE',
+        url: `api/listings/${id}`
+    })
+);
+
+export const fetchUserLists = userId => (
+    $.ajax({
+        method: 'GET',
+        url: `api/users/${userId}/lists`
+    })
+);

@@ -5,7 +5,7 @@ import ListForm from './list_form';
 const mapStateToProps = state => {
 
     return {
-        currentUserId: state.ui.currentUserId,
+        currentUserId: state.session.currentUserId,
     }
 };
 

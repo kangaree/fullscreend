@@ -5,9 +5,10 @@ import LoginContainer from '../session/login_container';
 import SignupContainer from '../session/signup_container';
 import CreateReviewFormContainer from '../shows_show/create_review_form_container';
 import EditReviewFormContainer from '../shows_show/edit_review_form_container';
+import CreateListingFormContainer from '../lists/create_listing_form_container';
 import { networkInterfaces } from 'os';
 
-// modal is a string now, but will be an object with type and options keys
+// modal was a string, but now is an object with type and options keys
 function Modal({ modal, closeModal }) {
 
     if (!modal) {
@@ -27,6 +28,9 @@ function Modal({ modal, closeModal }) {
             break;
         case 'edit-review':
             component = <EditReviewFormContainer review={modal.options.review}/>;
+            break;
+        case 'list':
+            component = <CreateListingFormContainer />;
             break;
         default:
             return null;

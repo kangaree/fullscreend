@@ -61,7 +61,7 @@ class ShowsShow extends Component {
                             {currentUser ? 
                                 <div className="dashboard-buttons">
                                     <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Review or log...</a>
-                                    <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Add to a list...</a>
+                                    <a className="gray-button" onClick={() => openModal({ modal_type: 'list' })} show={show}>Add to a list...</a>
                                     <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Share</a>
                                 </div>
                                 :

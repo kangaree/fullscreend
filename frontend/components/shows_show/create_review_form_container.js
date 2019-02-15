@@ -8,7 +8,7 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 const mapStateToProps = state => {
 
     return {
-        currentUserId: state.ui.currentUserId,
+        currentUserId: state.session.currentUserId,
         show: state.entities.shows[state.ui.shows_show],
     }
 };

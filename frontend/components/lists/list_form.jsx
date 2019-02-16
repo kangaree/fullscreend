@@ -28,6 +28,7 @@ class ListForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.processListForm(this.state);
+        this.props.history.push(`/lists/`);
     }
 
     // renderErrors() {

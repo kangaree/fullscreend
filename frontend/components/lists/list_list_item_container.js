@@ -4,16 +4,17 @@ import { openModal } from '../../actions/modal_actions';
 import { Link } from 'react-router-dom';
 
 import ListPosterItemContainer from './list_poster_item_container'
+import review_form from '../shows_show/review_form';
 
 const List = ({ list }) => {
-    const { title, description, poster_paths } = list;
+    const { title, description, poster_paths, id } = list;
 
     return (
         <div className="list-item-container">
 
             <div className="list-index">
 
-                <div className="">
+                <Link to={"/lists/" + id}>
                     {poster_paths ? 
                         <ul className="list-posters">
                             {Object.values(poster_paths).map(poster_path => {
@@ -35,7 +36,7 @@ const List = ({ list }) => {
                         : 
                         null
                         }
-                </div>
+                </Link>
 
                 <h3 className="">{title}</h3>
                 <p className="">{description}</p>

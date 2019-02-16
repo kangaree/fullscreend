@@ -10,6 +10,7 @@ import ShowsShowContainer from './shows_show/shows_show_container';
 import ReviewsContainer from './reviews/reviews_container';
 import ListsContainer from './lists/lists_container';
 import CreateListContainer from './lists/create_list_form_container';
+import UserListsContainer from './lists/user_lists_container';
 import Home from './home/home';
 import BigList from './biglist/biglist';
 import Blank from './blank/blank';
@@ -31,6 +32,7 @@ export default () => (
             <ProtectedRoute exact path="/reviews" component={ReviewsContainer} />
             <ProtectedRoute exact path="/lists" component={ListsContainer} />
             <ProtectedRoute exact path="/lists/new" component={CreateListContainer} />
+            <ProtectedRoute exact path="/users/:userId/lists" component={UserListsContainer} />
             <Route path="/" component={Blank} />
         </Switch>
 

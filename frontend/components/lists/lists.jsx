@@ -16,7 +16,7 @@ class Lists extends Component {
                 <div className="all-review-index-background">
                     <h2 className="list-index-new-title">Collect, curate, and share. Lists are the perfect way to group shows.</h2>
                     <div className="new-list-link"><Link to="/lists/new" className="new-list-link">Start your own list.</Link></div>
-                    {currentUser ? lists.map(list => (
+                    {/* {currentUser ? lists.map(list => (
                         <ListListItemContainer
                             list={list}
                             key={list.id}
@@ -25,7 +25,15 @@ class Lists extends Component {
                         />
                     )).reverse()
                         :
-                        null}
+                        null} */}
+                    {lists.map(list => (
+                        <ListListItemContainer
+                            list={list}
+                            key={list.id}
+                            deleteList={this.props.deleteList}
+                            updateList={this.props.updateList}
+                        />
+                    )).reverse()}
                 </div>
 
 

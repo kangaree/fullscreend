@@ -6,8 +6,9 @@ import { Link } from 'react-router-dom';
 import ListPosterItemContainer from './list_poster_item_container'
 import review_form from '../shows_show/review_form';
 
-const List = ({ list }) => {
+const List = ({ list, user }) => {
     const { title, description, poster_paths, id } = list;
+    // debugger
 
     return (
         <div className="list-item-container">
@@ -15,6 +16,8 @@ const List = ({ list }) => {
             <div className="list-index">
 
                 <Link to={"/lists/" + id}>
+                    <h3 className="">{title}</h3>
+                    {user ? (<p>by {user.username}</p>) : null}
                     {poster_paths ? 
                         <ul className="list-posters">
                             {Object.values(poster_paths).map(poster_path => {
@@ -38,7 +41,6 @@ const List = ({ list }) => {
                         }
                 </Link>
 
-                <h3 className="">{title}</h3>
                 <p className="">{description}</p>
 
             </div>
@@ -50,7 +52,6 @@ const List = ({ list }) => {
 const mapStateToProps = ({ entities: { users }, session: { currentUserId } }, { list }) => {
     return {
         user: users[list.user_id],
-        currentUser: users[currentUserId]
     };
 };
 

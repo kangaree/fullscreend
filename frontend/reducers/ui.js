@@ -4,6 +4,7 @@ import popularShowsReducer from './popular_shows';
 import showShowsReducer from './show_shows';
 import showReviewsReducer from './show_reviews';
 import currentListsReducer from './current_lists';
+import listsShowReducer from './lists_show';
 
 // import filters from './filters_reducer';
 import modal from './modal';
@@ -16,4 +17,5 @@ export default combineReducers({
     shows_show: showShowsReducer,
     show_reviews: showReviewsReducer,
     currentLists: currentListsReducer,
+    lists_show: listsShowReducer,
 });

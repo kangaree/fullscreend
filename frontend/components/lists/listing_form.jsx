@@ -41,19 +41,21 @@ class ListingForm extends React.Component {
         const { lists, listIds } = this.props;
 
         return (
-            <div className="review-form-container">
+            <div className="listing-form-container">
                 <div onClick={this.props.closeModal} className="close-x">X</div>
 
-                <label>Note
+                {/* <label>Note
                     <input type="text"
                         value={this.state.note}
                         onChange={this.update('note')}
                         className="signup-input"
                     />
-                </label>
+                </label> */}
 
                 {listIds.map(
-                    listId => (<h2 key={listId} onClick={ () =>
+                    listId => (<h2 key={listId} 
+                                className="listing-list-link"
+                                onClick={ () =>
                                     {
                                         const listing = Object.assign({}, this.state, {
                                             list_id: listId,

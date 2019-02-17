@@ -34,3 +34,24 @@
     width: 380px;
     padding-top: 30px;
 }
+
+
+.list-show-poster {
+    height: 300px;
+    border-radius: 5px;
+    border: 3px solid transparent;
+}
+
+.list-show-poster:hover {
+    height: 300px;
+    border-radius: 5px;
+    border: 3px solid #00e054;
+}
+
+
+.list-show-item-container {
+    margin-left: 20%;
+    margin-right: 20%;
+    border-bottom: 1px solid #435466;
+    padding-top: 10px;
+}

@@ -46,7 +46,7 @@ class ListForm extends React.Component {
     render() {
 
         return (
-            <div className="">
+            <div className="list-show-item-container">
                 <div className="blank-header"></div>
                 <form onSubmit={this.handleSubmit} className="signup-form-box">
                     <h1>Title</h1>

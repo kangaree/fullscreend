@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class ListsShow extends Component {
     componentDidMount() {
+        window.scrollTo(0, 0);
         this.props.fetchList(this.props.match.params.listId);
     }
 
@@ -22,19 +24,25 @@ class ListsShow extends Component {
             <>
                 <div className="blank-header"></div>
                 <div className="all-review-index-background">
-                    <div className="list-item-container">
-                        <h3>{list.title}</h3>
+                    <div className="list-show-item-container">
+                        <h3 className="list-show-title">{list.title}</h3>
+                        <p className="">{list.description}</p>
                         {list.listings ? (Object.values(list.listings).map(
                             listing => {
-                                return (<div key={listing.show_id} className= "list-posters-info">
-                                    <p>{listing.show_title}</p>
-                                    <p>{listing.note}</p>
-                                    <img className="list-poster"
+                                return (
+                                    <Link to={"/shows/" + listing.show_id} key={listing.show_id}>
+                                    {/* <p>{listing.show_title}</p> */}
+                                    {/* <p>{listing.note}</p> */}
+                                    {/* <img className="list-poster"
+                                    src={"https://image.tmdb.org/t/p/w500/" + listing.poster_path}
+                                    /> */}
+                                    <img className="list-show-poster"
                                         src={"https://image.tmdb.org/t/p/w500/" + listing.poster_path}
                                     />
-                                </div>);
+                                    </Link>
+                                );
                             }
-                        )) : null}
+                        )) : <p>There are no shows in this list.</p>}
                     </div>
                 </div>
 

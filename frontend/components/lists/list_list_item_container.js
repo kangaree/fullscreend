@@ -18,7 +18,7 @@ const List = ({ list, user }) => {
                 {listings ? 
                     <Link to={"/lists/" + id}>
                         <ul className="list-posters">
-                            {Object.values(listings).map(listing => {
+                            {Object.values(listings).slice(0,10).map(listing => {
                                 return (
                                     // <img src="poster_path.poster_path"></img>
                                     <li key={listing.poster_path}>

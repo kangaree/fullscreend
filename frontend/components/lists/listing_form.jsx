@@ -40,8 +40,6 @@ class ListingForm extends React.Component {
 
         const { lists, listIds } = this.props;
 
-        debugger
-
         return (
             <div className="review-form-container">
                 <div onClick={this.props.closeModal} className="close-x">X</div>

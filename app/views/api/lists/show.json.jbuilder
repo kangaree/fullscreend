@@ -3,7 +3,7 @@ json.list do
   json.listings do
       @list.listings.each do |listing|
           json.set! listing.id do
-              json.extract! listing, :poster_path, :note
+              json.extract! listing, :poster_path, :note, :show_title, :show_id
           end
       end
   end

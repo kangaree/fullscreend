@@ -18,14 +18,8 @@ const Review = ({ review, deleteReview, openModal, currentUser, user }) => {
                         src={
                             poster_path ?
                                 "https://image.tmdb.org/t/p/w500/" + poster_path
-                                : "https://image.tmdb.org/t/p/w500//8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg"} />
+                                : window.testPoster} />
                 </Link>
-
-                {/* <img    className="all-review-show-poster"
-                        src={
-                            poster_path ?
-                            "https://image.tmdb.org/t/p/w500/" + poster_path
-                            : "https://image.tmdb.org/t/p/w500//8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg"} /> */}
 
                 <div>
                     <div className="review-author-body">

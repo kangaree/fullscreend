@@ -40,7 +40,7 @@ class ShowsShow extends Component {
                                 src={
                                     show.poster_path ?
                                         "https://image.tmdb.org/t/p/w500/" + show.poster_path
-                                        : "https://image.tmdb.org/t/p/w500//8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg"} />
+                                        : window.testPoster} />
                                             
                             <div className="dashboard-middle-text">
                                 <h2 className="headline-show">{show.name}</h2>

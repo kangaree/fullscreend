@@ -15,29 +15,6 @@ const List = ({ list, user }) => {
 
             <div className="list-show-item">
 
-                {/* {listings ? 
-                    <Link to={"/lists/" + id}>
-                        <ul className="list-posters">
-                            {Object.values(listings).map(listing => {
-                                return (
-                                    // <img src="poster_path.poster_path"></img>
-                                    <li key={listing.poster_path}>
-                                        <img className="list-poster"
-                                            src={
-                                                listing ?
-                                                "https://image.tmdb.org/t/p/w500/" + listing.poster_path
-                                                : "https://image.tmdb.org/t/p/w500//8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg"} 
-                                                
-                                                
-                                                />
-                                    </li>
-                                )
-                            })}
-                        </ul>
-                    </Link>
-                    : 
-                    null
-                } */}
                 {listings ? 
                     <Link to={"/lists/" + id}>
                         <ul className="list-posters">
@@ -58,39 +35,39 @@ const List = ({ list, user }) => {
                             })}
                             {/* The following is an example of WET code */}
                             { Object.values(listings).length < 2 ? 
-                                (<li key="placeholder-2"><img className="list-poster" src="https://image.tmdb.org/t/p/w92/8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg" /></li>) 
+                                (<li key="placeholder-2"><img className="list-poster" src={window.testPoster} /></li>) 
                                 : 
                                 null }
                             { Object.values(listings).length < 3 ? 
-                                (<li key="placeholder-3"><img className="list-poster" src="https://image.tmdb.org/t/p/w92/8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg" /></li>) 
+                                (<li key="placeholder-3"><img className="list-poster" src={window.testPoster} /></li>) 
                                 : 
                                 null }
                             { Object.values(listings).length < 4 ? 
-                                (<li key="placeholder-4"><img className="list-poster" src="https://image.tmdb.org/t/p/w92/8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg" /></li>) 
+                                (<li key="placeholder-4"><img className="list-poster" src={window.testPoster} /></li>) 
                                 : 
                                 null }
                             { Object.values(listings).length < 5 ? 
-                                (<li key="placeholder-5"><img className="list-poster" src="https://image.tmdb.org/t/p/w92/8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg" /></li>) 
+                                (<li key="placeholder-5"><img className="list-poster" src={window.testPoster} /></li>) 
                                 : 
                                 null }
                             { Object.values(listings).length < 6 ? 
-                                (<li key="placeholder-6"><img className="list-poster" src="https://image.tmdb.org/t/p/w92/8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg" /></li>) 
+                                (<li key="placeholder-6"><img className="list-poster" src={window.testPoster} /></li>) 
                                 : 
                                 null }
                             { Object.values(listings).length < 7 ? 
-                                (<li key="placeholder-7"><img className="list-poster" src="https://image.tmdb.org/t/p/w92/8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg" /></li>) 
+                                (<li key="placeholder-7"><img className="list-poster" src={window.testPoster} /></li>) 
                                 : 
                                 null }
                             { Object.values(listings).length < 8 ? 
-                                (<li key="placeholder-8"><img className="list-poster" src="https://image.tmdb.org/t/p/w92/8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg" /></li>) 
+                                (<li key="placeholder-8"><img className="list-poster" src={window.testPoster} /></li>) 
                                 : 
                                 null }
                             { Object.values(listings).length < 9 ? 
-                                (<li key="placeholder-9"><img className="list-poster" src="https://image.tmdb.org/t/p/w92/8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg" /></li>) 
+                                (<li key="placeholder-9"><img className="list-poster" src={window.testPoster} /></li>) 
                                 : 
                                 null }
                             { Object.values(listings).length < 10 ? 
-                                (<li key="placeholder-10"><img className="list-poster" src="https://image.tmdb.org/t/p/w92/8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg" /></li>) 
+                                (<li key="placeholder-10"><img className="list-poster" src={window.testPoster} /></li>) 
                                 : 
                                 null }
                         </ul>
@@ -99,16 +76,16 @@ const List = ({ list, user }) => {
                     (
                         <Link to={"/lists/" + id}>
                             <ul className="list-posters">
-                                <li key="placeholder-1"><img className="list-poster" src="https://image.tmdb.org/t/p/w92/8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg"/></li>
-                                <li key="placeholder-2"><img className="list-poster" src="https://image.tmdb.org/t/p/w92/8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg"/></li>
-                                <li key="placeholder-3"><img className="list-poster" src="https://image.tmdb.org/t/p/w92/8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg"/></li>
-                                <li key="placeholder-4"><img className="list-poster" src="https://image.tmdb.org/t/p/w92/8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg"/></li>
-                                <li key="placeholder-5"><img className="list-poster" src="https://image.tmdb.org/t/p/w92/8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg"/></li>
-                                <li key="placeholder-6"><img className="list-poster" src="https://image.tmdb.org/t/p/w92/8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg"/></li>
-                                <li key="placeholder-7"><img className="list-poster" src="https://image.tmdb.org/t/p/w92/8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg"/></li>
-                                <li key="placeholder-8"><img className="list-poster" src="https://image.tmdb.org/t/p/w92/8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg"/></li>
-                                <li key="placeholder-9"><img className="list-poster" src="https://image.tmdb.org/t/p/w92/8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg"/></li>
-                                <li key="placeholder-10"><img className="list-poster" src="https://image.tmdb.org/t/p/w92/8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg"/></li>
+                                <li key="placeholder-1"><img className="list-poster" src={window.testPoster}/></li>
+                                <li key="placeholder-2"><img className="list-poster" src={window.testPoster}/></li>
+                                <li key="placeholder-3"><img className="list-poster" src={window.testPoster}/></li>
+                                <li key="placeholder-4"><img className="list-poster" src={window.testPoster}/></li>
+                                <li key="placeholder-5"><img className="list-poster" src={window.testPoster}/></li>
+                                <li key="placeholder-6"><img className="list-poster" src={window.testPoster}/></li>
+                                <li key="placeholder-7"><img className="list-poster" src={window.testPoster}/></li>
+                                <li key="placeholder-8"><img className="list-poster" src={window.testPoster}/></li>
+                                <li key="placeholder-9"><img className="list-poster" src={window.testPoster}/></li>
+                                <li key="placeholder-10"><img className="list-poster" src={window.testPoster}/></li>
                             </ul>
                         </Link>
                     ) 

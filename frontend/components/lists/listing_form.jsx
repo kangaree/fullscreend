@@ -12,6 +12,7 @@ class ListingForm extends React.Component {
             show_id: props.show.id,
             show_title: props.show.name,
             poster_path: (props.show.poster_path ? props.show.poster_path : ""),
+            note: "",
         };
 
         // this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,8 +24,15 @@ class ListingForm extends React.Component {
     }
 
     update(property) {
+        // debugger
         return e => {
             return this.setState({ [property]: e.currentTarget.value })
+        };
+    }
+
+    handleInput(type) {
+        return (e) => {
+            this.setState({ [type]: e.target.value })
         };
     }
 
@@ -32,9 +40,20 @@ class ListingForm extends React.Component {
 
         const { lists, listIds } = this.props;
 
+        debugger
+
         return (
             <div className="review-form-container">
                 <div onClick={this.props.closeModal} className="close-x">X</div>
+
+                <label>Note
+                    <input type="text"
+                        value={this.state.note}
+                        onChange={this.update('note')}
+                        className="signup-input"
+                    />
+                </label>
+
                 {listIds.map(
                     listId => (<h2 key={listId} onClick={ () =>
                                     {

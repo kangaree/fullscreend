@@ -7,7 +7,7 @@ import ListPosterItemContainer from './list_poster_item_container'
 import review_form from '../shows_show/review_form';
 
 const List = ({ list, user }) => {
-    const { title, description, poster_paths, id } = list;
+    const { title, description, listings, id } = list;
     // debugger
 
     return (
@@ -18,16 +18,16 @@ const List = ({ list, user }) => {
                 <Link to={"/lists/" + id}>
                     <h3 className="">{title}</h3>
                     {user ? (<p>by {user.username}</p>) : null}
-                    {poster_paths ? 
+                    {listings ? 
                         <ul className="list-posters">
-                            {Object.values(poster_paths).map(poster_path => {
+                            {Object.values(listings).map(listing => {
                                 return (
                                     // <img src="poster_path.poster_path"></img>
-                                    <li key={poster_path.poster_path}>
+                                    <li key={listing.poster_path}>
                                         <img className="list-poster"
                                             src={
-                                                poster_path ?
-                                                    "https://image.tmdb.org/t/p/w500/" + poster_path.poster_path
+                                                listing ?
+                                                    "https://image.tmdb.org/t/p/w500/" + listing.poster_path
                                                     : "https://image.tmdb.org/t/p/w500//8KPH2kKDEBGA6W2mdKjHqzYIv63.jpg"} 
                                         
                                             

@@ -42,6 +42,6 @@ class Api::ListingsController < ApplicationController
   private
 
   def listing_params
-    params.require(:listing).permit(:list_id, :show_id, :show_title, :poster_path)
+    params.require(:listing).permit(:list_id, :show_id, :show_title, :poster_path, :note)
   end
 end

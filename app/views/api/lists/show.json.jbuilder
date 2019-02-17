@@ -1,9 +1,9 @@
 json.list do
   json.partial! '/api/lists/list', list: @list
-  json.poster_paths do
+  json.listings do
       @list.listings.each do |listing|
           json.set! listing.id do
-              json.extract! listing, :poster_path
+              json.extract! listing, :poster_path, :note
           end
       end
   end

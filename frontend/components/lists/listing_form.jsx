@@ -65,7 +65,7 @@ class ListingForm extends React.Component {
                                 }>
                                 {lists[listId].title}
                                 </h2>)
-                )}
+                ).reverse()}
             </div>
         );
     }

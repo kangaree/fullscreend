@@ -1,9 +1,8 @@
 .shows-ul-top {
     margin-bottom: 0;
-    list-style: none;
-    columns: 10;
-    -webkit-columns: 10;
-    -moz-columns: 10;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding-left: 0;
     width: 960px;
     margin-block-start: 0;
@@ -14,17 +13,9 @@
 }
 
 .show-li-top img {
-    width: 90px;
-    height: 146px;
+    /* width: 200px; */
+    height: 150px;
     border-radius: 8px;
-    border: 2px solid transparent;
-}
-
-
-.show-li-top img:hover {
-    border: 2px solid #00e054;
-    background-color: #fff;
-    color: #fff;
 }
 
 .pagination-buttons {

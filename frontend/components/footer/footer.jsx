@@ -6,10 +6,10 @@ export default () => {
         <footer className="footer">
             <div className="footer-links">
                 <ul className="footer-links-text">
-                    <li><Link to="/shows">About</Link></li>
-                    <li><Link to="/shows">Help</Link></li>
-                    <li><Link to="/shows">Credit</Link></li>
-                    <li><Link to="/shows">Contact</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/help">Help</Link></li>
+                    <li><Link to="/credit">Credit</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
                 </ul>
                 <div className="footer-links-logos">
                     <p><a href="//github.com/kangaree/"><i className="fab fa-github"></i></a> / <a href="//linkedin.com/in/gary-kang-877b9b22"><i className="fab fa-linkedin-in"></i></a> / <a href="mailto:garyzkang@gmail.com"><i className="fas fa-envelope"></i></a></p>

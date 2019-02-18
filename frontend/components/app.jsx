@@ -14,6 +14,10 @@ import UserListsContainer from './lists/user_lists_container';
 import ListsShowContainer from './lists/lists_show_container';
 import Home from './home/home';
 import BigList from './biglist/biglist';
+import About from './about/about';
+import Help from './help/help';
+import Credit from './credit/credit';
+import Contact from './contact/contact';
 import Blank from './blank/blank';
 import { Route, Switch } from 'react-router-dom';
 import { AuthRoute } from '../utils/route_utils';
@@ -26,6 +30,10 @@ export default () => (
         {/* <ShowsSearchContainer /> */}
         <Switch>
             <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/help" component={Help} />
+            <Route exact path="/credit" component={Credit} />
+            <Route exact path="/contact" component={Contact} />
             <Route exact path="/biglist" component={BigList} />
             <Route exact path="/shows/:showId" component={ShowsShowContainer}/>
             <Route exact path="/shows/pages/:page" component={ShowsPopularContainer} />

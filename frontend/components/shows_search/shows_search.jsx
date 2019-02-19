@@ -32,8 +32,7 @@ class ShowsSearch extends React.Component {
     }
 
     onBlur() {
-        // debugger
-        // this.props.removeSearchedShows();
+        // setTimeout
         setTimeout(
             function () {
                 this.setState({ searchTerm: "" });
@@ -41,7 +40,6 @@ class ShowsSearch extends React.Component {
                 .bind(this),
             150
         );
-        // this.setState({ searchTerm: "" });
     }
 
     render() {

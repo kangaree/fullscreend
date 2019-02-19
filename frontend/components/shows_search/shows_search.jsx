@@ -8,26 +8,17 @@ class ShowsSearch extends React.Component {
         this.state = { searchTerm: '' };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.onFocus = this.onFocus.bind(this);
-        this.searchWordNone = this.searchWordNone.bind(this);
+        this.onBlur = this.onBlur.bind(this);
     }
-
-    // componentDidUpdate() {
-        // this.props.fetchSearchShows(' ');
-    // }
 
     componentDidUpdate(prevProps, prevState) {
         if (this.state.searchTerm.length == 0 && prevState.searchTerm.length > 0) {
             this.props.removeSearchedShows();
         }
-    }
 
-    // update() {
-    //     return e => this.setState({ searchTerm: e.currentTarget.value })
-    // };
-
-    searchWordNone() {
-        this.setState({ searchTerm: "" })
+        if (this.state.searchTerm.length > 0 && prevState.searchTerm != this.state.searchTerm) {
+            this.props.fetchSearchShows(this.state.searchTerm);
+        }
     }
 
     handleChange(e) {
@@ -40,9 +31,17 @@ class ShowsSearch extends React.Component {
         if (this.state.searchTerm) {this.props.fetchSearchShows(searchTerm)};
     }
 
-    onFocus() {
-        this.setState({ searchTerm: "" });
-        // this.inputField.value = "";
+    onBlur() {
+        // debugger
+        // this.props.removeSearchedShows();
+        setTimeout(
+            function () {
+                this.setState({ searchTerm: "" });
+            }
+                .bind(this),
+            150
+        );
+        // this.setState({ searchTerm: "" });
     }
 
     render() {
@@ -51,7 +50,7 @@ class ShowsSearch extends React.Component {
         return (
             <>
                 <form className="search-bar-test">
-                    <input value={this.state.searchTerm} onChange={this.handleChange} onFocus={this.onFocus}/>
+                    <input value={this.state.searchTerm} onChange={this.handleChange} onBlur={this.onBlur}/>
                     <button type="submit" onClick={this.handleSubmit}><i className="fas fa-search"></i></button>
                 </form>
                 <ShowsIndex shows={shows} showIds={showIds} removeSearchedShows={removeSearchedShows} />

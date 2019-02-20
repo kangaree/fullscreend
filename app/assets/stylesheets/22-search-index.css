@@ -2,6 +2,9 @@
     height: 120px;
     border-radius: 3px;
     border: 1px solid transparent;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 3px;
 }
 
 .all-review-index-show-body-title * {
@@ -17,6 +20,12 @@
 }
 
 .show-search-index-overview {
-    height: 35px;
+    max-height: 110px;
+    width: 100%;
     overflow: hidden;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
 }

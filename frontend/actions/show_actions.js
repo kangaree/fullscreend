@@ -15,6 +15,21 @@ export const receiveSearchShows = shows => {
     }
 };
 
+export const RECEIVE_SEARCH_INDEX_SHOWS = 'RECEIVE_SEARCH_INDEX_SHOWS';
+export const REQUEST_SEARCH_INDEX_SHOWS = 'REQUEST_SEARCH_INDEX_SHOWS';
+
+export const fetchSearchIndexShows = searchTerm => dispatch => {
+    return APIUtil.fetchSearchIndexShows(searchTerm)
+        .then(shows => dispatch(receiveSearchIndexShows(shows.results)))
+};
+
+export const receiveSearchIndexShows = shows => {
+    return {
+        type: RECEIVE_SEARCH_INDEX_SHOWS,
+        shows
+    }
+};
+
 export const RECEIVE_POPULAR_SHOWS = 'RECEIVE_POPULAR_SHOWS';
 export const REQUEST_POPULAR_SHOWS = 'REQUEST_POPULAR_SHOWS';
 
@@ -38,6 +53,16 @@ export const discardSearchedShows = () => dispatch => (
 
 export const removeSearchedShows = () => ({
     type: REMOVE_SEARCHED_SHOWS
+})
+
+export const REMOVE_SEARCHED_INDEX_SHOWS = 'REMOVE_SEARCHED_INDEX_SHOWS'
+
+export const discardSearchedIndexShows = () => dispatch => (
+    dispatch(removeSearchedIndexShows())
+);
+
+export const removeSearchedIndexShows = () => ({
+    type: REMOVE_SEARCHED_INDEX_SHOWS
 })
 
 export const RECEIVE_SHOW = 'RECEIVE_SHOW';

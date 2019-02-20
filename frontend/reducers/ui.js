@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 import searchShowsReducer from './search_shows';
+import searchShowsIndexReducer from './search_index_shows';
 import popularShowsReducer from './popular_shows';
 import showShowsReducer from './show_shows';
 import showReviewsReducer from './show_reviews';
@@ -13,6 +14,7 @@ export default combineReducers({
     // filters,
     modal,
     search_shows: searchShowsReducer,
+    search_shows_index: searchShowsIndexReducer,
     popular_shows: popularShowsReducer,
     shows_show: showShowsReducer,
     show_reviews: showReviewsReducer,

@@ -1,0 +1,22 @@
+.search-index-poster {
+    height: 120px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+}
+
+.all-review-index-show-body-title * {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+.search-link {
+    text-decoration: none;
+}
+
+.show-search-index-overview {
+    height: 35px;
+    overflow: hidden;
+}

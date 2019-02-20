@@ -4,6 +4,7 @@ import {
     RECEIVE_SHOW,
     RECEIVE_POPULAR_SHOWS,
     RECEIVE_SEARCH_SHOWS,
+    RECEIVE_SEARCH_INDEX_SHOWS,
 } from '../actions/show_actions';
 
 const showsReducer = (state = {}, action) => {
@@ -33,6 +34,16 @@ const showsReducer = (state = {}, action) => {
             });
 
             return newShows2;
+
+        case RECEIVE_SEARCH_INDEX_SHOWS:
+
+            let newShows3 = merge({}, state);
+
+            (Object.values(action.shows)).forEach(show => {
+                newShows3[show.id] = show;
+            });
+
+            return newShows3;
             
         default:
             return state;

@@ -7,6 +7,7 @@ import FooterContainer from './footer/footer_container';
 import ShowsSearchContainer from './shows_search/shows_search_container';
 import ShowsPopularContainer from './shows_popular/shows_popular_container';
 import ShowsShowContainer from './shows_show/shows_show_container';
+import ShowsSearchIndexContainer from './shows_search/shows_search_index_container';
 import ReviewsContainer from './reviews/reviews_container';
 import ListsContainer from './lists/lists_container';
 import CreateListContainer from './lists/create_list_form_container';
@@ -38,6 +39,7 @@ export default () => (
             <Route exact path="/shows/:showId" component={ShowsShowContainer}/>
             <Route exact path="/shows/pages/:page" component={ShowsPopularContainer} />
             <Route exact path="/shows" component={ShowsPopularContainer} />
+            <Route exact path="/search/:searchTerm" component={ShowsSearchIndexContainer} />
             <ProtectedRoute exact path="/reviews" component={ReviewsContainer} />
             <ProtectedRoute exact path="/lists" component={ListsContainer} />
             <ProtectedRoute exact path="/lists/new" component={CreateListContainer} />

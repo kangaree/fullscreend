@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 import ShowsIndex from './shows_index';
 
@@ -28,7 +29,7 @@ class ShowsSearch extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         let searchTerm = this.state.searchTerm.split(' ').join('+');
-        if (this.state.searchTerm) {this.props.fetchSearchShows(searchTerm)};
+        this.props.history.push(`/search/` + searchTerm);
     }
 
     onBlur() {
@@ -57,4 +58,4 @@ class ShowsSearch extends React.Component {
     }
 }
 
-export default ShowsSearch;
+export default withRouter(ShowsSearch);

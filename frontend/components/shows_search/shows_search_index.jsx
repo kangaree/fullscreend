@@ -44,13 +44,13 @@ class ShowsSearchIndex extends React.Component {
                             <Link to={"/shows/" + showId} className="search-link">
                                 <div className="all-review-index-show-body-title">
                                     {shows[showId].name + (shows[showId].first_air_date ? (" (" + shows[showId].first_air_date.slice(0, 4) + ") ") : " ")}
-                                    <i class="fas fa-users"></i> {Math.floor(shows[showId].popularity * 10).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                                 </div>
                                 <img className="search-index-poster"
                                     src={
                                         shows[showId].poster_path ?
                                             "https://image.tmdb.org/t/p/w500/" + shows[showId].poster_path
                                             : window.testPoster} />
+                                <p><i className="fas fa-users"></i> {Math.floor(shows[showId].vote_count).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
                                 {shows[showId].overview ? <p className="show-search-index-overview">{shows[showId].overview}</p> : null}
                             </Link>
                         </div>

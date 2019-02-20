@@ -8,7 +8,6 @@ import review_form from '../shows_show/review_form';
 
 const List = ({ list, user }) => {
     const { title, description, listings, id } = list;
-    // debugger
 
     return (
         <div className="list-show-item-container">

@@ -7,8 +7,6 @@ const mapStateToProps = (state) => {
 
     const list = state.entities.lists ? state.entities.lists[state.ui.lists_show] : [];
 
-    // debugger
-
     return {
         list,
     }

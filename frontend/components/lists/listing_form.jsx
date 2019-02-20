@@ -24,7 +24,6 @@ class ListingForm extends React.Component {
     }
 
     update(property) {
-        // debugger
         return e => {
             return this.setState({ [property]: e.currentTarget.value })
         };

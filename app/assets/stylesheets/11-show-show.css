@@ -110,11 +110,6 @@
     justify-content: center;
     align-items: flex-end;
     flex-direction: column;
-    /* padding-right: 15%; */
-    /* right: 18%;
-    top: 25%;
-    position: absolute; */
-    padding-top: 42px;
 }
 
 .dashboard-container {

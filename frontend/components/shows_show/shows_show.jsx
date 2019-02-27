@@ -1,10 +1,4 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
-import ReviewFormContainer from './create_review_form_container';
-import { ReviewLink } from '../../utils/link_util';
-
-// import LoadingIcon from './loading_icon';
-
 import ReviewListItemContainer from './review_list_item_container'
 
 class ShowsShow extends Component {
@@ -23,6 +17,20 @@ class ShowsShow extends Component {
 
     render() {
         const { show, openModal, currentUser, reviews } = this.props;
+
+        let currentUserReview = {}
+        
+        if (currentUser) {
+            currentUserReview = reviews.reverse().find((review) => review.user_id === currentUser.id);
+        }
+
+        let currentUserReviewScore = 0
+        
+        if (currentUserReview) {
+            if (currentUserReview.score) {
+                currentUserReviewScore = currentUserReview.score;
+            }
+        }
 
         if (!show) return null;
 
@@ -60,9 +68,36 @@ class ShowsShow extends Component {
 
                             {currentUser ? 
                                 <div className="dashboard-buttons">
+                                    <div className="gray-quick-review">
+                                        <a className="gray-quick-review-link">
+                                            <i className="far fa-bookmark" style={currentUserReview ? { color: "#00e24b" } : null}></i>
+                                        </a>
+                                        <a className="gray-quick-review-link">
+                                            <i className="far fa-heart" style={currentUserReview ? (currentUserReview.like ? { color: "orange" } : null) : null}></i>
+                                        </a>
+                                        <a className="gray-quick-review-link">
+                                            <i className="far fa-clock" onClick={() => openModal({ modal_type: 'list' })} show={show}></i>
+                                        </a>
+                                    </div>
+                                    <div className="gray-quick-review">
+                                        <a className="gray-quick-review-star">
+                                            <i className="fas fa-star" style={currentUserReviewScore >= 1 ? {color: "#00e24b"} : null}></i>
+                                        </a>
+                                        <a className="gray-quick-review-star">
+                                            <i className="fas fa-star" style={currentUserReviewScore >= 2 ? { color: "#00e24b" } : null}></i>
+                                        </a>
+                                        <a className="gray-quick-review-star">
+                                            <i className="fas fa-star" style={currentUserReviewScore >= 3 ? { color: "#00e24b" } : null}></i>
+                                        </a>
+                                        <a className="gray-quick-review-star">
+                                            <i className="fas fa-star" style={currentUserReviewScore >= 4 ? { color: "#00e24b" } : null}></i>
+                                        </a>
+                                        <a className="gray-quick-review-star">
+                                            <i className="fas fa-star" style={currentUserReviewScore >= 5 ? { color: "#00e24b" } : null}></i>
+                                        </a>
+                                    </div>
                                     <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Review or log...</a>
                                     <a className="gray-button" onClick={() => openModal({ modal_type: 'list' })} show={show}>Add to a list...</a>
-                                    <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Share</a>
                                 </div>
                                 :
                                 
@@ -98,7 +133,7 @@ class ShowsShow extends Component {
                         openModal={this.props.openModal}
                         show={show}
                     />
-                    )).reverse()
+                    ))
                     : 
                     null}
 

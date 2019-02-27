@@ -7,7 +7,10 @@ export default ({ currentUser, logout, openModal }) => {
     <div>
       <nav className="header-nav">
         <ul>
-          <li><Link className="nav-link" to="/">{currentUser.username}</Link></li>
+          <li><Link className="nav-link" to="/">
+            <span className="nav-profile-pic"><img src={currentUser.id % 10 === 7 ? window.profSnowball : (currentUser.id % 10 === 6 ? window.profSanta : (currentUser.id % 10 === 5 ? window.profGrandma : (currentUser.id % 10 === 4 ? window.profGrandpa : (currentUser.id % 10 === 3 ? window.profMaggie : (currentUser.id % 10 === 2 ? window.profBart : (currentUser.id % 10 === 1 ? window.profLisa : (currentUser.id % 10 === 0 ? window.profMarge : (currentUser.id % 10 === 8 ? window.profTV : window.profHomer))))))))} /></span>
+            {" " + currentUser.username}
+          </Link></li>
           <li><a className="nav-link" onClick={logout}>Log Out</a></li>
           <li><Link className="nav-link" to="/reviews">Activity</Link></li>
           <li><Link className="nav-link" to="/shows">Shows</Link></li>

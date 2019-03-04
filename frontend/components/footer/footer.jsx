@@ -12,7 +12,7 @@ export default () => {
                     <li><Link to="/contact">Contact</Link></li>
                 </ul>
                 <div className="footer-links-logos">
-                    <p><a href="//github.com/kangaree/"><i className="fab fa-github"></i></a> / <a href="//linkedin.com/in/gary-kang-877b9b22"><i className="fab fa-linkedin-in"></i></a> / <a href="mailto:garyzkang@gmail.com"><i className="fas fa-envelope"></i></a></p>
+                    <p><a href="//github.com/kangaree/"><i className="fab fa-github"></i></a> / <a href="//linkedin.com/in/garykangaroo"><i className="fab fa-linkedin-in"></i></a> / <a href="//angel.co/garykangaroo"><i className="fab fa-angellist"></i></a> / <a href="mailto:garyzkang@gmail.com"><i className="fas fa-envelope"></i></a></p>
                 </div>
             </div>
             <p className="footer-credit"> Fullscreend. Made by a fan of tv (and Letterboxd) in NY, NY. TV data from TMDb. </p>

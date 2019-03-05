@@ -10,6 +10,7 @@ const mapStateToProps = (state) => {
     return {
         currentUser: state.entities.users[state.session.currentUserId],
         reviews,
+        loading: state.ui.loading.reviewsLoading,
     };
 };
 

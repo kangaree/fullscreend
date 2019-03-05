@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import { ReviewLink } from '../../utils/link_util';
 
+import Loading from '../loading/loading';
+
 // import LoadingIcon from './loading_icon';
 
 import ReviewListItemContainer from './review_list_item_container'
@@ -16,7 +18,11 @@ class Reviews extends Component {
     // }
 
     render() {
-        const { openModal, currentUser, reviews, } = this.props;
+        const { openModal, currentUser, reviews, loading } = this.props;
+
+        if (loading) {
+            return <Loading />;
+        }
 
         return (
             <>

@@ -75,10 +75,11 @@ export const receiveShow = show => {
     }
 };
 
-export const fetchShow = id => dispatch => (
-    APIUtil.fetchShow(id)
+export const fetchShow = id => dispatch => {
+    dispatch(startLoadingSingleShow());
+    return APIUtil.fetchShow(id)
         .then(show => (dispatch(receiveShow(show))))
-);
+};
 
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 
@@ -140,6 +141,29 @@ export const receiveReviews = reviews => {
 };
 
 export const fetchReviews = () => dispatch => {
+    dispatch(startLoadingReviews());
     return APIUtil.fetchReviews()
         .then(reviews => (dispatch(receiveReviews(reviews))))
 };
+
+export const START_LOADING_SHOWS = 'START_LOADING_SHOWS';
+export const START_LOADING_SINGLE_SHOW = 'START_LOADING_SINGLE_SHOW';
+
+export const startLoadingShows = () => ({
+    type: START_LOADING_SHOWS
+});
+
+export const startLoadingSingleShow = () => ({
+    type: START_LOADING_SINGLE_SHOW
+});
+
+export const START_LOADING_REVIEWS = 'START_LOADING_REVIEWS';
+export const START_LOADING_SINGLE_REVIEW = 'START_LOADING_SINGLE_REVIEW';
+
+export const startLoadingReviews = () => ({
+    type: START_LOADING_REVIEWS
+});
+
+export const startLoadingSingleReview = () => ({
+    type: START_LOADING_SINGLE_REVIEW
+});

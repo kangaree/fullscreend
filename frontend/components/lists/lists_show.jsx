@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import Loading from '../loading/loading_show';
+
 class ListsShow extends Component {
     componentDidMount() {
         window.scrollTo(0, 0);
@@ -18,13 +20,17 @@ class ListsShow extends Component {
 
         const { list } = this.props;
 
+        if (this.props.loading) {
+            return <Loading />;
+        }
+
         if (!list) return null;
 
         return (
             <>
                 <div className="blank-header"></div>
-                <div className="all-review-index-background">
-                    <div className="list-show-item-container">
+                <div className="list-show-background">
+                    <div className="list-show-container">
                         <h3 className="list-show-title">{list.title}</h3>
                         <p className="">{list.description}</p>
                         {list.listings ? (Object.values(list.listings).map(

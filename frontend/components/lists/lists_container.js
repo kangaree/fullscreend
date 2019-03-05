@@ -13,6 +13,7 @@ const mapStateToProps = (state) => {
         currentUser: state.entities.users[state.session.currentUserId],
         lists,
         listings,
+        loading: state.ui.loading.listsLoading,
     };
 };
 

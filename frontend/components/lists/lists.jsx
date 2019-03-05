@@ -2,13 +2,19 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import ListListItemContainer from './list_list_item_container'
 
+import Loading from '../loading/loading';
+
 class Lists extends Component {
     componentDidMount() {
         if (this.props.currentUser) { this.props.fetchLists() };
     }
 
     render() {
-        const { currentUser, lists } = this.props;
+        const { currentUser, lists, loading } = this.props;
+
+        if (loading) {
+            return <Loading />;
+        }
 
         return (
             <>

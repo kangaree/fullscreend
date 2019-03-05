@@ -9,6 +9,12 @@
     color: #89a;
 }
 
+.list-show-container {
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 10px;
+}
+
 .list-show-item {
     display: flex;
     justify-content: space-between;
@@ -49,10 +55,8 @@
     border: 3px solid #00e054;
 }
 
-
-.list-show-item-container {
-    margin-left: 20%;
-    margin-right: 20%;
-    border-bottom: 1px solid #435466;
-    padding-top: 10px;
+.list-show-background {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    background-image: linear-gradient(#171b21, #14181b);
 }

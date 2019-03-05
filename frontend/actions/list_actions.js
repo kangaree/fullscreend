@@ -18,6 +18,7 @@ export const createList = list => dispatch => {
 export const REMOVE_LIST = "REMOVE_LIST"
 
 export const fetchList = id => dispatch => {
+    dispatch(startLoadingSingleList());
     return APIUtil.fetchList(id)
         .then(list => (dispatch(receiveList(list))))
 };
@@ -46,6 +47,7 @@ export const receiveLists = lists => {
 };
 
 export const fetchLists = () => dispatch => {
+    dispatch(startLoadingLists());
     return APIUtil.fetchLists()
         .then(lists => (dispatch(receiveLists(lists))))
 };
@@ -90,3 +92,14 @@ export const fetchUserLists = (userId) => dispatch => {
     return APIUtil.fetchUserLists(userId)
         .then(lists => (dispatch(receiveLists(lists))))
 };
+
+export const START_LOADING_LISTS = 'START_LOADING_LISTS';
+export const START_LOADING_SINGLE_LIST = 'START_LOADING_SINGLE_LIST';
+
+export const startLoadingLists = () => ({
+    type: START_LOADING_LISTS
+});
+
+export const startLoadingSingleList = () => ({
+    type: START_LOADING_SINGLE_LIST
+});

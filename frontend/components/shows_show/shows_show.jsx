@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import ReviewListItemContainer from './review_list_item_container'
+import ReviewListItemContainer from './review_list_item_container';
+import Loading from '../loading/loading_show';
+import { join } from 'path';
 
 class ShowsShow extends Component {
     componentDidMount() {
@@ -16,7 +18,8 @@ class ShowsShow extends Component {
     }
 
     render() {
-        const { show, openModal, currentUser, reviews } = this.props;
+
+        const { show, openModal, currentUser, reviews, loading } = this.props;
 
         let currentUserReview = {}
         
@@ -32,7 +35,13 @@ class ShowsShow extends Component {
             }
         }
 
+        if (loading) {
+            return <Loading />;
+        }
+
         if (!show) return null;
+
+        if (show.id === 404) { return <Loading />; }
 
         return (
             <>

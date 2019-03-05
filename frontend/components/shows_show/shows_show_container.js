@@ -14,6 +14,7 @@ const mapStateToProps = (state, ownProps) => {
         show,
         reviews,
         showReviewIds,
+        loading: state.ui.loading.detailLoading,
     };
 };
 

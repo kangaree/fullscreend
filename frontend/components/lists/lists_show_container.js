@@ -9,6 +9,7 @@ const mapStateToProps = (state) => {
 
     return {
         list,
+        loading: state.ui.loading.listLoading,
     }
 }
 

@@ -2,7 +2,10 @@
     margin: auto;
     display: flex;
     justify-content: space-between;
-    width: 1000px;
+    width: 60%;
+    background: #14181c;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 .poster-link img {

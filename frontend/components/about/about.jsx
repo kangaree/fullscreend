@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default () => (
     <>
-        <div className="backdrop"><div className="backdrop-fade">
+        <div className="backdrop-footer-link"><div className="backdrop-fade">
             <h2 className="headline-1">About</h2>
             <div className="headline-2">
                 <p>Fullscreend is an app that lets you log and collect tv.<br></br>

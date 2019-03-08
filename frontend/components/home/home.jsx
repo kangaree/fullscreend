@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 export default () => (
     <div className="home">
+
+        <video autoPlay muted loop src="https://s3.amazonaws.com/fullscreend/TV+Intros+Short.mp4" id="tv-intros"></video>
         <div className="backdrop"><div className="backdrop-fade">
             <h2 className="headline-1">The social network for tv lovers.</h2>
             <p className="headline-2">Start your tv diary now, it's free!</p>
@@ -18,6 +20,23 @@ export default () => (
     
         </div>
 
-        <div className="div-center"><a href="//letterboxd.com"><img src="https://a.ltrbxd.com/logos/letterboxd-logo-h-neg-rgb-1000px.png" alt="Letterboxd" /></a></div>
+        <p className="div-center">Fullscreend lets you...</p>
+        <div className="lets-you">
+            <div className="lets-you-item">
+                <i className="fas fa-eye"></i>
+                <p>Keep a diary of your favorite shows. Record and share.</p>
+            </div>
+            <div className="lets-you-item">
+                <i className="fas fa-star"></i>
+                <p>Rate each show on a five-star scale.</p>
+            </div>
+            <div className="lets-you-item">
+                <i className="fas fa-list-ul"></i>
+                <p>Compile and share lists of shows on any topic.</p>
+            </div>
+        </div>
+
+        <p className="div-center">Love film? Check out...</p>
+        <div className="div-center"><a href="//letterboxd.com"><img src="https://a.ltrbxd.com/logos/letterboxd-logo-h-neg-rgb-1000px.png" alt="Letterboxd" className="letterboxd-horizontal" /></a></div>
     </div>
 )

@@ -25,3 +25,29 @@
     margin-top: 24px;
     margin-bottom: 24px;
 }
+
+.letterboxd-horizontal {
+    max-width: 770px;
+}
+
+.lets-you {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.lets-you-item {
+    background: #445465;
+    color: #def;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.lets-you-item * {
+    margin-left: 10px;
+    margin-right: 10px;
+}

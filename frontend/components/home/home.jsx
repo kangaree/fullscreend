@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 export default () => (
     <div className="home">
-
-        {/* <video autoPlay muted loop src="https://s3.amazonaws.com/fullscreend/TV+Intros+Short.mp4" id="tv-intros"></video> */}
-        <div className="backdrop"><div className="backdrop-fade">
-            <video autoPlay muted loop src="https://s3.amazonaws.com/fullscreend/TV+Intros+Short.mp4" id="tv-intros"></video>
+        <video autoPlay muted loop id="tv-intros">
+            <source src="https://s3.amazonaws.com/fullscreend/TV+Intros+Montage.mp4" type="video/mp4"></source>
+        </video>
+        <div className="home-backdrop"><div className="backdrop-fade">
             <h2 className="headline-1">The social network for tv lovers.</h2>
             <p className="headline-2">Start your tv diary now, it's free!</p>
         </div></div>

@@ -5,6 +5,7 @@ export default () => (
     <div className="home">
         <video autoPlay muted loop id="tv-intros">
             <source src="https://s3.amazonaws.com/fullscreend/TV+Intros+Montage.mp4" type="video/mp4"></source>
+            <source src="https://s3.amazonaws.com/fullscreend/TV+Intros+Montage.webm" type="video/webm"></source>
         </video>
         <div className="home-backdrop"><div className="backdrop-fade">
             <h2 className="headline-1">The social network for tv lovers.</h2>

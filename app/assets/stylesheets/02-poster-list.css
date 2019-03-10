@@ -24,9 +24,17 @@
 
 @media only screen and (max-width: 1000px) {
     .poster-link img {
-        width: 90px;
-        height: 135px;
+        /* width: 90px;
+        height: 135px; */
+        width: 180px;
+        height: 270px;
         border-radius: 3px;
         border: 1px solid transparent;
+    }
+
+    .horizontal-featured-list {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
     }
 }

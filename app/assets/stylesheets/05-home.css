@@ -54,11 +54,27 @@
 
 @media only screen and (max-width: 1000px) {
     .lets-you-item {
-        width: 180px;
-        margin-right: 3px;
+        width: 100%;
+    }
+    
+    .lets-you-item i {
+        font-size: 40px;
     }
 
     .letterboxd-horizontal {
         max-width: 600px;
     }
+
+    .home p {
+        font-size: 36px;
+    }
+
+    .home .headline-1 {
+        font-size: 50px;
+    }
+
+    .home .headline-2 {
+        font-size: 40px;
+    }
+
 }

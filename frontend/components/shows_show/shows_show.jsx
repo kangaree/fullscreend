@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReviewListItemContainer from './review_list_item_container';
 import Loading from '../loading/loading_show';
 import { join } from 'path';
+import { Link } from 'react-router-dom';
 
 class ShowsShow extends Component {
     componentDidMount() {
@@ -125,9 +126,14 @@ class ShowsShow extends Component {
                 
                 <div className="center-horizontally">
                     <ul className="season-list">
-                        {show.seasons && show.seasons.every(season => season.poster_path) ? show.seasons.map(season => <li key={season.name}><img src={season.poster_path ?
-                            "https://image.tmdb.org/t/p/w500" + season.poster_path
-                            : ""}/></li> )
+                        {show.seasons && show.seasons.every(season => season.poster_path) ? show.seasons.map(season => 
+                            <li key={season.name}>
+                                <Link to={"/shows/" + show.id + "/seasons/" + season.season_number}>
+                                    <img src={season.poster_path ?
+                                        "https://image.tmdb.org/t/p/w500" + season.poster_path
+                                        : ""}/>
+                                </Link>
+                            </li> )
                         :
                         null}
                     </ul>

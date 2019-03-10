@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default () => (
     <div className="home">
-        <video playsinline autoPlay muted loop id="tv-intros">
+        <video playsInline autoPlay muted loop id="tv-intros">
             <source src="https://s3.amazonaws.com/fullscreend/TV+Intros+Montage.webm" type="video/webm"></source>
             <source src="https://s3.amazonaws.com/fullscreend/TV+Intros+Montage.mp4" type="video/mp4"></source>
         </video>

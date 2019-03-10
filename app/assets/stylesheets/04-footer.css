@@ -50,3 +50,20 @@ footer ul li {
     color: #678;
     line-height: 1.5;
 }
+
+@media only screen and (max-width: 1000px) {
+    footer {
+        position: absolute;
+    }
+    
+    .footer-links {
+        width: 900px;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .footer-credit {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}

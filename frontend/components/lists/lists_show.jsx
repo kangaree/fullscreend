@@ -32,7 +32,7 @@ class ListsShow extends Component {
                 <div className="list-show-background">
                     <div className="list-show-container">
                         <h3 className="list-show-title">{list.title}</h3>
-                        <p className="">{list.description}</p>
+                        <p className="list-show-description">{list.description}</p>
                         {list.listings ? (Object.values(list.listings).map(
                             listing => {
                                 return (

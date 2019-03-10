@@ -54,3 +54,10 @@
 .list-item-container * {
     color: #89a;
 }
+
+@media only screen and (max-width: 1000px) {
+    .list-index-new-title {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}

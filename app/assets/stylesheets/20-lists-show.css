@@ -59,4 +59,31 @@
     padding-top: 20px;
     padding-bottom: 50px;
     background-image: linear-gradient(#171b21, #14181b);
+    text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .list-show-item-container {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    .list-posters-info {
+        width: 200px;
+    }
+
+    .list-show-container {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .list-show-container h3 {
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .list-show-description {
+        text-align: center;
+    }
 }

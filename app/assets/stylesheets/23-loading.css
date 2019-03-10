@@ -23,3 +23,13 @@
     width: 100%;
     height: 800px;
 }
+
+@media only screen and (max-width: 1000px) {
+    .loading-backdrop {
+        height: 2000px;
+    }
+
+    .loading-show-backdrop {
+        height: 1800px;
+    }
+}

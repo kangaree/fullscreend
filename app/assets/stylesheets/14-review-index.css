@@ -54,3 +54,11 @@
     border-radius: 5px;
     text-align: center;
 }
+
+
+@media only screen and (max-width: 1000px) {
+    .review-list-index-container {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}

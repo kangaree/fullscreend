@@ -37,7 +37,7 @@ export default ({ currentUser, logout, openModal }) => {
     <header className="nav-bar">
       <Link to="/">
         <div className="nav-logo-text">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/%D0%A3%D0%AD%D0%98%D0%A2.svg" />
+          <img src="https://s3.amazonaws.com/fullscreend/fullscreendtest.svg" />
           <h1 className="logo">Fullscreend</h1>
         </div>
       </Link>

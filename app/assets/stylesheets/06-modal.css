@@ -34,3 +34,9 @@
 .modal-child-login {
     margin-left: 6px;
 }
+
+@media only screen and (max-width: 1000px) {
+    .modal-background-login {
+        right: 0;
+    }
+}

@@ -30,7 +30,7 @@ export default () => (
             </div>
             <div className="lets-you-item">
                 <i className="fas fa-star"></i>
-                <p>Rate each show on a five-star scale.</p>
+                <p>Rate each show on a five-star scale. Like a show.</p>
             </div>
             <div className="lets-you-item">
                 <i className="fas fa-list-ul"></i>

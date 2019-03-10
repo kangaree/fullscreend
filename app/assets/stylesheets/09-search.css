@@ -29,3 +29,10 @@
     overflow: auto;
     border-radius: 3px;
 }
+
+
+@media only screen and (max-width: 1000px) {
+    .nav-search-input {
+        background: white;
+    }
+}

@@ -2,7 +2,7 @@
     cursor: pointer;
     display: inline-block;
     border-width: 0px;
-    width: 155px;
+    width: 230px;
     border-radius: 5px;
     text-align: center;
 
@@ -12,14 +12,16 @@
     padding: 15px 30px;
     box-sizing: border-box;
 
-    font-size: 12px;
+    font-size: 14px;
     font-family: sans-serif;
 }
 
 .gray-quick-review {
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+
     border-width: 0px;
-    width: 155px;
+    width: 230px;
     border-radius: 5px;
     text-align: center;
 
@@ -29,18 +31,30 @@
     padding: 15px 30px;
     box-sizing: border-box;
 
-    font-size: 12px;
+    font-size: 16px;
     font-family: sans-serif;
 }
 
+.gray-quick-review i {
+    font-size: 30px;
+}
+
 .gray-quick-review-link {
-    font-size: 24px;
+    font-size: 16px;
 }
 
 .gray-quick-review-link:not(:last-child) {
     margin-right: 5px;
 }
 
+.gray-quick-review-link i {
+    margin-bottom: 15px;
+}
+
 .gray-quick-review-star {
     font-size: 16px;
+}
+
+.gray-quick-review-star-caption {
+    margin-top: 15px;
 }

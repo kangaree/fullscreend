@@ -104,20 +104,20 @@ class ShowsShow extends Component {
                                     <a className="">
                                         <i className="far fa-bookmark" style={currentUserReview ? { color: "#00e24b" } : null}></i>
                                     </a>
-                                    <div>Watch</div>
+                                    <div> {currentUserReview ? (currentUserReview ? "Logged" : "Not logged") : "Not logged"} </div>
                                 </div>
                                 <div className="gray-quick-review-link">
                                     <a className="">
                                         <i className="far fa-heart" style={currentUserReview ? (currentUserReview.like ? { color: "orange" } : null) : null}></i>
                                     </a>
-                                    <div>Like</div>
+                                    <div> { currentUserReview ? (currentUserReview.like ? "Liked" : "Not liked") : "Not liked" } </div>
                                 </div>
-                                <div className="gray-quick-review-link">
+                                {/* <div className="gray-quick-review-link">
                                     <a className="">
                                         <i className="far fa-clock" onClick={() => openModal({ modal_type: 'list' })} show={show}></i>
                                     </a>
                                     <div>List</div>
-                                </div>
+                                </div> */}
                             </div>
                             <div className="gray-quick-review">
                                 <div>
@@ -136,7 +136,7 @@ class ShowsShow extends Component {
                                     <a className="gray-quick-review-star">
                                         <i className="fas fa-star" style={currentUserReviewScore >= 5 ? { color: "#00e24b" } : null}></i>
                                     </a>
-                                    <div className="gray-quick-review-star-caption">Rate</div>
+                                    <div className="gray-quick-review-star-caption">{currentUserReview ? (currentUserReviewScore ? "Rated" : "Not rated") : "Not rated"}</div>
                                 </div>
                             </div>
                             <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Review or log...</a>
@@ -157,11 +157,11 @@ class ShowsShow extends Component {
                         <ul className="season-list">
                             {show.seasons ? show.seasons.map(season =>
                                 <li key={season.name}>
-                                    <Link to={"/shows/" + show.id + "/seasons/" + season.season_number}>
+                                    {/* <Link to={"/shows/" + show.id + "/seasons/" + season.season_number}> */}
                                         <img src={season.poster_path ?
                                             "https://image.tmdb.org/t/p/w500" + season.poster_path
                                             : window.testPoster} />
-                                    </Link>
+                                    {/* </Link> */}
                                 </li>)
                                 :
                                 null}
@@ -203,10 +203,9 @@ class ShowsShow extends Component {
                         ))
                             :
                             null}
+                        <br></br>
                     </div>
                 </div>
-
-                {currentUser ? <div className="center-buttons"><a className="green-button-log" onClick={() => openModal({ modal_type: 'review' })} show={show}>log</a></div> : null}
 
             </>
         );

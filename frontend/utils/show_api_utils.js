@@ -41,6 +41,13 @@ export const fetchShowReviews = showId => (
     })
 );
 
+export const fetchShowSeason = (showId, seasonNumber) => {
+    return $.ajax({
+        method: 'GET',
+        url: `https://api.themoviedb.org/3/tv/${showId}/season/${seasonNumber}?api_key=138b6460ffe9a8a67112c073f2008fd5&language=en-US`
+    })
+};
+
 export const fetchReview = id => (
     $.ajax({
         method: 'GET',

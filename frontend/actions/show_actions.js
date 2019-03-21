@@ -167,3 +167,18 @@ export const startLoadingReviews = () => ({
 export const startLoadingSingleReview = () => ({
     type: START_LOADING_SINGLE_REVIEW
 });
+
+export const RECEIVE_SHOW_SEASON = 'RECEIVE_SHOW_SEASON';
+
+export const receiveShowSeason = (season, showId) => {
+    return {
+        type: RECEIVE_SHOW_SEASON,
+        season,
+        showId,
+    }
+};
+
+export const fetchShowSeason = (showId, seasonNumber) => dispatch => {
+    return APIUtil.fetchShowSeason(showId, seasonNumber)
+        .then(season => (dispatch(receiveShowSeason(season, showId))))
+};

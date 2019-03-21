@@ -5,6 +5,7 @@ import {
     RECEIVE_POPULAR_SHOWS,
     RECEIVE_SEARCH_SHOWS,
     RECEIVE_SEARCH_INDEX_SHOWS,
+    RECEIVE_SHOW_SEASON,
 } from '../actions/show_actions';
 
 const showsReducer = (state = {}, action) => {
@@ -14,6 +15,9 @@ const showsReducer = (state = {}, action) => {
         case RECEIVE_SHOW:
 
             return merge({}, state, {[action.show.id]: action.show})
+
+        case RECEIVE_SHOW_SEASON:
+            return merge({}, state, { [action.showId]: { season: action.season }})
             
         case RECEIVE_POPULAR_SHOWS:
 

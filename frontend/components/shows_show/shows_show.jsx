@@ -8,19 +8,21 @@ class ShowsShow extends Component {
     componentDidMount() {
         window.scrollTo(0, 0);
         this.props.fetchShow(this.props.match.params.showId);
+        this.props.fetchShowSeason(this.props.match.params.showId, 1);
         if (this.props.currentUser) {this.props.fetchShowReviews(this.props.match.params.showId)};
     }
 
     componentDidUpdate(prevProps) {
         if (prevProps.match.params.showId !== this.props.match.params.showId) {
             this.props.fetchShow(this.props.match.params.showId);
+            this.props.fetchShowSeason(this.props.match.params.showId, 1);
             if (this.props.currentUser) { this.props.fetchShowReviews(this.props.match.params.showId) };
         }
     }
 
     render() {
 
-        const { show, openModal, currentUser, reviews, loading } = this.props;
+        const { show, openModal, currentUser, reviews, loading, season } = this.props;
 
         let currentUserReview = {}
         
@@ -164,6 +166,31 @@ class ShowsShow extends Component {
                                 :
                                 null}
                         </ul>
+
+                        {season ?
+                            <div>
+                                <h3>
+                                    <i className="fas fa-fast-backward"></i> <i>{season.episodes[0].name}</i> S1 E1 {season.episodes[0].air_date}
+                                </h3>
+                                <p>
+                                    {season.episodes[0].overview}
+                                </p>
+                            </div>
+                            :
+                            null}
+
+                        {show.last_episode_to_air ?
+                            <div>
+                                <h3>
+                                    <i className="fas fa-fast-forward"></i> <i>{show.last_episode_to_air.name}</i> S{show.last_episode_to_air.season_number} E{show.last_episode_to_air.episode_number} {show.last_episode_to_air.air_date}
+                                </h3>
+                                <p>
+                                    {show.last_episode_to_air.overview}
+                                </p>
+                            </div>
+                            :
+                            null}
+
                         {currentUser ? reviews.map(review => (
                             <ReviewListItemContainer
                                 review={review}

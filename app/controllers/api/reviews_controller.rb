@@ -1,5 +1,5 @@
 class Api::ReviewsController < ApplicationController
-  before_action :require_signed_in!
+  before_action :require_signed_in!, :except => [:index]
 
   def create
     @review = current_user.reviews.new(review_params)

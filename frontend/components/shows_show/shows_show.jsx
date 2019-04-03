@@ -9,7 +9,8 @@ class ShowsShow extends Component {
         window.scrollTo(0, 0);
         this.props.fetchShow(this.props.match.params.showId);
         this.props.fetchShowSeason(this.props.match.params.showId, 1);
-        if (this.props.currentUser) {this.props.fetchShowReviews(this.props.match.params.showId)};
+        // if (this.props.currentUser) {this.props.fetchShowReviews(this.props.match.params.showId)};
+        this.props.fetchShowReviews(this.props.match.params.showId);
     }
 
     componentDidUpdate(prevProps) {
@@ -202,7 +203,16 @@ class ShowsShow extends Component {
                             />
                         ))
                             :
-                            null}
+                            reviews.map(review => (
+                                <ReviewListItemContainer
+                                    review={review}
+                                    key={review.id}
+                                    deleteReview={this.props.deleteReview}
+                                    updateReview={this.props.updateReview}
+                                    openModal={this.props.openModal}
+                                    show={show}
+                                />
+                            ))}
                         <br></br>
                     </div>
                 </div>

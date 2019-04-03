@@ -25,8 +25,13 @@ const Review = ({ review, user, deleteReview, show, openModal, currentUser }) =>
 
                 {date_watched ? (<div>{date_watched ? date_watched : null}</div>) : null }
 
-                {currentUser.id == review.user_id ? <div onClick={() => deleteReview(review.id)} className="delete-review-button"><i className="fas fa-trash"></i></div> : null }
-                {currentUser.id == review.user_id ? <div onClick={() => openModal({ modal_type: 'edit-review', options: { review } })} className="edit-review-button"><i className="fas fa-edit"></i></div> : null }
+                {currentUser ? (currentUser.id == review.user_id ? 
+                    <>
+                        <div onClick={() => deleteReview(review.id)} className="delete-review-button"><i className="fas fa-trash"></i></div>
+                        <div onClick={() => openModal({ modal_type: 'edit-review', options: { review } })} className="edit-review-button"><i className="fas fa-edit"></i></div>
+                    </>
+                    : null) : null}
+                    
             </div>
             <div className="show-review-index">
                 { body ? <p>{body}</p> : <p><i className="fas fa-bookmark"></i></p> }

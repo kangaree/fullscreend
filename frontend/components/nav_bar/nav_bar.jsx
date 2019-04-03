@@ -4,7 +4,6 @@ import ShowsSearchContainer from '../shows_search/shows_search_container';
 
 export default ({ currentUser, logout, openModal }) => {
   const display = currentUser ? (
-    <div>
       <nav className="header-nav">
         <ul>
           <li><Link className="nav-link" to="/">
@@ -19,7 +18,6 @@ export default ({ currentUser, logout, openModal }) => {
           <li className="nav-search-input"><ShowsSearchContainer /></li>
         </ul>
       </nav>
-    </div>
   ) : (
       <nav className="header-nav">
         <ul>

@@ -11,9 +11,8 @@
 .modal-background-login {
     position: absolute;
     top: -1px;
-    right: 100px;
+    right: 10%;
     height: 48px;
-    width: 550px;
     z-index: 10;
     background: #14181c;
     padding: 8px;

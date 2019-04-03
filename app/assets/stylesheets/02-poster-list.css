@@ -1,7 +1,7 @@
 .horizontal-featured-list {
     margin: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 60%;
     background: #14181c;
     padding-left: 20%;

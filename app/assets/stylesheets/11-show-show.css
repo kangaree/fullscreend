@@ -201,6 +201,21 @@
     padding-left: 245px;
 }
 
+span.spoiler {
+  text-shadow: 0 0 8px #fff;
+  color: rgba(255, 255, 255, 0);
+  filter: DXImageTransform.Microsoft.Blur(pixelradius=2);
+  zoom: 1;
+  pause-before: 2s;
+  transition: 1s text-shadow linear;
+}
+
+span.spoiler:hover {
+  text-shadow: none;
+  color: #fff;
+  filter: none;
+}
+
 @media only screen and (max-width: 1000px) {
     .center-horizontally {
         padding-left: 6%;

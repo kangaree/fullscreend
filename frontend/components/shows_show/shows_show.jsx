@@ -186,7 +186,7 @@ class ShowsShow extends Component {
                                     <i className="fas fa-fast-forward"></i> <i>{show.last_episode_to_air.name}</i> S{show.last_episode_to_air.season_number} E{show.last_episode_to_air.episode_number} {show.last_episode_to_air.air_date}
                                 </h3>
                                 <p>
-                                    {show.last_episode_to_air.overview}
+                                    <span className="spoiler">{show.last_episode_to_air.overview}</span>
                                 </p>
                             </div>
                             :

@@ -13,6 +13,16 @@
 
 .search-bar-test input {
     width: 100px;
+    background-color: hsla(0,0%,100%,.25);
+    border-width: 0;
+    color: white;
+}
+
+.search-bar-test button {
+    background-color: hsla(0,0%,100%,.25);
+    color: white;
+    border-width: 0;
+    padding: 1px 7px 1px;
 }
 
 .shows-ul {

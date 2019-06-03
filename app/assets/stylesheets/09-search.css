@@ -1,14 +1,8 @@
 .search-bar-test {
-    /* position: absolute;
-    right: 11.3%;
-    top: 5.5%; */
     display: block;
     color: #89a;
     font-size: 1rem;
     line-height: 1.30769231;
-    /* padding: 8px 30px 8px 10px; */
-    /* height: 30px; */
-    /* border-radius: 15px; */
 }
 
 .search-bar-test input {

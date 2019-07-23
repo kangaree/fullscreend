@@ -35,9 +35,11 @@ class ShowsPopular extends React.Component {
         return (
             <>
                 <ShowsIndex shows={shows} showIds={showIds}/>
-                <div className="pagination-buttons">
-                    {!(page - 1 < 1) ? <button onClick={this.showPreviousPage} className="previous-page-popular">Previous</button> : <button className="previous-page-popular">Previous</button> }
-                    <button onClick={this.showNextPage} className="next-page-popular">Next</button>
+                <div className="pagination-buttons-container">
+                    <div className="pagination-buttons">
+                        {!(page - 1 < 1) ? <button onClick={this.showPreviousPage} className="previous-page-popular">Previous</button> : <button className="previous-page-popular">Previous</button> }
+                        <button onClick={this.showNextPage} className="next-page-popular">Next</button>
+                    </div>
                 </div>
             </>
         );

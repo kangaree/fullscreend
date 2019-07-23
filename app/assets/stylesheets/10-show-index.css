@@ -19,6 +19,8 @@
     margin-inline-start: 0;
     margin-inline-end: 0;
     padding-inline-start: 0;
+    width: 1000px;
+    text-align: center;
 }
 
 .show-li img {
@@ -35,13 +37,17 @@
     color: #fff;
 }
 
+.pagination-buttons-container {
+    background-color: #1e252d;
+}
+
 .pagination-buttons {
     display: flex;
     justify-content: space-between;
     background-color: #1e252d;
-    padding-left: 17%;
-    padding-right: 17%;
     padding-bottom: 20px;
+    margin: 0 auto;
+    width: 1000px;
 }
 
 .previous-page-popular {

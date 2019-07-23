@@ -12,6 +12,8 @@
     background-color: transparent;
     background-repeat: repeat-x;
     background-image: linear-gradient(180deg,#14181c 0,rgba(20,24,28,.94460641) 16.56%,rgba(20,24,28,.80174927) 30.85%,rgba(20,24,28,.60641399) 43.77%,rgba(20,24,28,.39358601) 56.23%,rgba(20,24,28,.19825073) 69.15%,rgba(20,24,28,.05539359) 83.44%,rgba(20,24,28,0));
+    width: 1000px;
+    margin: 0 auto;
 }
 
 .nav-bar img {

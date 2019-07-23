@@ -14,7 +14,7 @@ export default ({ currentUser, logout, openModal }) => {
           <li><Link className="nav-link" to="/reviews">Activity</Link></li>
           <li><Link className="nav-link" to="/shows">Shows</Link></li>
           <li><Link className="nav-link" to="/lists">Lists</Link></li>
-          <li><Link className="nav-link" to="/biglist">People</Link></li >
+          {/* <li><Link className="nav-link" to="/biglist">People</Link></li > */}
           <li className="nav-search-input"><ShowsSearchContainer /></li>
         </ul>
       </nav>
@@ -25,7 +25,7 @@ export default ({ currentUser, logout, openModal }) => {
           <li><a className="nav-link" onClick={() => openModal({ modal_type: 'signup' })}>Create Account</a></li>
           <li><Link className="nav-link" to="/shows">Shows</Link></li>
           <li><Link className="nav-link" to="/lists">Lists</Link></li>
-          <li><Link className="nav-link" to="/biglist">People</Link></li >
+          {/* <li><Link className="nav-link" to="/biglist">People</Link></li > */}
           <li className="nav-search-input"><ShowsSearchContainer /></li>
         </ul>
       </nav>

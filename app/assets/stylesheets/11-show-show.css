@@ -30,7 +30,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     padding-left: 10%;
-    padding-right: 10%;
+    padding-right: 15%;
 }
 
 .headline-3 img {
@@ -90,7 +90,7 @@
 
 .center-horizontally {
     padding-left: 10%;
-    padding-right: 10%;
+    padding-right: 13.5%;
 }
 
 .dashboard-buttons {
@@ -126,7 +126,7 @@
     position: -webkit-sticky;
     position: sticky;
     top: 10px;
-    left: 10%;
+    left: 15%;
 }
 
 .show-overview {
@@ -146,8 +146,8 @@
 .dashboard-middle-text {
     display: flex;
     flex-direction: column;
-    margin-left: 245px;
-    margin-right: 40px;
+    margin-left: 315px;
+    margin-right: 5px;
 }
 
 .show-networks img {
@@ -170,7 +170,7 @@
 }
 
 .left-indent-poster {
-    padding-left: 245px;
+    padding-left: 315px;
 }
 
 span.spoiler {

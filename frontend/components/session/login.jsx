@@ -31,7 +31,9 @@ class Login extends React.Component {
         this.props.processLoginForm(this.state)
             .then(() => {
                 this.props.closeModal();
-                this.props.history.push(`/reviews/`);
+                if (this.props.location.pathname === `/`) {
+                    this.props.history.push(`/reviews/`);
+                }
             });
     }
 
@@ -43,7 +45,9 @@ class Login extends React.Component {
         }
         this.props.processLoginForm(user).then(() => {
             this.props.closeModal();
-            this.props.history.push(`/reviews/`);
+            if (this.props.location.pathname === `/`) {
+                this.props.history.push(`/reviews/`);
+            }
         });
     }
 

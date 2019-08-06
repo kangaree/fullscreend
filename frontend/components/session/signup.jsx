@@ -29,7 +29,12 @@ class Signup extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.processSignupForm(this.state)
-            .then(() => this.props.closeModal());
+            .then(() => {
+                this.props.closeModal()
+                if (this.props.location.pathname === `/`) {
+                    this.props.history.push(`/reviews/`);
+                }
+            });
     }
 
     renderErrors() {

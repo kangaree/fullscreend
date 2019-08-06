@@ -29,7 +29,10 @@ class Login extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.processLoginForm(this.state)
-            .then(() => this.props.closeModal());
+            .then(() => {
+                this.props.closeModal();
+                this.props.history.push(`/reviews/`);
+            });
     }
 
     handleDemoSubmit(e) {
@@ -38,7 +41,10 @@ class Login extends React.Component {
             username: "test_user",
             password: "test_user",
         }
-        this.props.processLoginForm(user).then(() => this.props.closeModal());
+        this.props.processLoginForm(user).then(() => {
+            this.props.closeModal();
+            this.props.history.push(`/reviews/`);
+        });
     }
 
     renderDemoButton() {

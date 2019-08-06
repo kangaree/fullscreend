@@ -13,7 +13,7 @@ import ListsContainer from './lists/lists_container';
 import CreateListContainer from './lists/create_list_form_container';
 import UserListsContainer from './lists/user_lists_container';
 import ListsShowContainer from './lists/lists_show_container';
-import Home from './home/home';
+import HomeContainer from './home/home_container';
 import BigList from './biglist/biglist';
 import About from './about/about';
 import Help from './help/help';
@@ -30,7 +30,7 @@ export default () => (
         <header><Route path="/" component={NavBarContainer} /></header>
         {/* <ShowsSearchContainer /> */}
         <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={HomeContainer} />
             <Route exact path="/about" component={About} />
             <Route exact path="/help" component={Help} />
             <Route exact path="/credit" component={Credit} />

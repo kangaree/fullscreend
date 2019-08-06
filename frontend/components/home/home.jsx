@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default () => (
+export default ({ currentUser, openModal }) => (
     <div className="home">
         <video playsInline autoPlay muted loop id="tv-intros">
             <source src="https://s3.amazonaws.com/fullscreend/TV+Intros+Montage.webm" type="video/webm"></source>
@@ -9,7 +9,7 @@ export default () => (
         </video>
         <div className="home-backdrop"><div className="backdrop-fade">
             <h2 className="headline-1">The social network for tv lovers.</h2>
-            <p className="headline-2">Start your tv diary now, it's free!</p>
+            {currentUser ? "" : <p className="headline-2" onClick={() => openModal({ modal_type: 'signup' })}><button className="green-button">Get started- it's free!</button></p>}
         </div></div>
         <div className="horizontal-featured-list"> 
 

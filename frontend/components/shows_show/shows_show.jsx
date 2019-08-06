@@ -105,13 +105,13 @@ class ShowsShow extends Component {
                                     <a className="">
                                         <i className="far fa-bookmark" style={currentUserReview ? { color: "#00e24b" } : null}></i>
                                     </a>
-                                    <div> {currentUserReview ? (currentUserReview ? "Logged" : "Not logged") : "Not logged"} </div>
+                                    {currentUserReview ? <div>Logged</div> : <div onClick={() => openModal({ modal_type: 'review' })} show={show} style={{ cursor: 'pointer' }}>Not Logged</div> }
                                 </div>
                                 <div className="gray-quick-review-link">
                                     <a className="">
                                         <i className="far fa-heart" style={currentUserReview ? (currentUserReview.like ? { color: "orange" } : null) : null}></i>
                                     </a>
-                                    <div> { currentUserReview ? (currentUserReview.like ? "Liked" : "Not liked") : "Not liked" } </div>
+                                    {currentUserReview ? (currentUserReview.like ? <div>Liked</div> : <div onClick={() => openModal({ modal_type: 'review' })} show={show} style={{ cursor: 'pointer' }}>Not Liked</div>) : <div onClick={() => openModal({ modal_type: 'review' })} show={show} style={{ cursor: 'pointer' }}>Not Liked</div>}
                                 </div>
                                 {/* <div className="gray-quick-review-link">
                                     <a className="">
@@ -137,7 +137,9 @@ class ShowsShow extends Component {
                                     <a className="gray-quick-review-star">
                                         <i className="fas fa-star" style={currentUserReviewScore >= 5 ? { color: "#00e24b" } : null}></i>
                                     </a>
-                                    <div className="gray-quick-review-star-caption">{currentUserReview ? (currentUserReviewScore ? "Rated" : "Not rated") : "Not rated"}</div>
+                                    <div className="gray-quick-review-star-caption">
+                                        {currentUserReview ? (currentUserReviewScore ? <div>Rated</div> : <div onClick={() => openModal({ modal_type: 'review' })} show={show} style={{ cursor: 'pointer' }}>Not Rated</div>) : <div onClick={() => openModal({ modal_type: 'review' })} show={show} style={{ cursor: 'pointer' }}>Not Rated</div>}
+                                    </div>
                                 </div>
                             </div>
                             <a className="gray-button" onClick={() => openModal({ modal_type: 'review' })} show={show}>Review or log...</a>

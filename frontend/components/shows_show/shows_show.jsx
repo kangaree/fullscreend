@@ -154,21 +154,21 @@ class ShowsShow extends Component {
                     }
 
                 </div>
+                <ul className="season-list">
+                    {show.seasons ? show.seasons.map(season =>
+                        <li key={season.name}>
+                            {/* <Link to={"/shows/" + show.id + "/seasons/" + season.season_number}> */}
+                                <img src={season.poster_path ?
+                                    "https://image.tmdb.org/t/p/w500" + season.poster_path
+                                    : window.testPoster} />
+                            {/* </Link> */}
+                        </li>)
+                        :
+                        null}
+                </ul>
 
                 <div className="center-horizontally">
                     <div className="left-indent-poster">
-                        <ul className="season-list">
-                            {show.seasons ? show.seasons.map(season =>
-                                <li key={season.name}>
-                                    {/* <Link to={"/shows/" + show.id + "/seasons/" + season.season_number}> */}
-                                        <img src={season.poster_path ?
-                                            "https://image.tmdb.org/t/p/w500" + season.poster_path
-                                            : window.testPoster} />
-                                    {/* </Link> */}
-                                </li>)
-                                :
-                                null}
-                        </ul>
 
                         {season ?
                             <div>

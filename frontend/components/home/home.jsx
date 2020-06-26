@@ -13,8 +13,8 @@ export default ({ currentUser, openModal }) => (
         </div></div>
         <div className="horizontal-featured-list"> 
 
-            <Link to="/shows/30991" className="poster-link"><img src="https://image.tmdb.org/t/p/original/wjFU9z8EfOwczRTv0FrPcv9zHME.jpg" alt="Cowboy Bebop" /></Link>
-            <Link to="/shows/1438" className="poster-link"><img src="https://image.tmdb.org/t/p/original/dg7NuKDjmS6OzuNy33qt8kSkPA1.jpg" alt="The Wire" /></Link>
+            <Link to="/shows/30991" className="poster-link"><img src="https://image.tmdb.org/t/p/original//xDiXDfZwC6XYC6fxHI1jl3A3Ill.jpg" alt="Cowboy Bebop" /></Link>
+            <Link to="/shows/1438" className="poster-link"><img src="https://image.tmdb.org/t/p/original//4lbclFySvugI51fwsyxBTOm4DqK.jpg" alt="The Wire" /></Link>
             <Link to="/shows/66732" className="poster-link"><img src="https://image.tmdb.org/t/p/original/vNJ95BMCzIBJZhW0IEoxzOoW53P.jpg" alt="Stranger Things" /></Link>
             <Link to="/shows/63926" className="poster-link"><img src="https://image.tmdb.org/t/p/original/iE3s0lG5QVdEHOEZnoAxjmMtvne.jpg" alt="One Punch Man" /></Link>
             <Link to="/shows/2382" className="poster-link"><img src="https://image.tmdb.org/t/p/original/tPqV63zcW6ZV0Hd48DMGb5UzQIG.jpg" alt="Freaks and Geeks" /></Link>

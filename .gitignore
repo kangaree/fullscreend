@@ -28,6 +28,4 @@
 /config/master.key
 
 /node_modules
-/app/assets/javascripts/bundle.js
-/app/assets/javascripts/bundle.js*
 /yarn-error.log

@@ -2,7 +2,7 @@
 # Fullscreend
 Fullscreend is an app that lets you log and collect tv. 
 
-[Live Demo](https://fullscreend.herokuapp.com)
+[Live Demo](https://fullscreend-1e2cf806ef6e.herokuapp.com/)
 
 Fullscreend is a clone of Letterboxd, an app that lets you log and collect movies. 
 
@@ -105,3 +105,16 @@ A slice of the CSS:
 * Spoiler Filter
 * Calendar
 * Half Stars
+
+## 2024 Update
+
+I'm trying to resurrect this project and put it back on [Heroku](https://fullscreend-1e2cf806ef6e.herokuapp.com/).
+
+You've got to run `npm start` to build the React bundle. 
+
+If I add the below to .gitignore, for some reason the React bundle doesn't show:
+
+```
+/app/assets/javascripts/bundle.js
+/app/assets/javascripts/bundle.js\*
+```
